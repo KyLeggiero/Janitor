@@ -7,6 +7,9 @@
 //
 
 import SwiftUI
+import AppKit
+
+
 
 struct PathControlView: NSViewRepresentable {
     
@@ -19,14 +22,14 @@ struct PathControlView: NSViewRepresentable {
     
     func makeNSView(context: NSViewRepresentableContext<PathControlView>) -> NSViewType {
         let pathControl = NSPathControl()
-        pathControl.url = url
-        pathControl.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        updateNSView(pathControl, context: context)
         return pathControl
     }
     
     
-    func updateNSView(_ nsView: NSViewType, context: NSViewRepresentableContext<PathControlView>) {
-        // TODO
+    func updateNSView(_ pathControl: NSViewType, context: NSViewRepresentableContext<PathControlView>) {
+        pathControl.url = url
+        pathControl.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     }
 }
 

@@ -14,16 +14,17 @@ import JanitorKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     lazy var window: NSWindow = generateWindow()
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-
-
+    
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setUpMenuBarItem()
         runInForeground()
     }
-
+    
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
@@ -85,16 +86,18 @@ extension AppDelegate {
     private func generateWindow() -> NSWindow {
         let window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+            styleMask: [.titled, .closable, .miniaturizable, .resizable],
             backing: .buffered, defer: false)
         window.center()
         window.setFrameAutosaveName("Main Window")
+        window.title = "Janitor"
         window.tabbingMode = .disallowed
         window.isReleasedWhenClosed = false
         window.delegate = self
-
-        window.contentView = NSHostingView(rootView: ContentView(watchedLocations: [URL.User.desktop!]))
-//        window.contentView?.setContentCompressionResistancePriority(.required, for: .vertical)
+        window.titlebarAppearsTransparent = true;
+        
+        window.contentView = NSHostingView(rootView: ContentView(trackedDirectories: UserPreferences.Bindings.trackedDirectories))
+        //        window.contentView?.setContentCompressionResistancePriority(.required, for: .vertical)
         
         return window
     }

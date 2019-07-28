@@ -21,11 +21,13 @@
 		A370A00C22DFE6800097FFAD /* Janitor Finder Extensions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A370A04F22DFE79F0097FFAD /* JanitorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; };
 		A370A05022DFE79F0097FFAD /* JanitorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E1E22EA4765002E7B49 /* OpenPanel.swift */; };
+		A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */; };
+		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
 		A3D4791822E1A0C700F83308 /* NewWatchedFolderSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D4791722E1A0C700F83308 /* NewWatchedFolderSetupView.swift */; };
 		A3E5487722E03D1500FE7565 /* Image Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5487622E03D1500FE7565 /* Image Constants.swift */; };
 		A3F3784522E18BC100642A90 /* AllWatchedFoldersSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784422E18BC100642A90 /* AllWatchedFoldersSettingsView.swift */; };
 		A3F3784C22E1990100642A90 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784B22E1990100642A90 /* Color Constants.swift */; };
-		A3F3784E22E19CB600642A90 /* AddNewWatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784D22E19CB600642A90 /* AddNewWatchedFolderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,11 +102,13 @@
 		A370A00822DFE6800097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A370A00922DFE6800097FFAD /* Janitor_Finder_Extensions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor_Finder_Extensions.entitlements; sourceTree = "<group>"; };
 		A370A04E22DFE79F0097FFAD /* JanitorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JanitorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3739E1E22EA4765002E7B49 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
+		A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
+		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 		A3D4791722E1A0C700F83308 /* NewWatchedFolderSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWatchedFolderSetupView.swift; sourceTree = "<group>"; };
 		A3E5487622E03D1500FE7565 /* Image Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Constants.swift"; sourceTree = "<group>"; };
 		A3F3784422E18BC100642A90 /* AllWatchedFoldersSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersSettingsView.swift; sourceTree = "<group>"; };
 		A3F3784B22E1990100642A90 /* Color Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
-		A3F3784D22E19CB600642A90 /* AddNewWatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWatchedFolderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +147,12 @@
 		A32740A322E1045C00DAC82D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A32740A422E1047800DAC82D /* WatchedFolderSettingsView.swift */,
-				A32740A622E1052F00DAC82D /* PathControlView.swift */,
-				A32740A822E1068700DAC82D /* Checkbox.swift */,
+				A3739E1D22EA46EE002E7B49 /* AppKit Bridges */,
 				A3F3784422E18BC100642A90 /* AllWatchedFoldersSettingsView.swift */,
-				A3F3784D22E19CB600642A90 /* AddNewWatchedFolderView.swift */,
 				A3D4791722E1A0C700F83308 /* NewWatchedFolderSetupView.swift */,
+				A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */,
+				A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */,
+				A32740A422E1047800DAC82D /* WatchedFolderSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +239,16 @@
 				A370A04E22DFE79F0097FFAD /* JanitorKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3739E1D22EA46EE002E7B49 /* AppKit Bridges */ = {
+			isa = PBXGroup;
+			children = (
+				A32740A822E1068700DAC82D /* Checkbox.swift */,
+				A3739E1E22EA4765002E7B49 /* OpenPanel.swift */,
+				A32740A622E1052F00DAC82D /* PathControlView.swift */,
+			);
+			path = "AppKit Bridges";
 			sourceTree = "<group>";
 		};
 		A3F3784622E198DF00642A90 /* Constants */ = {
@@ -411,13 +425,15 @@
 				A3E5487722E03D1500FE7565 /* Image Constants.swift in Sources */,
 				A3709FD422DFE5670097FFAD /* ContentView.swift in Sources */,
 				A32740A922E1068700DAC82D /* Checkbox.swift in Sources */,
+				A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */,
 				A32740A522E1047800DAC82D /* WatchedFolderSettingsView.swift in Sources */,
+				A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */,
 				A3D4791822E1A0C700F83308 /* NewWatchedFolderSetupView.swift in Sources */,
 				A3F3784C22E1990100642A90 /* Color Constants.swift in Sources */,
 				A3F3784522E18BC100642A90 /* AllWatchedFoldersSettingsView.swift in Sources */,
+				A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */,
 				A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */,
 				A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */,
-				A3F3784E22E19CB600642A90 /* AddNewWatchedFolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

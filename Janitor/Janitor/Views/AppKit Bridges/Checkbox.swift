@@ -17,13 +17,15 @@ struct Checkbox: NSViewRepresentable {
     
     
     var title: String
+    var alternateTitle: String?
     var state: Binding<State>
     var alignment: Alignment
     private var shim: Shim!
     
     
-    init(title: String, state: Binding<State>, alignment: Alignment = .checkboxLeading) {
+    init(title: String, alternateTitle: String? = nil, state: Binding<State>, alignment: Alignment = .checkboxLeading) {
         self.title = title
+        self.alternateTitle = alternateTitle
         self.state = state
         self.alignment = alignment
         self.shim = Shim(self)
@@ -32,16 +34,19 @@ struct Checkbox: NSViewRepresentable {
     
     func makeNSView(context: NSViewRepresentableContext<Checkbox>) -> NSViewType {
         let checkbox = NSViewType(checkboxWithTitle: title, target: shim, action: #selector(Shim.didPress))
-        checkbox.imagePosition = .init(alignment)
-        checkbox.alignment = .init(alignment)
-        checkbox.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        checkbox.setContentHuggingPriority(.required, for: .horizontal)
+        updateNSView(checkbox, context: context)
         return checkbox
     }
     
     
-    func updateNSView(_ nsView: NSViewType, context: NSViewRepresentableContext<Checkbox>) {
-        // TODO
+    func updateNSView(_ checkbox: NSViewType, context: NSViewRepresentableContext<Checkbox>) {
+        checkbox.title = title
+        checkbox.alternateTitle = alternateTitle ?? ""
+        checkbox.imagePosition = .init(alignment)
+        checkbox.alignment = .init(alignment)
+        checkbox.state = state.value.nsControlState
+        checkbox.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        checkbox.setContentHuggingPriority(.required, for: .horizontal)
     }
     
     
@@ -78,6 +83,20 @@ struct Checkbox: NSViewRepresentable {
         
         init(_ isChecked: Bool) {
             self = isChecked ? .checked : .unchecked
+        }
+        
+        
+        var nsControlState: NSControl.StateValue {
+            switch self {
+            case .checked:
+                return .on
+                
+            case .unchecked:
+                return .off
+                
+            case .indeterminate:
+                return .mixed
+            }
         }
     }
     

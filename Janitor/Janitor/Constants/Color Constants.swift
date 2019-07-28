@@ -12,4 +12,5 @@ import SwiftUI
 
 extension Color {
     static let watchedFolderSettingsBackground = Color("Watched Folder Settings Background")
+    static let watchedFolderSettingsBorder = Color("Watched Folder Settings Border")
 }
