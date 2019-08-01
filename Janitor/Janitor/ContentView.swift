@@ -13,20 +13,37 @@ import JanitorKit
 
 struct ContentView: View {
     
-    @Binding
+    @Inout
     var trackedDirectories: [TrackedDirectory]
-    
-    @State
+
+    @BoundPointer
     private var currentlyEditedDirectory: TrackedDirectory? = nil
 
-    @Binding
-    private var isEditTrackedDirectorySheetShown: Bool
+    @BoundPointer
+    private var isEditTrackedDirectorySheetShown = false
+
+
+    init(trackedDirectories: Inout<[TrackedDirectory]>) {
+
+        self._trackedDirectories = trackedDirectories
+
+        self._currentlyEditedDirectory.didSet =
+            self.currentlyEditedDirectoryPointerDidChange(newPointee:)
+        
+        self._isEditTrackedDirectorySheetShown.didSet = {
+            print($0)
+        }
+    }
+    
     
     var body: some View {
-        VStack(alignment: .center) {
-            AllWatchedFoldersSettingsView(trackedDirectories: $trackedDirectories)
-            Button(action: {
-                    self.isEditTrackedDirectorySheetShown = true
+//        Text("Whoops")
+        VStack(alignment: HorizontalAlignment.center) {
+            AllWatchedFoldersSettingsView(trackedDirectories: $trackedDirectories,
+                                          currentlyEditedDirectory: _currentlyEditedDirectory.binding)
+            Button(
+                action: {
+                    self.currentlyEditedDirectory = TrackedDirectory.default
                 },
                 label: {
                     HStack {
@@ -36,40 +53,38 @@ struct ContentView: View {
                 }
             )
         }
-        .padding()
-        .sheet(isPresented: $isEditTrackedDirectorySheetShown, content: {
-            NewWatchedFolderSetupView(onComplete: { newTrackedDirectory in
+            .sheet(item: _currentlyEditedDirectory.binding, content: sheetContent)
+            .padding()
+    }
+    
+    
+    private func didCompleteNewTrackedDirSelection(newTrackedDirectory: TrackedDirectory?) {
+        if let newTrackedDirectory = newTrackedDirectory {
+            trackedDirectories.append(newTrackedDirectory)
+        }
+    }
+
+
+    private func currentlyEditedDirectoryPointerDidChange(newPointee: TrackedDirectory?) {
+        self.isEditTrackedDirectorySheetShown = nil != newPointee
+    }
+    
+    
+    func sheetContent(currentlyEditedDirectory: TrackedDirectory) -> some View {
+        var currentlyEditedDirectory: TrackedDirectory = currentlyEditedDirectory
+        let trackedDirectoryBinding = Binding(
+            getValue: { currentlyEditedDirectory },
+            setValue: { currentlyEditedDirectory = $0 }
+        )
+        return NewWatchedFolderSetupView(
+            trackedDirectory: trackedDirectoryBinding,
+            onComplete: { newTrackedDirectory in
                 self.currentlyEditedDirectory = nil
                 if let newTrackedDirectory = newTrackedDirectory {
                     self.trackedDirectories.replaceOrAppend(newTrackedDirectory)
                 }
-            })
-            .padding()
         })
-    }
-    
-    
-    init(trackedDirectories: Binding<[TrackedDirectory]>) {
-        
-        self._trackedDirectories = trackedDirectories
-        
-        self._isEditTrackedDirectorySheetShown = Binding<Bool>(
-           getValue: {
-               nil != self.currentlyEditedDirectory
-           },
-           setValue: { newIsShown in
-               if !newIsShown {
-                   self.currentlyEditedDirectory = nil
-               }
-           }
-       )
-    }
-    
-    
-    func didCompleteNewTrackedDirSelection(newTrackedDirectory: TrackedDirectory?) {
-        if let newTrackedDirectory = newTrackedDirectory {
-            trackedDirectories.append(newTrackedDirectory)
-        }
+            .padding()
     }
 }
 

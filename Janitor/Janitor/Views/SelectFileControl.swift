@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import JanitorKit
+
+
 
 struct SelectFileControl: View {
     
-    @Binding
+    @Inout
     var selectedFile: URL?
     
     var body: some View {
@@ -36,24 +39,24 @@ struct SelectFileControl: View {
             #endif
         }
     }
-        
-        
-        func didPressSelectFileButton() {
-            let panel = NSOpenPanel()
-            panel.canChooseDirectories = true
-            panel.canChooseFiles = false
-            panel.directoryURL = URL.User.home
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let result = panel.runModal()
-                switch result {
-                case .OK:
-                    self.selectedFile = panel.url
-                    
-                default:
-                    self.selectedFile = nil
-                }
+    
+    
+    func didPressSelectFileButton() {
+        let panel = NSOpenPanel()
+        panel.canChooseDirectories = true
+        panel.canChooseFiles = false
+        panel.directoryURL = URL.User.home
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let result = panel.runModal()
+            switch result {
+            case .OK:
+                self.selectedFile = panel.url
+                
+            default:
+                self.selectedFile = nil
             }
         }
+    }
     
     
     

@@ -14,19 +14,18 @@ import JanitorKit
 
 struct WatchedFolderSettingsView: View {
     
-    @Binding
+    @Inout
     var trackedDirectory: TrackedDirectory
 
     var onDidPressEditButton: OnDidPressEditButton
     var onDidPressDeleteButton: OnDidPressDeleteButton
     
-    
     @State
     private var isPopoverShown = false
     
-    private var isEnabledCheckboxState: Binding<Checkbox.State> = .constant(.indeterminate)
+    private var isEnabledCheckboxState: Inout<Checkbox.State>
     
-    init(trackedDirectory: Binding<TrackedDirectory>,
+    init(trackedDirectory: Inout<TrackedDirectory>,
          onDidPressEditButton: @escaping OnDidPressEditButton,
          onDidPressDeleteButton: @escaping OnDidPressDeleteButton) {
         
@@ -35,7 +34,8 @@ struct WatchedFolderSettingsView: View {
         
         self._trackedDirectory = trackedDirectory
         
-        self.isEnabledCheckboxState = Binding<Checkbox.State>(
+        self.isEnabledCheckboxState = .constant(.indeterminate)
+        self.isEnabledCheckboxState = Inout(
             getValue: checkBoxStateBasedOnEnabled,
             setValue: updateEnabledBasedOnCheckboxState
         )
@@ -68,7 +68,7 @@ struct WatchedFolderSettingsView: View {
                 PathControlView(url: trackedDirectory.url)
                     .frame(minWidth: 100, idealWidth: 200, minHeight: 16, idealHeight: 16, alignment: .leading)
                 
-                Checkbox(title: "Enabled", alternateTitle: "Disabled", state: isEnabledCheckboxState, alignment: .checkboxTrailing)
+                Checkbox(title: "Disabled", alternateTitle: "Enabled", state: isEnabledCheckboxState, alignment: .checkboxTrailing)
             }
         }
             .padding(.horizontal, 10)
@@ -115,7 +115,7 @@ struct WatchedFolderSettingsView: View {
                     .font(Font.caption.weight(.black))
             }
             HStack(spacing: 4) {
-                Text("or push the folder's total size over")
+                Text("or if they push the folder's total size over")
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text(self.trackedDirectory.largestAllowedTotalSize.description)

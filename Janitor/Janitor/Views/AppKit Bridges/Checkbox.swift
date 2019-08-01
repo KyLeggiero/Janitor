@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import JanitorKit
 
 
 
@@ -18,12 +19,12 @@ struct Checkbox: NSViewRepresentable {
     
     var title: String
     var alternateTitle: String?
-    var state: Binding<State>
+    var state: Inout<State>
     var alignment: Alignment
     private var shim: Shim!
     
     
-    init(title: String, alternateTitle: String? = nil, state: Binding<State>, alignment: Alignment = .checkboxLeading) {
+    init(title: String, alternateTitle: String? = nil, state: Inout<State>, alignment: Alignment = .checkboxLeading) {
         self.title = title
         self.alternateTitle = alternateTitle
         self.state = state

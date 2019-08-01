@@ -13,16 +13,19 @@ import JanitorKit
 
 struct AllWatchedFoldersSettingsView: View {
     
-    @Binding
+    @Inout
     var trackedDirectories: [TrackedDirectory]
+    
+    @Inout
+    var currentlyEditedDirectory: TrackedDirectory?
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack {
-                ForEach(_trackedDirectories) { trackedDirectory in
+                ForEach(_trackedDirectories) { (trackedDirectory: Inout<TrackedDirectory>) -> WatchedFolderSettingsView in
                     WatchedFolderSettingsView(trackedDirectory: trackedDirectory,
-                                              onDidPressEditButton: { edit(trackedDirectory) },
-                                              onDidPressDeleteButton: { delete(trackedDirectory) })
+                                              onDidPressEditButton: { self.beginEditing(trackedDirectory) },
+                                              onDidPressDeleteButton: { self.delete(trackedDirectory.value) })
                 }
             }
         }
@@ -30,13 +33,13 @@ struct AllWatchedFoldersSettingsView: View {
     }
     
     
-    func edit(_ trackedDirectory: TrackedDirectory) {
-        // TODO
+    func beginEditing(_ directoryToBeEdited: Inout<TrackedDirectory>) {
+        self.currentlyEditedDirectory = directoryToBeEdited.value
     }
     
     
     func delete(_ trackedDirectory: TrackedDirectory) {
-        // TODO
+        trackedDirectories.remove(firstElementWithId: trackedDirectory.id)
     }
 }
 
@@ -44,8 +47,12 @@ struct AllWatchedFoldersSettingsView: View {
 struct AllWatchedFoldersSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         AllWatchedFoldersSettingsView(trackedDirectories: .constant([
-            TrackedDirectory(url: URL.User.downloads!, oldestAllowedAge: 30.days, largestAllowedTotalSize: 1.gibibytes)
-        ]))
+            TrackedDirectory(url: URL.User.downloads!,
+                             oldestAllowedAge: 30.days,
+                             largestAllowedTotalSize: 1.gibibytes)
+            ]),
+                                      currentlyEditedDirectory: .constant(nil)
+        )
     }
 }
 #endif

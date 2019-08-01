@@ -13,10 +13,10 @@ import JanitorKit
 
 struct MeasurementPicker<Unit: MeasurementUnit>: View {
     
-    @Binding
+    @Inout
     private var value: Measurement.Value
     
-    @Binding
+    @Inout
     private var unit: Unit
     
     /// A short string of text describing the context of the picker. For instance, if picking an age, this might be `"No older than"` or `"At least"`
@@ -26,12 +26,12 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
     var postamble: String?
     
     
-    init(preamble: String?, measurement initialAge: Binding<Measurement>, postamble: String?) {
+    init(preamble: String?, measurement initialAge: Inout<Measurement>, postamble: String?) {
         
         self.preamble = preamble
         self.postamble = postamble
         
-        self._value = Binding(
+        self._value = Inout(
             getValue: {
                 return initialAge.value.value
             },
@@ -40,7 +40,7 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
             }
         )
         
-        self._unit = Binding(
+        self._unit = Inout(
             getValue: {
                 return initialAge.value.unit
             },
