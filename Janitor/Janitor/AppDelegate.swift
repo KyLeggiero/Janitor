@@ -89,7 +89,6 @@ extension AppDelegate {
             styleMask: [.titled, .closable, .miniaturizable, .resizable],
             backing: .buffered, defer: false)
         window.center()
-        window.setFrameAutosaveName("Main Window")
         window.title = "Janitor"
         window.tabbingMode = .disallowed
         window.isReleasedWhenClosed = false

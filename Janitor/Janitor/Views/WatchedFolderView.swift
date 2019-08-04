@@ -1,5 +1,5 @@
 //
-//  WatchedFolderSettingsView.swift
+//  WatchedFolderView.swift
 //  Janitor
 //
 //  Created by Ben Leggiero on 7/18/19.
@@ -12,7 +12,7 @@ import JanitorKit
 
 
 
-struct WatchedFolderSettingsView: View {
+struct WatchedFolderView: View {
     
     @Inout
     var trackedDirectory: TrackedDirectory
@@ -36,8 +36,8 @@ struct WatchedFolderSettingsView: View {
         
         self.isEnabledCheckboxState = .constant(.indeterminate)
         self.isEnabledCheckboxState = Inout(
-            getValue: checkBoxStateBasedOnEnabled,
-            setValue: updateEnabledBasedOnCheckboxState
+            get: checkBoxStateBasedOnEnabled,
+            set: updateEnabledBasedOnCheckboxState
         )
     }
     
@@ -53,15 +53,15 @@ struct WatchedFolderSettingsView: View {
                     .foregroundColor(.secondary)
                 Text(trackedDirectory.largestAllowedTotalSize.description)
                 Button("􀁜", action: { self.isPopoverShown.toggle() })
-                    .buttonStyle(.plain)
+                    .buttonStyle(PlainButtonStyle())
                     .popover(isPresented: $isPopoverShown, content: popoverContent)
                 
                 Spacer(minLength: 8)
                 
                 Button("􀈊", action: didPressEditButton)
-                    .buttonStyle(.plain)
+                    .buttonStyle(PlainButtonStyle())
                 Button("􀈑", action: didPressDeleteButton)
-                    .buttonStyle(.plain)
+                    .buttonStyle(PlainButtonStyle())
             }
             
             HStack {
@@ -73,9 +73,20 @@ struct WatchedFolderSettingsView: View {
         }
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
-            .border(Color.watchedFolderSettingsBorder, cornerRadius: 6)
-            .background(Color.watchedFolderSettingsBackground)
-            .cornerRadius(6)
+//            .border(Color.watchedFolderSettingsBorder)
+//            .clipShape(RoundedRectangle(cornerRadius: 6, style: RoundedCornerStyle.circular))
+//            .contentShape(RoundedRectangle(cornerRadius: 6, style: RoundedCornerStyle.circular))
+//            .border(Color.watchedFolderSettingsBorder, cornerRadius: 6)
+            .background(
+                RoundedRectangle(cornerRadius: 6)
+                    .strokeBorder(Color.watchedFolderSettingsBorder)
+                    .background(Color.watchedFolderSettingsBackground)
+                    .cornerRadius(6)
+            )
+//            .background(RoundedRectangle(cornerRadius: 6, style: .circular)
+//                .fill(Color.watchedFolderSettingsBackground)
+//                .border(Color.watchedFolderSettingsBorder)
+//            )
     }
     
     
@@ -144,9 +155,7 @@ struct WatchedFolderSettingsView: View {
 #if DEBUG
 struct WatchedFolderSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchedFolderSettingsView(trackedDirectory: .constant(TrackedDirectory(url: URL.User.desktop!,
-                                                                     oldestAllowedAge: 1.weeks,
-                                                                     largestAllowedTotalSize: 2.gibibytes)),
+        WatchedFolderView(trackedDirectory: .constant(.default()),
                                   onDidPressEditButton: {},
                                   onDidPressDeleteButton: {}
         )

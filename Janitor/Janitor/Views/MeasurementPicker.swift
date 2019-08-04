@@ -25,29 +25,40 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
     /// A short string of text describing the context of the picker. For instance, if picking an age, this might be `"No older than"` or `"At least"`
     var postamble: String?
     
+    /// The units presented in this picker
+    var presentedUnits: PresentedUnits
     
-    init(preamble: String?, measurement initialAge: Inout<Measurement>, postamble: String?) {
+    
+    private var valueForFormatter: Binding<NSNumber>
+    
+    
+    init(preamble: String?, measurement initialMeasurement: Inout<Measurement>, presentedUnits: PresentedUnits = Unit.allCases, postamble: String?) {
         
         self.preamble = preamble
+        self.presentedUnits = presentedUnits
         self.postamble = postamble
         
         self._value = Inout(
-            getValue: {
-                return initialAge.value.value
+            get: {
+                return initialMeasurement.wrappedValue.value
             },
-            setValue: { newValue in
-                initialAge.value = Measurement(value: newValue, unit: initialAge.value.unit)
+            set: { newValue in
+                initialMeasurement.wrappedValue.value = newValue// = Measurement(value: newValue, unit: initialMeasurement.wrappedValue.unit)
             }
         )
         
         self._unit = Inout(
-            getValue: {
-                return initialAge.value.unit
+            get: {
+                return initialMeasurement.value.unit
             },
-            setValue: { newUnit in
-                initialAge.value = Measurement(value: initialAge.value.value, unit: newUnit)
+            set: { newUnit in
+                initialMeasurement.wrappedValue.unit = newUnit//Measurement(value: initialMeasurement.wrappedValue.value, unit: newUnit)
+//                initialMeasurement.update()
             }
         )
+        
+        self.valueForFormatter = .constant(0)
+        self.valueForFormatter = Binding(get: self.nsNumberValue, set: self.setNsNumberValue)
     }
     
     
@@ -57,16 +68,21 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
                 Text(preamble!) // 🤮 I hope they fix this before SwiftUI goes public
             }
             TextField("value", value: $value, formatter: numberFormatter)
-            Picker("unit", selection: $unit, content: {
-                ForEach(Age.Unit.casesLargerThanSeconds) { ageUnit in
-                    Text(ageUnit.name.text(for: self.value)).tag(ageUnit)
-                }
-            })
-                .pickerStyle(.popUpButton)
+            picker
+//                .pickerStyle(PopUpButtonPickerStyle())
             if nil != postamble {
                 Text(postamble!) // 🤮 I hope they fix this before SwiftUI goes public
             }
         }
+    }
+    
+    
+    private var picker: some View {
+        Picker("", selection: $unit, content: {
+            ForEach(presentedUnits) { ageUnit in
+                Text(ageUnit.name.text(for: self.value).localizedCapitalized).tag(ageUnit)
+            }
+        })
     }
     
     
@@ -84,16 +100,26 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
     }()
     
     
+    private func nsNumberValue() -> NSNumber { NSNumber(value: value) }
+    private nonmutating func setNsNumberValue(newValue: NSNumber) { value = .init(truncating: newValue) }
+    
+    
     
     typealias Measurement = JanitorKit.Measurement<Unit>
+    typealias PresentedUnits = Unit.AllCases
 }
 
 
 
 #if DEBUG
 struct MeasurementPicker_Previews: PreviewProvider {
+    private static var exampleAge: Binding<Age> = .constant(1.days)
+    private static var exampleDataSize: Binding<DataSize> = .constant(5.mebibytes)
     static var previews: some View {
-        MeasurementPicker(preamble: "No older than", measurement: .constant(1.days), postamble: nil)
+        Group {
+            MeasurementPicker(preamble: "No older than", measurement: exampleAge, postamble: nil)
+            MeasurementPicker(preamble: "No more than", measurement: exampleDataSize, postamble: nil)
+        }
     }
 }
 #endif

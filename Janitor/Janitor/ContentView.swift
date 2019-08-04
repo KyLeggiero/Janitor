@@ -16,34 +16,22 @@ struct ContentView: View {
     @Inout
     var trackedDirectories: [TrackedDirectory]
 
-    @BoundPointer
+    @State
     private var currentlyEditedDirectory: TrackedDirectory? = nil
-
-    @BoundPointer
-    private var isEditTrackedDirectorySheetShown = false
 
 
     init(trackedDirectories: Inout<[TrackedDirectory]>) {
-
         self._trackedDirectories = trackedDirectories
-
-        self._currentlyEditedDirectory.didSet =
-            self.currentlyEditedDirectoryPointerDidChange(newPointee:)
-        
-        self._isEditTrackedDirectorySheetShown.didSet = {
-            print($0)
-        }
     }
     
     
     var body: some View {
-//        Text("Whoops")
         VStack(alignment: HorizontalAlignment.center) {
             AllWatchedFoldersSettingsView(trackedDirectories: $trackedDirectories,
-                                          currentlyEditedDirectory: _currentlyEditedDirectory.binding)
+                                          currentlyEditedDirectory: $currentlyEditedDirectory)
             Button(
                 action: {
-                    self.currentlyEditedDirectory = TrackedDirectory.default
+                    self.currentlyEditedDirectory = TrackedDirectory.default()
                 },
                 label: {
                     HStack {
@@ -53,8 +41,9 @@ struct ContentView: View {
                 }
             )
         }
-            .sheet(item: _currentlyEditedDirectory.binding, content: sheetContent)
+            .sheet(item: $currentlyEditedDirectory, content: sheetContent)
             .padding()
+            .frame(minWidth: 512, idealWidth: 640, minHeight: 200, idealHeight: 480, alignment: Alignment.top)
     }
     
     
@@ -63,20 +52,15 @@ struct ContentView: View {
             trackedDirectories.append(newTrackedDirectory)
         }
     }
-
-
-    private func currentlyEditedDirectoryPointerDidChange(newPointee: TrackedDirectory?) {
-        self.isEditTrackedDirectorySheetShown = nil != newPointee
-    }
     
     
     func sheetContent(currentlyEditedDirectory: TrackedDirectory) -> some View {
         var currentlyEditedDirectory: TrackedDirectory = currentlyEditedDirectory
         let trackedDirectoryBinding = Binding(
-            getValue: { currentlyEditedDirectory },
-            setValue: { currentlyEditedDirectory = $0 }
+            get: { currentlyEditedDirectory },
+            set: { currentlyEditedDirectory = $0 }
         )
-        return NewWatchedFolderSetupView(
+        return WatchedFolderEditView(
             trackedDirectory: trackedDirectoryBinding,
             onComplete: { newTrackedDirectory in
                 self.currentlyEditedDirectory = nil
@@ -90,14 +74,10 @@ struct ContentView: View {
 
 
 #if DEBUG
-let exampleDirectories = [
-    TrackedDirectory(url: URL.User.desktop!, oldestAllowedAge: 6.0.days, largestAllowedTotalSize: 2.0.gigabytes),
-]
-
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ContentView(trackedDirectories: .constant(exampleDirectories))
+        ContentView(trackedDirectories: .constant([.default()]))
     }
 }
 #endif

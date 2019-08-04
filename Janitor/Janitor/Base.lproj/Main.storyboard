@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14845"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14854.2"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -52,7 +52,7 @@
                                                 <action selector="didSelectQuitEntirelyMenuItemWithSender:" target="Voe-Tx-rLC" id="RVB-2N-mCj"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Run Janitor In Background" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Run Janitor In Background" alternate="YES" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="didSelectRunJanitorInBackgroundWithSender:" target="Voe-Tx-rLC" id="S7D-LU-zql"/>
                                             </connections>

@@ -1,5 +1,5 @@
 //
-//  NewWatchedFolderSetupView.swift
+//  WatchedFolderEditView.swift
 //  Janitor
 //
 //  Created by Ben Leggiero on 7/19/19.
@@ -11,7 +11,7 @@ import JanitorKit
 
 
 
-struct NewWatchedFolderSetupView: View {
+struct WatchedFolderEditView: View {
     
     var onComplete: OnComplete
 //    @State var selectedFile: URL? = nil
@@ -33,13 +33,13 @@ struct NewWatchedFolderSetupView: View {
         VStack {
             Text("Add a folder to the cleaning schedule")
             SelectFileControl(selectedFile: _trackedDirectory_url.binding)
-            MeasurementPicker(preamble: "No file older than", measurement: _trackedDirectory_oldestAllowedAge.binding, postamble: nil)
-            MeasurementPicker(preamble: "Overall no more than", measurement: _trackedDirectory_largestAllowedTotalSize.binding, postamble: nil)
+            MeasurementPicker(preamble: "No file older than", measurement: _trackedDirectory_oldestAllowedAge.binding, presentedUnits: Age.Unit.commonFileAgeCases, postamble: nil)
+            MeasurementPicker(preamble: "Overall no more than", measurement: _trackedDirectory_largestAllowedTotalSize.binding, presentedUnits: DataSize.Unit.commonSIFileSizeCases, postamble: nil)
             HStack {
                 Spacer()
                 Button("Cancel", action: didPressCancel)
                 Button("Save", action: didPressSave)
-                    .buttonStyle(.default)
+                    .buttonStyle(DefaultButtonStyle())
             }
         }
     }
@@ -48,9 +48,9 @@ struct NewWatchedFolderSetupView: View {
         self._trackedDirectory = trackedDirectory
         self.onComplete = onComplete
         
-        self._trackedDirectory_url = .init(initialValue: trackedDirectory.value.url)
-        self._trackedDirectory_oldestAllowedAge = .init(initialValue: trackedDirectory.value.oldestAllowedAge)
-        self._trackedDirectory_largestAllowedTotalSize = .init(initialValue: trackedDirectory.value.largestAllowedTotalSize)
+        self._trackedDirectory_url = .init(wrappedValue: trackedDirectory.value.url)
+        self._trackedDirectory_oldestAllowedAge = .init(wrappedValue: trackedDirectory.value.oldestAllowedAge)
+        self._trackedDirectory_largestAllowedTotalSize = .init(wrappedValue: trackedDirectory.value.largestAllowedTotalSize)
         
         self._trackedDirectory_url.didSet = setTrackedDirectoryUrlOnPointerDidSet
         self._trackedDirectory_oldestAllowedAge.didSet = setTrackedDirectoryOldestAllowedAge
@@ -74,7 +74,7 @@ struct NewWatchedFolderSetupView: View {
 
 
 
-private extension NewWatchedFolderSetupView {
+private extension WatchedFolderEditView {
     
     nonmutating func setTrackedDirectoryUrlOnPointerDidSet(newValue: URL?) {
         if let url = newValue {
@@ -98,7 +98,7 @@ private extension NewWatchedFolderSetupView {
 #if DEBUG
 struct NewWatchedFolderSetupView_Previews: PreviewProvider {
     static var previews: some View {
-        NewWatchedFolderSetupView(trackedDirectory: .constant(.default), onComplete: { _ in })
+        WatchedFolderEditView(trackedDirectory: .constant(.default()), onComplete: { _ in })
     }
 }
 #endif
