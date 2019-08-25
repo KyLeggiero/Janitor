@@ -27,7 +27,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: HorizontalAlignment.center) {
-            AllWatchedFoldersSettingsView(trackedDirectories: $trackedDirectories,
+            AllWatchedFoldersView(trackedDirectories: $trackedDirectories,
                                           currentlyEditedDirectory: $currentlyEditedDirectory)
             Button(
                 action: {

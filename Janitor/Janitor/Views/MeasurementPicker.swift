@@ -13,11 +13,9 @@ import JanitorKit
 
 struct MeasurementPicker<Unit: MeasurementUnit>: View {
     
-    @Inout
-    private var value: Measurement.Value
+    private var value: Inout<Measurement.Value>
     
-    @Inout
-    private var unit: Unit
+    private var unit: Inout<Unit>
     
     /// A short string of text describing the context of the picker. For instance, if picking an age, this might be `"No older than"` or `"At least"`
     var preamble: String?
@@ -38,7 +36,7 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
         self.presentedUnits = presentedUnits
         self.postamble = postamble
         
-        self._value = Inout(
+        self.value = Inout(
             get: {
                 return initialMeasurement.wrappedValue.value
             },
@@ -47,7 +45,7 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
             }
         )
         
-        self._unit = Inout(
+        self.unit = Inout(
             get: {
                 return initialMeasurement.value.unit
             },
@@ -67,22 +65,17 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
             if nil != preamble {
                 Text(preamble!) // 🤮 I hope they fix this before SwiftUI goes public
             }
-            TextField("value", value: $value, formatter: numberFormatter)
-            picker
-//                .pickerStyle(PopUpButtonPickerStyle())
+            TextField("value", value: value, formatter: numberFormatter)
+            Picker("", selection: unit, content: {
+                ForEach(presentedUnits) { ageUnit in
+                    Text(ageUnit.name.text(whenAmountIs: self.value.value).localizedCapitalized).tag(ageUnit)
+                }
+            })
+                .pickerStyle(PopUpButtonPickerStyle())
             if nil != postamble {
                 Text(postamble!) // 🤮 I hope they fix this before SwiftUI goes public
             }
         }
-    }
-    
-    
-    private var picker: some View {
-        Picker("", selection: $unit, content: {
-            ForEach(presentedUnits) { ageUnit in
-                Text(ageUnit.name.text(for: self.value).localizedCapitalized).tag(ageUnit)
-            }
-        })
     }
     
     
@@ -100,8 +93,8 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
     }()
     
     
-    private func nsNumberValue() -> NSNumber { NSNumber(value: value) }
-    private nonmutating func setNsNumberValue(newValue: NSNumber) { value = .init(truncating: newValue) }
+    private func nsNumberValue() -> NSNumber { NSNumber(value: value.value) }
+    private nonmutating func setNsNumberValue(newValue: NSNumber) { value.value = .init(truncating: newValue) }
     
     
     

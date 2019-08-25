@@ -39,7 +39,7 @@ struct WatchedFolderEditView: View {
                 Spacer()
                 Button("Cancel", action: didPressCancel)
                 Button("Save", action: didPressSave)
-                    .buttonStyle(DefaultButtonStyle())
+                    .buttonStyle(BorderedButtonStyle())
             }
         }
     }

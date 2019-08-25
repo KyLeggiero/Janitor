@@ -1,5 +1,5 @@
 //
-//  AllWatchedFoldersSettingsView.swift
+//  AllWatchedFoldersView.swift
 //  Janitor
 //
 //  Created by Ben Leggiero on 7/18/19.
@@ -11,7 +11,7 @@ import JanitorKit
 
 
 
-struct AllWatchedFoldersSettingsView: View {
+struct AllWatchedFoldersView: View {
     
     @Inout
     var trackedDirectories: [TrackedDirectory]
@@ -46,7 +46,7 @@ struct AllWatchedFoldersSettingsView: View {
 #if DEBUG
 struct AllWatchedFoldersSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        AllWatchedFoldersSettingsView(trackedDirectories: .constant([.default()]),
+        AllWatchedFoldersView(trackedDirectories: .constant([.default()]),
                                       currentlyEditedDirectory: .constant(nil)
         )
     }
