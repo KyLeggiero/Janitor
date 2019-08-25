@@ -84,3 +84,6 @@ iOSInjectionProject/
 \.DS_Store
 
 *.7z
+
+*.blend[0-9]
+*.blend[0-9][0-9]
