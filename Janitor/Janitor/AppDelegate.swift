@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setUpMenuBarItem()
         runInForeground()
+        startMonitoring()
     }
     
     
@@ -96,7 +97,6 @@ extension AppDelegate {
         window.titlebarAppearsTransparent = true;
         
         window.contentView = NSHostingView(rootView: ContentView(trackedDirectories: UserPreferences.Bindings.trackedDirectories))
-        //        window.contentView?.setContentCompressionResistancePriority(.required, for: .vertical)
         
         return window
     }
@@ -128,5 +128,13 @@ extension AppDelegate {
     @objc
     func didPressMenuBarButton(sender: Any) {
         runInForeground()
+    }
+}
+
+
+
+private extension AppDelegate {
+    func startMonitoring() {
+        UserPreferences.Bindings.trackedDirectories.on
     }
 }

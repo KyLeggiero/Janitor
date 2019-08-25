@@ -26,7 +26,7 @@
 		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
 		A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */; };
 		A3E5487722E03D1500FE7565 /* Image Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5487622E03D1500FE7565 /* Image Constants.swift */; };
-		A3F3784522E18BC100642A90 /* AllWatchedFoldersSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784422E18BC100642A90 /* AllWatchedFoldersSettingsView.swift */; };
+		A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */; };
 		A3F3784C22E1990100642A90 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784B22E1990100642A90 /* Color Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +107,7 @@
 		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 		A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderEditView.swift; sourceTree = "<group>"; };
 		A3E5487622E03D1500FE7565 /* Image Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Constants.swift"; sourceTree = "<group>"; };
-		A3F3784422E18BC100642A90 /* AllWatchedFoldersSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersSettingsView.swift; sourceTree = "<group>"; };
+		A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersView.swift; sourceTree = "<group>"; };
 		A3F3784B22E1990100642A90 /* Color Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A3739E1D22EA46EE002E7B49 /* AppKit Bridges */,
-				A3F3784422E18BC100642A90 /* AllWatchedFoldersSettingsView.swift */,
+				A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */,
 				A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */,
 				A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */,
 				A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */,
@@ -430,7 +430,7 @@
 				A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */,
 				A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */,
 				A3F3784C22E1990100642A90 /* Color Constants.swift in Sources */,
-				A3F3784522E18BC100642A90 /* AllWatchedFoldersSettingsView.swift in Sources */,
+				A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */,
 				A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */,
 				A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */,
 				A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */,
