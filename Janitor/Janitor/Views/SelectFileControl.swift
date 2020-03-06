@@ -13,15 +13,15 @@ import JanitorKit
 
 struct SelectFileControl: View {
     
-    @Inout
+    @Binding
     var selectedFile: URL?
     
     var body: some View {
         HStack {
             Button("Select", action: self.didPressSelectFileButton)
                 .controlSize(.small)
-            #if swift(>=5.1.1)
-            if let selectedFile = self.selectedFile.value {
+            #if swift(>=5.3)
+            if let selectedFile = self.selectedFile {
                 PathControlView(url: selectedFile)
             }
             else {
@@ -30,7 +30,7 @@ struct SelectFileControl: View {
             }
             #else
             if selectedFile != nil {
-                PathControlView(url: selectedFile!) // 🤮 I hope they fix this before SwiftUI goes public
+                PathControlView(url: selectedFile!) // 🤮 I hope they fix this soon
             }
             else {
                 Text("📂")

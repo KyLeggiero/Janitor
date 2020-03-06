@@ -14,7 +14,7 @@ import JanitorKit
 
 struct WatchedFolderView: View {
     
-    @Inout
+    @Binding
     var trackedDirectory: TrackedDirectory
 
     var onDidPressEditButton: OnDidPressEditButton
@@ -23,9 +23,7 @@ struct WatchedFolderView: View {
     @State
     private var isPopoverShown = false
     
-    private var isEnabledCheckboxState: Inout<Checkbox.State>
-    
-    init(trackedDirectory: Inout<TrackedDirectory>,
+    init(trackedDirectory: Binding<TrackedDirectory>,
          onDidPressEditButton: @escaping OnDidPressEditButton,
          onDidPressDeleteButton: @escaping OnDidPressDeleteButton) {
         
@@ -33,12 +31,6 @@ struct WatchedFolderView: View {
         self.onDidPressDeleteButton = onDidPressDeleteButton
         
         self._trackedDirectory = trackedDirectory
-        
-        self.isEnabledCheckboxState = .constant(.indeterminate)
-        self.isEnabledCheckboxState = Inout(
-            get: checkBoxStateBasedOnEnabled,
-            set: updateEnabledBasedOnCheckboxState
-        )
     }
     
     
@@ -68,7 +60,13 @@ struct WatchedFolderView: View {
                 PathControlView(url: trackedDirectory.url)
                     .frame(minWidth: 100, idealWidth: 200, minHeight: 16, idealHeight: 16, alignment: .leading)
                 
-                Checkbox(title: "Disabled", alternateTitle: "Enabled", state: isEnabledCheckboxState, alignment: .checkboxTrailing)
+                Toggle(
+                    isOn: Binding(
+                        get: { self.trackedDirectory.isEnabled },
+                        set: { self.trackedDirectory.isEnabled = $0 }
+                    ),
+                    label: { Text(self.trackedDirectory.isEnabled ? "Enabled" : "Disabled") })
+//                Checkbox(title: "Disabled", alternateTitle: "Enabled", state: isEnabledCheckboxState, alignment: .checkboxTrailing)
             }
         }
             .padding(.horizontal, 10)
@@ -87,22 +85,6 @@ struct WatchedFolderView: View {
 //                .fill(Color.watchedFolderSettingsBackground)
 //                .border(Color.watchedFolderSettingsBorder)
 //            )
-    }
-    
-    
-    private func checkBoxStateBasedOnEnabled() -> Checkbox.State {
-        return .init(self.trackedDirectory.isEnabled)
-    }
-    
-    
-    private func updateEnabledBasedOnCheckboxState(_ newState: Checkbox.State) {
-        switch newState {
-        case .checked:
-            self.trackedDirectory.isEnabled = true
-            
-        case .unchecked, .indeterminate:
-            self.trackedDirectory.isEnabled = false
-        }
     }
     
     

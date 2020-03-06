@@ -13,22 +13,22 @@ import JanitorKit
 
 struct ContentView: View {
     
-    @Inout
+    @Binding
     var trackedDirectories: [TrackedDirectory]
 
     @State
     private var currentlyEditedDirectory: TrackedDirectory? = nil
 
 
-    init(trackedDirectories: Inout<[TrackedDirectory]>) {
+    init(trackedDirectories: Binding<[TrackedDirectory]>) {
         self._trackedDirectories = trackedDirectories
     }
     
     
     var body: some View {
-        VStack(alignment: HorizontalAlignment.center) {
+        VStack(alignment: .center) {
             AllWatchedFoldersView(trackedDirectories: $trackedDirectories,
-                                          currentlyEditedDirectory: $currentlyEditedDirectory)
+                                  currentlyEditedDirectory: $currentlyEditedDirectory)
             Button(
                 action: {
                     self.currentlyEditedDirectory = TrackedDirectory.default()
@@ -55,13 +55,13 @@ struct ContentView: View {
     
     
     func sheetContent(currentlyEditedDirectory: TrackedDirectory) -> some View {
-        var currentlyEditedDirectory: TrackedDirectory = currentlyEditedDirectory
-        let trackedDirectoryBinding = Binding(
+        var currentlyEditedDirectory = currentlyEditedDirectory
+        let currentlyEditedDirectoryBinding = Binding(
             get: { currentlyEditedDirectory },
             set: { currentlyEditedDirectory = $0 }
         )
         return WatchedFolderEditView(
-            trackedDirectory: trackedDirectoryBinding,
+            trackedDirectory: currentlyEditedDirectoryBinding,
             onComplete: { newTrackedDirectory in
                 self.currentlyEditedDirectory = nil
                 if let newTrackedDirectory = newTrackedDirectory {

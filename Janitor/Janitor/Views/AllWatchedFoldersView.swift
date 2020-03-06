@@ -13,33 +13,27 @@ import JanitorKit
 
 struct AllWatchedFoldersView: View {
     
-    @Inout
+    @Binding
     var trackedDirectories: [TrackedDirectory]
     
-    @Inout
+    @Binding
     var currentlyEditedDirectory: TrackedDirectory?
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack {
-                ForEach(_trackedDirectories) { (trackedDirectory: Inout<TrackedDirectory>) -> WatchedFolderView in
-                    WatchedFolderView(trackedDirectory: trackedDirectory,
-                                              onDidPressEditButton: { self.beginEditing(trackedDirectory) },
-                                              onDidPressDeleteButton: { self.delete(trackedDirectory.value) })
+                ForEach(trackedDirectories) { trackedDirectory in
+                    WatchedFolderView(
+                        trackedDirectory: Binding(
+                            get: { self.trackedDirectories[trackedDirectory.id] ?? trackedDirectory },
+                            set: { self.trackedDirectories.replaceOrAppend($0) }),
+                        onDidPressEditButton:   { self.currentlyEditedDirectory = trackedDirectory },
+                        onDidPressDeleteButton: { self.trackedDirectories.remove(firstElementWithId: trackedDirectory.id) }
+                    )
                 }
             }
         }
         .frame(minHeight: 100)
-    }
-    
-    
-    func beginEditing(_ directoryToBeEdited: Inout<TrackedDirectory>) {
-        self.currentlyEditedDirectory = directoryToBeEdited.value
-    }
-    
-    
-    func delete(_ trackedDirectory: TrackedDirectory) {
-        trackedDirectories.remove(firstElementWithId: trackedDirectory.id)
     }
 }
 
@@ -47,7 +41,7 @@ struct AllWatchedFoldersView: View {
 struct AllWatchedFoldersSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         AllWatchedFoldersView(trackedDirectories: .constant([.default()]),
-                                      currentlyEditedDirectory: .constant(nil)
+                              currentlyEditedDirectory: .constant(nil)
         )
     }
 }

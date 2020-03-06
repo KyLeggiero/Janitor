@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Atomic",
+        "repositoryURL": "https://github.com/RougeWare/Swift-Atomic.git",
+        "state": {
+          "branch": null,
+          "revision": "9e272359c739faefcbe4d45a42a6ad09afb8d13e",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "LazyContainers",
+        "repositoryURL": "https://github.com/RougeWare/Swift-Lazy-Patterns.git",
+        "state": {
+          "branch": null,
+          "revision": "20ae92c62e844cbb2e1e17261641d2cc176e224d",
+          "version": "3.0.1"
+        }
+      },
+      {
+        "package": "PropertyWrapper Protocol",
+        "repositoryURL": "https://github.com/RougeWare/Swift-PropertyWrapper-Protocol.git",
+        "state": {
+          "branch": null,
+          "revision": "06cb74f4e08db89a7c3a6f7d8301d2cbfc0cbe58",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SafePointer",
+        "repositoryURL": "https://github.com/RougeWare/Swift-Safe-Pointer.git",
+        "state": {
+          "branch": null,
+          "revision": "18faa4b850a9b8ebc9a23e2801b5abff752bd90c",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "TODO",
+        "repositoryURL": "https://github.com/RougeWare/Swift-TODO.git",
+        "state": {
+          "branch": null,
+          "revision": "8d227a03c493f1382a638bb7573510be24f789a3",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

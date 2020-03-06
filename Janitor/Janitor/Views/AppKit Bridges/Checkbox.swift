@@ -19,12 +19,12 @@ struct Checkbox: NSViewRepresentable {
     
     var title: String
     var alternateTitle: String?
-    var state: Inout<State>
+    var state: Binding<State>
     var alignment: Alignment
     private var shim: Shim!
     
     
-    init(title: String, alternateTitle: String? = nil, state: Inout<State>, alignment: Alignment = .checkboxLeading) {
+    init(title: String, alternateTitle: String? = nil, state: Binding<State>, alignment: Alignment = .checkboxLeading) {
         self.title = title
         self.alternateTitle = alternateTitle
         self.state = state
@@ -45,14 +45,14 @@ struct Checkbox: NSViewRepresentable {
         checkbox.alternateTitle = alternateTitle ?? ""
         checkbox.imagePosition = .init(alignment)
         checkbox.alignment = .init(alignment)
-        checkbox.state = state.value.nsControlState
+        checkbox.state = state.wrappedValue.nsControlState
         checkbox.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         checkbox.setContentHuggingPriority(.required, for: .horizontal)
     }
     
     
     private func shimDidRegisterPress(newState: NSControl.StateValue) {
-        self.state.value = State(newState)
+        self.state.wrappedValue = State(newState)
     }
     
     

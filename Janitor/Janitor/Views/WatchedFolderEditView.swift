@@ -17,7 +17,7 @@ struct WatchedFolderEditView: View {
 //    @State var selectedFile: URL? = nil
 //    @State var age: Age = 30.days
     
-    @Inout
+    @Binding
     var trackedDirectory: TrackedDirectory
     
     @BoundPointer
@@ -48,9 +48,9 @@ struct WatchedFolderEditView: View {
         self._trackedDirectory = trackedDirectory
         self.onComplete = onComplete
         
-        self._trackedDirectory_url = .init(wrappedValue: trackedDirectory.value.url)
-        self._trackedDirectory_oldestAllowedAge = .init(wrappedValue: trackedDirectory.value.oldestAllowedAge)
-        self._trackedDirectory_largestAllowedTotalSize = .init(wrappedValue: trackedDirectory.value.largestAllowedTotalSize)
+        self._trackedDirectory_url = .init(wrappedValue: trackedDirectory.wrappedValue.url)
+        self._trackedDirectory_oldestAllowedAge = .init(wrappedValue: trackedDirectory.wrappedValue.oldestAllowedAge)
+        self._trackedDirectory_largestAllowedTotalSize = .init(wrappedValue: trackedDirectory.wrappedValue.largestAllowedTotalSize)
         
         self._trackedDirectory_url.didSet = setTrackedDirectoryUrlOnPointerDidSet
         self._trackedDirectory_oldestAllowedAge.didSet = setTrackedDirectoryOldestAllowedAge

@@ -1,0 +1,34 @@
+//
+//  Janitor__AppKit_Tests.swift
+//  Janitor (AppKit)Tests
+//
+//  Created by Ben Leggiero on 2020-03-05.
+//  Copyright © 2020 Ben Leggiero. All rights reserved.
+//
+
+import XCTest
+@testable import Janitor__AppKit_
+
+class Janitor__AppKit_Tests: XCTestCase {
+
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
+    func testPerformanceExample() throws {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+
+}

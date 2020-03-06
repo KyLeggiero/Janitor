@@ -7,16 +7,26 @@
 //
 
 import Cocoa
+#if PrefersSwiftUI
 import SwiftUI
+#endif
 import JanitorKit
+import Atomic
 
 
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    #if PrefersSwiftUI
     lazy var window: NSWindow = generateWindow()
+    #else
+    @IBOutlet
+    var window: NSWindow!
+    #endif
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    @Atomic(wrappedValue: [], queue: DispatchQueue(label: "Janitorial Engine Mutation Lock", qos: .utility))
+    var engines: [JanitorialEngine]
     
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -80,25 +90,32 @@ extension AppDelegate {
     
     
     private func generateAndShowWindow() {
+        configure(window: window)
         window.makeKeyAndOrderFront(self)
     }
     
     
+    #if PrefersSwiftUI
     private func generateWindow() -> NSWindow {
         let window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
             styleMask: [.titled, .closable, .miniaturizable, .resizable],
             backing: .buffered, defer: false)
+        
+        window.contentView = NSHostingView(rootView: ContentView(trackedDirectories: UserPreferences.Bindings.trackedDirectories))
+        
+        return window
+    }
+    #endif
+    
+    
+    private func configure(window: NSWindow) {
         window.center()
         window.title = "Janitor"
         window.tabbingMode = .disallowed
         window.isReleasedWhenClosed = false
         window.delegate = self
-        window.titlebarAppearsTransparent = true;
-        
-        window.contentView = NSHostingView(rootView: ContentView(trackedDirectories: UserPreferences.Bindings.trackedDirectories))
-        
-        return window
+        window.titlebarAppearsTransparent = true
     }
 }
 
@@ -134,7 +151,25 @@ extension AppDelegate {
 
 
 private extension AppDelegate {
+    
     func startMonitoring() {
-        UserPreferences.Bindings.trackedDirectories.on
+        _engines.performUnsafeOperation { engines in
+            UserPreferences.trackedDirectories.forEach { directory in
+                engines.append(JanitorialEngine(trackedDirectory: directory,
+                                                checkingInterval: TimeInterval(UserPreferences.checkingDelay)))
+            }
+        }
+        
+        
+        UserPreferences.onTrackedDirectoriesDidChange { _ in
+            self.stopMonitoring()
+            self.startMonitoring()
+            return .thisIsTheTailEndOfTheCallbackChain
+        }
+    }
+    
+    
+    func stopMonitoring() {
+        self.engines = []
     }
 }

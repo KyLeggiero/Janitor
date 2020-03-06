@@ -13,9 +13,9 @@ import JanitorKit
 
 struct MeasurementPicker<Unit: MeasurementUnit>: View {
     
-    private var value: Inout<Measurement.Value>
+    private var value: Binding<Measurement.Value>
     
-    private var unit: Inout<Unit>
+    private var unit: Binding<Unit>
     
     /// A short string of text describing the context of the picker. For instance, if picking an age, this might be `"No older than"` or `"At least"`
     var preamble: String?
@@ -30,13 +30,13 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
     private var valueForFormatter: Binding<NSNumber>
     
     
-    init(preamble: String?, measurement initialMeasurement: Inout<Measurement>, presentedUnits: PresentedUnits = Unit.allCases, postamble: String?) {
+    init(preamble: String?, measurement initialMeasurement: Binding<Measurement>, presentedUnits: PresentedUnits = Unit.allCases, postamble: String?) {
         
         self.preamble = preamble
         self.presentedUnits = presentedUnits
         self.postamble = postamble
         
-        self.value = Inout(
+        self.value = Binding(
             get: {
                 return initialMeasurement.wrappedValue.value
             },
@@ -45,9 +45,9 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
             }
         )
         
-        self.unit = Inout(
+        self.unit = Binding(
             get: {
-                return initialMeasurement.value.unit
+                return initialMeasurement.wrappedValue.unit
             },
             set: { newUnit in
                 initialMeasurement.wrappedValue.unit = newUnit//Measurement(value: initialMeasurement.wrappedValue.value, unit: newUnit)
@@ -68,7 +68,7 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
             TextField("value", value: value, formatter: numberFormatter)
             Picker("", selection: unit, content: {
                 ForEach(presentedUnits) { ageUnit in
-                    Text(ageUnit.name.text(whenAmountIs: self.value.value).localizedCapitalized).tag(ageUnit)
+                    Text(ageUnit.name.text(whenAmountIs: self.value.wrappedValue).localizedCapitalized).tag(ageUnit)
                 }
             })
                 .pickerStyle(PopUpButtonPickerStyle())
@@ -93,8 +93,8 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
     }()
     
     
-    private func nsNumberValue() -> NSNumber { NSNumber(value: value.value) }
-    private nonmutating func setNsNumberValue(newValue: NSNumber) { value.value = .init(truncating: newValue) }
+    private func nsNumberValue() -> NSNumber { NSNumber(value: value.wrappedValue) }
+    private nonmutating func setNsNumberValue(newValue: NSNumber) { value.wrappedValue = .init(truncating: newValue) }
     
     
     
