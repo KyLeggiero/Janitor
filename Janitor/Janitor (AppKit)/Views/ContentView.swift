@@ -1,8 +1,8 @@
 //
-//  AllWatchedFoldersView.swift
+//  ContentView.swift
 //  Janitor (AppKit)
 //
-//  Created by Ben Leggiero on 2020-03-05.
+//  Created by Ben Leggiero on 2020-03-06.
 //  Copyright © 2020 Ben Leggiero. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import JanitorKit
 
 
 
-public class AllWatchedFoldersView: View {
+class ContentView: View {
     
     var trackedDirectories: [TrackedDirectory] = [] {
         didSet {
@@ -32,16 +32,6 @@ public class AllWatchedFoldersView: View {
     
     
     public var body: some NSView {
-        NSScrollView {
-            NSStackView(orientation: .vertical, views: watchedFolderViews)
-                .fullWidthViews()
-        }
-        .verticallyScrollingContent()
-        .background(.clear)
-    }
-    
-    
-    private var watchedFolderViews: [WatchedFolderView] {
-        trackedDirectories.map { WatchedFolderView(trackedDirectory: $0) }
+        AllWatchedFoldersView(trackedDirectories: trackedDirectories)
     }
 }

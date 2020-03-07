@@ -10,6 +10,14 @@
 		A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A422E1047800DAC82D /* WatchedFolderView.swift */; };
 		A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A622E1052F00DAC82D /* PathControlView.swift */; };
 		A32740A922E1068700DAC82D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A822E1068700DAC82D /* Checkbox.swift */; };
+		A328E2512412916E00109432 /* WatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2502412916E00109432 /* WatchedFolderView.swift */; };
+		A328E253241292D000109432 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E252241292D000109432 /* ContentView.swift */; };
+		A328E2552412B53300109432 /* NSScrollView sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2542412B53300109432 /* NSScrollView sugar.swift */; };
+		A328E2572412B62600109432 /* NSStackView sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2562412B62600109432 /* NSStackView sugar.swift */; };
+		A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */; };
+		A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25F24143A6C00109432 /* NSBox sugar.swift */; };
+		A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
+		A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
 		A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD122DFE5670097FFAD /* AppDelegate.swift */; };
 		A3709FD422DFE5670097FFAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD322DFE5670097FFAD /* ContentView.swift */; };
 		A3709FD622DFE5690097FFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3709FD522DFE5690097FFAD /* Assets.xcassets */; };
@@ -100,6 +108,13 @@
 		A32740A422E1047800DAC82D /* WatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderView.swift; sourceTree = "<group>"; };
 		A32740A622E1052F00DAC82D /* PathControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathControlView.swift; sourceTree = "<group>"; };
 		A32740A822E1068700DAC82D /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		A328E2502412916E00109432 /* WatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderView.swift; sourceTree = "<group>"; };
+		A328E252241292D000109432 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A328E2542412B53300109432 /* NSScrollView sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScrollView sugar.swift"; sourceTree = "<group>"; };
+		A328E2562412B62600109432 /* NSStackView sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStackView sugar.swift"; sourceTree = "<group>"; };
+		A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint sugar.swift"; sourceTree = "<group>"; };
+		A328E25F24143A6C00109432 /* NSBox sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBox sugar.swift"; sourceTree = "<group>"; };
+		A34E61062411F920002C4B3B /* TODO returning anything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TODO returning anything.swift"; sourceTree = "<group>"; };
 		A3709FCE22DFE5670097FFAD /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3709FD122DFE5670097FFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3709FD322DFE5670097FFAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,8 +212,25 @@
 				A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */,
 				A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */,
 				A32740A422E1047800DAC82D /* WatchedFolderView.swift */,
+				A3709FD322DFE5670097FFAD /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A34E61042411F908002C4B3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A34E61052411F910002C4B3B /* TODO */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A34E61052411F910002C4B3B /* TODO */ = {
+			isa = PBXGroup;
+			children = (
+				A34E61062411F920002C4B3B /* TODO returning anything.swift */,
+			);
+			path = TODO;
 			sourceTree = "<group>";
 		};
 		A3709FC522DFE5660097FFAD = {
@@ -234,7 +266,6 @@
 			children = (
 				A32740A322E1045C00DAC82D /* Views */,
 				A3709FD122DFE5670097FFAD /* AppDelegate.swift */,
-				A3709FD322DFE5670097FFAD /* ContentView.swift */,
 				A3CA12C22411DF8E00FDD938 /* Shared Startup Stuff.swift */,
 				A3709FD522DFE5690097FFAD /* Assets.xcassets */,
 				A3709FDA22DFE5690097FFAD /* Main.storyboard */,
@@ -326,6 +357,7 @@
 		A3CA12C52411E6AB00FDD938 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A34E61042411F908002C4B3B /* Extensions */,
 				A3CA12C62411E6B200FDD938 /* Constants */,
 			);
 			path = Shared;
@@ -344,6 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */,
+				A328E2502412916E00109432 /* WatchedFolderView.swift */,
+				A328E252241292D000109432 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,6 +386,10 @@
 			isa = PBXGroup;
 			children = (
 				A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */,
+				A328E2542412B53300109432 /* NSScrollView sugar.swift */,
+				A328E2562412B62600109432 /* NSStackView sugar.swift */,
+				A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */,
+				A328E25F24143A6C00109432 /* NSBox sugar.swift */,
 			);
 			path = Sugar;
 			sourceTree = "<group>";
@@ -584,6 +622,7 @@
 				A32740A922E1068700DAC82D /* Checkbox.swift in Sources */,
 				A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */,
 				A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */,
+				A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */,
 				A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */,
 				A3CA12CC2411E6C800FDD938 /* Color Constants.swift in Sources */,
 				A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */,
@@ -622,8 +661,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */,
+				A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */,
 				A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */,
+				A328E2572412B62600109432 /* NSStackView sugar.swift in Sources */,
+				A328E253241292D000109432 /* ContentView.swift in Sources */,
 				A3CA12CF2411E77000FDD938 /* AllWatchedFoldersView.swift in Sources */,
+				A328E2512412916E00109432 /* WatchedFolderView.swift in Sources */,
+				A328E2552412B53300109432 /* NSScrollView sugar.swift in Sources */,
+				A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */,
 				A3CA12C42411E3F900FDD938 /* AppDelegate.swift in Sources */,
 				A3CA12D22411E83800FDD938 /* NSView but more like SwiftUI View.swift in Sources */,
 				A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */,
@@ -727,6 +773,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -740,6 +789,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Debug;
 		};
@@ -781,6 +831,9 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -793,6 +846,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Release;
 		};

@@ -116,6 +116,10 @@ extension AppDelegate {
         window.isReleasedWhenClosed = false
         window.delegate = self
         window.titlebarAppearsTransparent = true
+        
+        #if PrefersAppKit
+        window.contentView = ContentView(trackedDirectories: UserPreferences.trackedDirectories)
+        #endif
     }
 }
 
