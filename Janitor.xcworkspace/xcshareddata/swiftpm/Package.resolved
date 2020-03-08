@@ -29,12 +29,30 @@
         }
       },
       {
+        "package": "MultiplicativeArithmetic",
+        "repositoryURL": "https://github.com/RougeWare/Swift-MultiplicativeArithmetic.git",
+        "state": {
+          "branch": null,
+          "revision": "38eee08151bbbefbbb422d02ff2c8da1a8b8bfe1",
+          "version": "1.3.0"
+        }
+      },
+      {
         "package": "PropertyWrapper Protocol",
         "repositoryURL": "https://github.com/RougeWare/Swift-PropertyWrapper-Protocol.git",
         "state": {
           "branch": null,
           "revision": "06cb74f4e08db89a7c3a6f7d8301d2cbfc0cbe58",
           "version": "1.0.0"
+        }
+      },
+      {
+        "package": "RectangleTools",
+        "repositoryURL": "https://github.com/RougeWare/Swift-Rectangle-Tools.git",
+        "state": {
+          "branch": null,
+          "revision": "bd3fbcf9c327838cb5eddc3a3ba38cb5f0ed8c37",
+          "version": "2.5.0"
         }
       },
       {

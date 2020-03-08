@@ -33,10 +33,10 @@ public class AllWatchedFoldersView: View {
     
     public var body: some NSView {
         NSScrollView {
-            NSStackView(orientation: .vertical, views: watchedFolderViews)
+            VStack(watchedFolderViews)
                 .fullWidthViews()
         }
-        .verticallyScrollingContent()
+        .verticallyScrollingContent(padding: NSEdgeInsets(each: 20))
         .background(.clear)
     }
     

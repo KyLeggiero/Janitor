@@ -47,15 +47,7 @@ public extension ViewProtocol {
     func rebuild() {
         self.subviews.forEach { $0.removeFromSuperview() }
         
-        let soleSubview = self.body
-        self.addSubview(soleSubview)
-        soleSubview.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            soleSubview.topAnchor.constraint(equalTo: topAnchor),
-            soleSubview.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bottomAnchor.constraint(equalTo: soleSubview.bottomAnchor),
-            trailingAnchor.constraint(equalTo: soleSubview.trailingAnchor)
-        ])
+        self.fill(withNewSubview: self.body)
     }
 }
 
@@ -90,6 +82,23 @@ extension NSView: SugaryView {
     public func background(_ color: NativeColor) -> Self {
         self.wantsLayer = true
         self.layer?.backgroundColor = color.cgColor
+        return self
+    }
+    
+    
+    @discardableResult
+    public func huggingPriority(_ huggingPriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> Self {
+        self.setContentHuggingPriority(huggingPriority, for: orientation)
+        return self
+    }
+}
+
+
+
+extension NSControl {
+    @discardableResult
+    public func enabled(_ newEnabled: Bool) -> Self {
+        self.isEnabled = newEnabled
         return self
     }
 }

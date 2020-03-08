@@ -32,15 +32,15 @@ public extension NSScrollView {
     
     
     @discardableResult
-    func verticallyScrollingContent() -> Self {
+    func verticallyScrollingContent(padding: NSEdgeInsets = .zero) -> Self {
         if let documentView = self.documentView {
             documentView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                documentView.topAnchor.constraint(equalTo: contentView.topAnchor).priority(.required),
-                documentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                contentView.trailingAnchor.constraint(equalTo: documentView.trailingAnchor),
+                documentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding.top).priority(.required),
+                contentView.leadingAnchor.constraint(equalTo: documentView.leadingAnchor, constant: padding.leading),
+                contentView.trailingAnchor.constraint(equalTo: documentView.trailingAnchor, constant: padding.trailing),
                 
-                documentView.heightAnchor.constraint(greaterThanOrEqualTo: contentView.heightAnchor),
+                documentView.heightAnchor.constraint(greaterThanOrEqualTo: contentView.heightAnchor, constant: -padding.bottom),
             ])
         }
         return self
