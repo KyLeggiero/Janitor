@@ -18,11 +18,11 @@ public extension NSStackView {
     
     
     @discardableResult
-    func fullWidthViews() -> Self {
+    func fullWidthViews(padding: NSEdgeInsets = .zero) -> Self {
         self.arrangedSubviews.forEach { view in
             NSLayoutConstraint.activate([
-                view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                self.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                view.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding.leading),
+                self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: padding.trailing)
             ])
         }
         return self

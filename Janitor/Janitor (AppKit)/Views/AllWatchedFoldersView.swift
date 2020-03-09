@@ -11,12 +11,14 @@ import JanitorKit
 
 
 
+private let padding: CGFloat = 12
+
+
+
 public class AllWatchedFoldersView: View {
     
     var trackedDirectories: [TrackedDirectory] = [] {
-        didSet {
-            rebuild()
-        }
+        didSet { rebuild() }
     }
     
     
@@ -34,9 +36,9 @@ public class AllWatchedFoldersView: View {
     public var body: some NSView {
         NSScrollView {
             VStack(watchedFolderViews)
-                .fullWidthViews()
+                .fullWidthViews(padding: NSEdgeInsets(each: padding))
         }
-        .verticallyScrollingContent(padding: NSEdgeInsets(each: 20))
+        .verticallyScrollingContent(padding: NSEdgeInsets(each: padding))
         .background(.clear)
     }
     
