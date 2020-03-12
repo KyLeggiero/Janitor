@@ -9,6 +9,7 @@
 import Cocoa
 import JanitorKit
 import CrossKitTypes
+import AttributedStringBuilder
 
 
 
@@ -31,9 +32,18 @@ class WatchedFolderView: View {
     
     
     var body: some NSView {
-        NSBox(title: nil, padding: NSEdgeInsets(eachVertical: 6, eachHorizontal: 10)) {
+        NSBox(title: nil, padding: NSEdgeInsets(eachVertical: 0, eachHorizontal: 4)) {
             VStack(alignment: .leading) {
-                NSTextField(labelWithAttributedString: configurationDescription)
+                HStack {
+                    NSTextField(labelWithAttributedString: configurationDescription)
+                    NSButton(title: "􀁜", target: self, action: #selector(didPressInfoButton))
+                        .borderless()
+                    Spacer()
+                    NSButton(title: "􀈊", target: self, action: #selector(didPressEditButton))
+                        .borderless()
+                    NSButton(title: "􀈑", target: self, action: #selector(didPressDeleteButton))
+                        .borderless()
+                }
                 NSPathControl(trackedDirectory.url)
                     .enabled(false)
             }
@@ -44,10 +54,38 @@ class WatchedFolderView: View {
     
     
     var configurationDescription: NSAttributedString {
-        let mutableString = NSMutableAttributedString()
-        mutableString.append(NSAttributedString(string: trackedDirectory.oldestAllowedAge.description))
-        mutableString.append(NSAttributedString(string: " – ", attributes: [.foregroundColor : NativeColor.secondaryLabelColor]))
-        mutableString.append(NSAttributedString(string: trackedDirectory.largestAllowedTotalSize.description))
-        return mutableString
+        NSAttributedString {
+            trackedDirectory.url.lastPathComponent
+                .font(NativeFont.boldSystemFont(ofSize: NativeFont.systemFontSize))
+            
+            " – ".foregroundColor(.secondaryLabelColor)
+            
+            trackedDirectory.oldestAllowedAge.description
+            
+            " – ".foregroundColor(.secondaryLabelColor)
+            
+            trackedDirectory.largestAllowedTotalSize.description
+        }
+    }
+}
+
+
+
+private extension WatchedFolderView {
+    @IBAction
+    func didPressInfoButton(sender _: NSButton) {
+        print("Info")
+    }
+    
+    
+    @IBAction
+    func didPressEditButton(sender _: NSButton) {
+        print("Edit")
+    }
+    
+    
+    @IBAction
+    func didPressDeleteButton(sender _: NSButton) {
+        print("Delete")
     }
 }

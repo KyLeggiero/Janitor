@@ -37,9 +37,9 @@ public func VStack(_ views: [NSView]) -> NSStackView {
 }
 
 
+@inline(__always)
 public func VStack<Echoed>(@NSViewBuilder _ builder: () -> Echoed) -> Echoed {
     builder()
-//    NSStackView(orientation: .vertical, views: [builder()])
 }
 
 
@@ -54,6 +54,20 @@ public func VStack(alignment: HorizontalAlignment = .center, @NSViewBuilder _ bu
 @inline(__always)
 public func HStack(_ views: [NSView]) -> NSStackView {
     NSStackView(orientation: .horizontal, views: views)
+}
+
+
+@inline(__always)
+public func HStack<Echoed>(@NSViewBuilder _ builder: () -> Echoed) -> Echoed {
+    builder()
+}
+
+
+public func HStack(alignment: VerticalAlignment = .center, @NSViewBuilder _ builder: () -> [NSView]) -> NSStackView {
+    let stack = NSStackView(orientation: .horizontal, views: builder())
+    stack.alignment = alignment.layoutAttribute
+    stack.setHuggingPriority(.required, for: .horizontal)
+    return stack
 }
 
 
@@ -82,7 +96,24 @@ public enum HorizontalAlignment {
         switch self {
         case .leading: return .leading
         case .center: return .centerX
-        case .trailing: return .centerY
+        case .trailing: return .trailing
+        }
+    }
+}
+
+
+
+public enum VerticalAlignment {
+    case top
+    case center
+    case bottom
+    
+    
+    var layoutAttribute: NSLayoutConstraint.Attribute {
+        switch self {
+        case .top: return .top
+        case .center: return .centerY
+        case .bottom: return .bottom
         }
     }
 }

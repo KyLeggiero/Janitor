@@ -36,6 +36,7 @@
 		A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */; };
 		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
 		A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBE178231CE60700966AF6 /* SwiftUI.framework */; };
+		A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */; };
 		A3CA12AA2411DF3500FDD938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CA12A92411DF3500FDD938 /* Assets.xcassets */; };
 		A3CA12AD2411DF3500FDD938 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3CA12AB2411DF3500FDD938 /* MainMenu.xib */; };
 		A3CA12B92411DF3600FDD938 /* Janitor__AppKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12B82411DF3600FDD938 /* Janitor__AppKit_Tests.swift */; };
@@ -144,6 +145,7 @@
 		A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
 		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 		A3BBE178231CE60700966AF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton sugar.swift"; sourceTree = "<group>"; };
 		A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Janitor (AppKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CA12A92411DF3500FDD938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3CA12AC2411DF3500FDD938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -401,12 +403,13 @@
 		A3CA12D02411E82700FDD938 /* Sugar */ = {
 			isa = PBXGroup;
 			children = (
-				A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */,
+				A328E25F24143A6C00109432 /* NSBox sugar.swift */,
+				A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */,
+				A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */,
+				A328E26124146BA100109432 /* NSPathControl sugar.swift */,
 				A328E2542412B53300109432 /* NSScrollView sugar.swift */,
 				A328E2562412B62600109432 /* NSStackView sugar.swift */,
-				A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */,
-				A328E25F24143A6C00109432 /* NSBox sugar.swift */,
-				A328E26124146BA100109432 /* NSPathControl sugar.swift */,
+				A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */,
 			);
 			path = Sugar;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				A3CA12C42411E3F900FDD938 /* AppDelegate.swift in Sources */,
 				A3CA12D22411E83800FDD938 /* NSView but more like SwiftUI View.swift in Sources */,
 				A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */,
+				A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */,
 				A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "AttributedStringBuilder",
+        "repositoryURL": "https://github.com/RougeWare/AttributedStringBuilder.git",
+        "state": {
+          "branch": "develop",
+          "revision": "d227fba8bc5145e5cebdf75b4eb1c37ae7576605",
+          "version": null
+        }
+      },
+      {
         "package": "Atomic",
         "repositoryURL": "https://github.com/RougeWare/Swift-Atomic.git",
         "state": {
@@ -24,8 +33,8 @@
         "repositoryURL": "https://github.com/RougeWare/Swift-Lazy-Patterns.git",
         "state": {
           "branch": null,
-          "revision": "20ae92c62e844cbb2e1e17261641d2cc176e224d",
-          "version": "3.0.1"
+          "revision": "df59ce2944def4b163f3d9b12c19c86b6f62e5e0",
+          "version": "3.0.2"
         }
       },
       {
@@ -60,8 +69,8 @@
         "repositoryURL": "https://github.com/RougeWare/Swift-Safe-Pointer.git",
         "state": {
           "branch": null,
-          "revision": "18faa4b850a9b8ebc9a23e2801b5abff752bd90c",
-          "version": "2.0.0"
+          "revision": "35a96bd9d1dd42ae1101341424c76c88a14da3f2",
+          "version": "2.0.1"
         }
       },
       {

@@ -12,6 +12,7 @@ import CrossKitTypes
 
 
 public extension NSScrollView {
+    @inlinable
     convenience init(_ provider: () -> NSView) {
         self.init()
         self.documentView = provider()
@@ -19,6 +20,7 @@ public extension NSScrollView {
     
     
     @discardableResult
+//    @inlinable // causes a segfault in the Swift compiler
     override func background(_ color: NativeColor) -> Self {
         if color.alphaComponent < 0.001 {
             self.drawsBackground = false
@@ -32,6 +34,7 @@ public extension NSScrollView {
     
     
     @discardableResult
+    @inlinable
     func verticallyScrollingContent(padding: NSEdgeInsets = .zero) -> Self {
         if let documentView = self.documentView {
             documentView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +52,8 @@ public extension NSScrollView {
 
 
 
-extension NSLayoutConstraint {
+public extension NSLayoutConstraint {
+    @inlinable
     func priority(_ priority: Priority) -> Self {
         self.priority = priority
         return self

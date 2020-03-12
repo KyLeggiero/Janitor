@@ -41,3 +41,27 @@ public extension NSView {
         return self
     }
 }
+
+
+
+public extension NSView {
+    
+    @discardableResult
+    func huggingPriority(_ huggingPriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> Self {
+        self.setContentHuggingPriority(huggingPriority, for: orientation)
+        return self
+    }
+    
+    
+    @discardableResult
+    func compressionResistancePriority(_ compressionResistancePriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> Self {
+        self.setContentCompressionResistancePriority(compressionResistancePriority, for: orientation)
+        return self
+    }
+}
+
+
+
+public extension NSLayoutConstraint.Priority {
+    static let lowest = NSLayoutConstraint.Priority.init(.leastNonzeroMagnitude)
+}

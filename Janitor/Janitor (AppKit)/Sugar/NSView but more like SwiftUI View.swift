@@ -84,13 +84,6 @@ extension NSView: SugaryView {
         self.layer?.backgroundColor = color.cgColor
         return self
     }
-    
-    
-    @discardableResult
-    public func huggingPriority(_ huggingPriority: NSLayoutConstraint.Priority, for orientation: NSLayoutConstraint.Orientation) -> Self {
-        self.setContentHuggingPriority(huggingPriority, for: orientation)
-        return self
-    }
 }
 
 
@@ -101,4 +94,15 @@ extension NSControl {
         self.isEnabled = newEnabled
         return self
     }
+}
+
+
+
+public func Spacer() -> some NSView {
+    let spacer = NSView()
+        .huggingPriority(.lowest, for: .horizontal)
+        .huggingPriority(.lowest, for: .vertical)
+        .compressionResistancePriority(.lowest, for: .horizontal)
+        .compressionResistancePriority(.lowest, for: .vertical)
+    return spacer
 }
