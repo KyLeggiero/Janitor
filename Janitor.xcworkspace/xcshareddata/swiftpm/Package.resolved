@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "Swift Drawing Tools",
+        "repositoryURL": "https://github.com/BenLeggiero/Swift-Drawing-Tools.git",
+        "state": {
+          "branch": "feature/MVP",
+          "revision": "3cf288a38e0c38835a98e2f9c35d7749e64affc7",
+          "version": null
+        }
+      },
+      {
         "package": "LazyContainers",
         "repositoryURL": "https://github.com/RougeWare/Swift-Lazy-Patterns.git",
         "state": {
@@ -60,8 +69,8 @@
         "repositoryURL": "https://github.com/RougeWare/Swift-Rectangle-Tools.git",
         "state": {
           "branch": null,
-          "revision": "bd3fbcf9c327838cb5eddc3a3ba38cb5f0ed8c37",
-          "version": "2.5.0"
+          "revision": "0bc598fb555e9b7d0569e31a2c5b1b2fb84aab84",
+          "version": "2.6.0"
         }
       },
       {
@@ -69,8 +78,8 @@
         "repositoryURL": "https://github.com/RougeWare/Swift-Safe-Pointer.git",
         "state": {
           "branch": null,
-          "revision": "35a96bd9d1dd42ae1101341424c76c88a14da3f2",
-          "version": "2.0.1"
+          "revision": "af940049d4de7fc0c1cdf42bcbb7670f3cd838c6",
+          "version": "2.1.1"
         }
       },
       {

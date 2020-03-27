@@ -17,8 +17,6 @@
 		A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */; };
 		A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25F24143A6C00109432 /* NSBox sugar.swift */; };
 		A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E26124146BA100109432 /* NSPathControl sugar.swift */; };
-		A328E268241472DA00109432 /* NSEdgeInsets + RectangleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E267241472DA00109432 /* NSEdgeInsets + RectangleTools.swift */; };
-		A328E26A2414738D00109432 /* FourSidedAbsolute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2692414738D00109432 /* FourSidedAbsolute.swift */; };
 		A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
 		A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
 		A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD122DFE5670097FFAD /* AppDelegate.swift */; };
@@ -34,6 +32,8 @@
 		A370A05022DFE79F0097FFAD /* JanitorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E1E22EA4765002E7B49 /* OpenPanel.swift */; };
 		A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */; };
+		A38C7BB0241E132900EC2F02 /* NSTextField Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */; };
+		A38C7BB2241E14B400EC2F02 /* NSFont sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */; };
 		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
 		A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBE178231CE60700966AF6 /* SwiftUI.framework */; };
 		A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */; };
@@ -119,8 +119,6 @@
 		A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint sugar.swift"; sourceTree = "<group>"; };
 		A328E25F24143A6C00109432 /* NSBox sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBox sugar.swift"; sourceTree = "<group>"; };
 		A328E26124146BA100109432 /* NSPathControl sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPathControl sugar.swift"; sourceTree = "<group>"; };
-		A328E267241472DA00109432 /* NSEdgeInsets + RectangleTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSEdgeInsets + RectangleTools.swift"; sourceTree = "<group>"; };
-		A328E2692414738D00109432 /* FourSidedAbsolute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSidedAbsolute.swift; sourceTree = "<group>"; };
 		A34E61062411F920002C4B3B /* TODO returning anything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TODO returning anything.swift"; sourceTree = "<group>"; };
 		A3709FCE22DFE5670097FFAD /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3709FD122DFE5670097FFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +141,8 @@
 		A370A04E22DFE79F0097FFAD /* JanitorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JanitorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3739E1E22EA4765002E7B49 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
 		A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
+		A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField Sugar.swift"; sourceTree = "<group>"; };
+		A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont sugar.swift"; sourceTree = "<group>"; };
 		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 		A3BBE178231CE60700966AF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton sugar.swift"; sourceTree = "<group>"; };
@@ -228,8 +228,6 @@
 		A328E266241472CB00109432 /* RectangleTools */ = {
 			isa = PBXGroup;
 			children = (
-				A328E267241472DA00109432 /* NSEdgeInsets + RectangleTools.swift */,
-				A328E2692414738D00109432 /* FourSidedAbsolute.swift */,
 			);
 			path = RectangleTools;
 			sourceTree = "<group>";
@@ -403,13 +401,15 @@
 		A3CA12D02411E82700FDD938 /* Sugar */ = {
 			isa = PBXGroup;
 			children = (
+				A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */,
 				A328E25F24143A6C00109432 /* NSBox sugar.swift */,
 				A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */,
+				A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */,
 				A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */,
 				A328E26124146BA100109432 /* NSPathControl sugar.swift */,
 				A328E2542412B53300109432 /* NSScrollView sugar.swift */,
 				A328E2562412B62600109432 /* NSStackView sugar.swift */,
-				A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */,
+				A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */,
 			);
 			path = Sugar;
 			sourceTree = "<group>";
@@ -681,22 +681,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38C7BB0241E132900EC2F02 /* NSTextField Sugar.swift in Sources */,
 				A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */,
 				A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */,
 				A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */,
-				A328E268241472DA00109432 /* NSEdgeInsets + RectangleTools.swift in Sources */,
 				A328E2572412B62600109432 /* NSStackView sugar.swift in Sources */,
 				A328E253241292D000109432 /* ContentView.swift in Sources */,
 				A3CA12CF2411E77000FDD938 /* AllWatchedFoldersView.swift in Sources */,
 				A328E2512412916E00109432 /* WatchedFolderView.swift in Sources */,
 				A328E2552412B53300109432 /* NSScrollView sugar.swift in Sources */,
 				A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */,
-				A328E26A2414738D00109432 /* FourSidedAbsolute.swift in Sources */,
 				A3CA12C42411E3F900FDD938 /* AppDelegate.swift in Sources */,
 				A3CA12D22411E83800FDD938 /* NSView but more like SwiftUI View.swift in Sources */,
 				A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */,
 				A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */,
 				A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */,
+				A38C7BB2241E14B400EC2F02 /* NSFont sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

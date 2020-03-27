@@ -22,20 +22,23 @@ public extension NSLayoutConstraint {
 
 public extension NSView {
     @discardableResult
-    func addConstraints(asSoleParentOfAlreadyAddedSubview subview: NSView, insets: NSEdgeInsets = .zero) -> Self {
+    func addConstraints(asSoleParentOfAlreadyAddedSubview subview: NSView, insets: NativeEdgeInsets = .zero) -> Self {
         subview.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             subview.topAnchor.constraint(equalTo: self.topAnchor, constant: insets.top),
             subview.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: insets.leading),
             self.bottomAnchor.constraint(equalTo: subview.bottomAnchor, constant: insets.bottom),
             self.trailingAnchor.constraint(equalTo: subview.trailingAnchor, constant: insets.trailing),
+            
+            subview.heightAnchor.constraint(greaterThanOrEqualToConstant: subview.fittingSize.height),
+            subview.widthAnchor.constraint(greaterThanOrEqualToConstant: subview.fittingSize.width),
         ])
         return self
     }
     
     
     @discardableResult
-    func fill(withNewSubview newSubview: NSView, insets: NSEdgeInsets = .zero) -> Self {
+    func fill(withNewSubview newSubview: NSView, insets: NativeEdgeInsets = .zero) -> Self {
         addSubview(newSubview)
         addConstraints(asSoleParentOfAlreadyAddedSubview: newSubview, insets: insets)
         return self

@@ -8,10 +8,11 @@
 
 import Cocoa
 import JanitorKit
+import RectangleTools
 
 
 
-private let padding: CGFloat = 12
+private let viewPadding: CGFloat = 12
 
 
 
@@ -36,9 +37,9 @@ public class AllWatchedFoldersView: View {
     public var body: some NSView {
         NSScrollView {
             VStack(watchedFolderViews)
-                .fullWidthViews(padding: NSEdgeInsets(each: padding))
+                .fullWidthViews(padding: NativeEdgeInsets(each: viewPadding))
         }
-        .verticallyScrollingContent(padding: NSEdgeInsets(each: padding))
+        .verticallyScrollingContent(padding: NativeEdgeInsets(each: viewPadding))
         .background(.clear)
     }
     

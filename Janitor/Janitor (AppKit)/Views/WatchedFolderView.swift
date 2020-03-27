@@ -10,6 +10,7 @@ import Cocoa
 import JanitorKit
 import CrossKitTypes
 import AttributedStringBuilder
+import SafePointer
 
 
 
@@ -19,10 +20,16 @@ class WatchedFolderView: View {
         didSet { rebuild() }
     }
     
+    @ObservableMutableSafePointer
+    var isPopoverShown = false
+    
     
     init(trackedDirectory: TrackedDirectory) {
         self.trackedDirectory = trackedDirectory
         super.init()
+        self._isPopoverShown.addObserver { (_, _) in
+            self.updateDisplay(ofPopoverWithId: "info")
+        }
     }
     
     
@@ -38,6 +45,8 @@ class WatchedFolderView: View {
                     NSTextField(labelWithAttributedString: configurationDescription)
                     NSButton(title: "􀁜", target: self, action: #selector(didPressInfoButton))
                         .borderless()
+                        .popover(withId: "info", parent: self, isPresented: _isPopoverShown, content: popoverContent)
+                    
                     Spacer()
                     NSButton(title: "􀈊", target: self, action: #selector(didPressEditButton))
                         .borderless()
@@ -74,7 +83,7 @@ class WatchedFolderView: View {
 private extension WatchedFolderView {
     @IBAction
     func didPressInfoButton(sender _: NSButton) {
-        print("Info")
+        isPopoverShown.toggle()
     }
     
     
@@ -87,5 +96,36 @@ private extension WatchedFolderView {
     @IBAction
     func didPressDeleteButton(sender _: NSButton) {
         print("Delete")
+    }
+}
+
+
+
+private extension WatchedFolderView {
+    func popoverContent() -> some NSView {
+        NSTextField {
+            "Items in the "
+                .font(.caption)
+                .foregroundColor(.secondaryLabelColor)
+            
+            trackedDirectory.url.lastPathComponent
+                .font(NativeFont.caption.weight(.black))
+            
+            " folder will be trashed\nif they are older than "
+                .font(.caption)
+                .foregroundColor(.secondaryLabelColor)
+            
+            trackedDirectory.oldestAllowedAge.description
+                .font(NativeFont.caption.weight(.black))
+            
+            "\nor if all items together total more than "
+                .font(.caption)
+                .foregroundColor(.secondaryLabelColor)
+            
+            trackedDirectory.largestAllowedTotalSize.description
+                .font(NativeFont.caption.weight(.black))
+        }
+        .allowTextWrapping(true)
+        .padding()
     }
 }
