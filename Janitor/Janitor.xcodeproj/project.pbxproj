@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30F2989242F10CD00B8CE31 /* SugaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2988242F10CD00B8CE31 /* SugaryView.swift */; };
+		A30F298B242F10F400B8CE31 /* EasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F298A242F10F400B8CE31 /* EasyView.swift */; };
+		A30F298D242F114600B8CE31 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F298C242F114600B8CE31 /* Spacer.swift */; };
+		A30F298F242F117A00B8CE31 /* HasPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F298E242F117A00B8CE31 /* HasPopover.swift */; };
+		A30F2991242F122200B8CE31 /* Rebuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2990242F122200B8CE31 /* Rebuildable.swift */; };
+		A30F2993242F123E00B8CE31 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2992242F123E00B8CE31 /* ViewProtocol.swift */; };
+		A30F2995242F125F00B8CE31 /* ViewProtocol + HasPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2994242F125F00B8CE31 /* ViewProtocol + HasPopover.swift */; };
+		A30F2997242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2996242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift */; };
+		A30F2999242F138600B8CE31 /* HasSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2998242F138600B8CE31 /* HasSheet.swift */; };
+		A30F299B242F1D4600B8CE31 /* WatchedFolderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F299A242F1D4600B8CE31 /* WatchedFolderEditView.swift */; };
 		A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A422E1047800DAC82D /* WatchedFolderView.swift */; };
 		A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A622E1052F00DAC82D /* PathControlView.swift */; };
 		A32740A922E1068700DAC82D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A822E1068700DAC82D /* Checkbox.swift */; };
@@ -17,6 +27,8 @@
 		A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */; };
 		A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25F24143A6C00109432 /* NSBox sugar.swift */; };
 		A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E26124146BA100109432 /* NSPathControl sugar.swift */; };
+		A3319DEC243A892800DCE6CC /* NSViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3319DEB243A892800DCE6CC /* NSViewBuilder.swift */; };
+		A3319E01243AC65000DCE6CC /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3319E00243AC65000DCE6CC /* MeasurementPicker.swift */; };
 		A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
 		A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
 		A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD122DFE5670097FFAD /* AppDelegate.swift */; };
@@ -35,6 +47,8 @@
 		A38C7BB0241E132900EC2F02 /* NSTextField Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */; };
 		A38C7BB2241E14B400EC2F02 /* NSFont sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */; };
 		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
+		A3A7590E243A45FF00E52B7B /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A7590D243A45FF00E52B7B /* SelectFileControl.swift */; };
+		A3A75910243A47F500E52B7B /* NSControl sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A7590F243A47F500E52B7B /* NSControl sugar.swift */; };
 		A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBE178231CE60700966AF6 /* SwiftUI.framework */; };
 		A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */; };
 		A3CA12AA2411DF3500FDD938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CA12A92411DF3500FDD938 /* Assets.xcassets */; };
@@ -47,7 +61,7 @@
 		A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C82411E6BD00FDD938 /* Color Constants.swift */; };
 		A3CA12CC2411E6C800FDD938 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C82411E6BD00FDD938 /* Color Constants.swift */; };
 		A3CA12CF2411E77000FDD938 /* AllWatchedFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */; };
-		A3CA12D22411E83800FDD938 /* NSView but more like SwiftUI View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */; };
+		A3CA12D22411E83800FDD938 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12D12411E83800FDD938 /* View.swift */; };
 		A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */; };
 		A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +123,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A30F2988242F10CD00B8CE31 /* SugaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugaryView.swift; sourceTree = "<group>"; };
+		A30F298A242F10F400B8CE31 /* EasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyView.swift; sourceTree = "<group>"; };
+		A30F298C242F114600B8CE31 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
+		A30F298E242F117A00B8CE31 /* HasPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasPopover.swift; sourceTree = "<group>"; };
+		A30F2990242F122200B8CE31 /* Rebuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rebuildable.swift; sourceTree = "<group>"; };
+		A30F2992242F123E00B8CE31 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		A30F2994242F125F00B8CE31 /* ViewProtocol + HasPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol + HasPopover.swift"; sourceTree = "<group>"; };
+		A30F2996242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol + Rebuildable.swift"; sourceTree = "<group>"; };
+		A30F2998242F138600B8CE31 /* HasSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSheet.swift; sourceTree = "<group>"; };
+		A30F299A242F1D4600B8CE31 /* WatchedFolderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderEditView.swift; sourceTree = "<group>"; };
 		A32740A422E1047800DAC82D /* WatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderView.swift; sourceTree = "<group>"; };
 		A32740A622E1052F00DAC82D /* PathControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathControlView.swift; sourceTree = "<group>"; };
 		A32740A822E1068700DAC82D /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -119,6 +143,8 @@
 		A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint sugar.swift"; sourceTree = "<group>"; };
 		A328E25F24143A6C00109432 /* NSBox sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBox sugar.swift"; sourceTree = "<group>"; };
 		A328E26124146BA100109432 /* NSPathControl sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPathControl sugar.swift"; sourceTree = "<group>"; };
+		A3319DEB243A892800DCE6CC /* NSViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewBuilder.swift; sourceTree = "<group>"; };
+		A3319E00243AC65000DCE6CC /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 		A34E61062411F920002C4B3B /* TODO returning anything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TODO returning anything.swift"; sourceTree = "<group>"; };
 		A3709FCE22DFE5670097FFAD /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3709FD122DFE5670097FFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +170,8 @@
 		A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField Sugar.swift"; sourceTree = "<group>"; };
 		A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont sugar.swift"; sourceTree = "<group>"; };
 		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
+		A3A7590D243A45FF00E52B7B /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
+		A3A7590F243A47F500E52B7B /* NSControl sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSControl sugar.swift"; sourceTree = "<group>"; };
 		A3BBE178231CE60700966AF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton sugar.swift"; sourceTree = "<group>"; };
 		A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Janitor (AppKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +186,7 @@
 		A3CA12C72411E6BD00FDD938 /* Image Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Constants.swift"; sourceTree = "<group>"; };
 		A3CA12C82411E6BD00FDD938 /* Color Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
 		A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersView.swift; sourceTree = "<group>"; };
-		A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView but more like SwiftUI View.swift"; sourceTree = "<group>"; };
+		A3CA12D12411E83800FDD938 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderEditView.swift; sourceTree = "<group>"; };
 		A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +239,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A30F2987242F10BE00B8CE31 /* NSView but more like SwiftUI View */ = {
+			isa = PBXGroup;
+			children = (
+				A3CA12D12411E83800FDD938 /* View.swift */,
+				A30F2988242F10CD00B8CE31 /* SugaryView.swift */,
+				A30F298A242F10F400B8CE31 /* EasyView.swift */,
+				A30F298C242F114600B8CE31 /* Spacer.swift */,
+				A30F298E242F117A00B8CE31 /* HasPopover.swift */,
+				A30F2998242F138600B8CE31 /* HasSheet.swift */,
+				A30F2990242F122200B8CE31 /* Rebuildable.swift */,
+				A30F2992242F123E00B8CE31 /* ViewProtocol.swift */,
+				A30F2994242F125F00B8CE31 /* ViewProtocol + HasPopover.swift */,
+				A30F2996242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift */,
+			);
+			path = "NSView but more like SwiftUI View";
+			sourceTree = "<group>";
+		};
 		A32740A322E1045C00DAC82D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,7 +436,10 @@
 		A3CA12CD2411E73F00FDD938 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A3A7590D243A45FF00E52B7B /* SelectFileControl.swift */,
+				A3319E00243AC65000DCE6CC /* MeasurementPicker.swift */,
 				A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */,
+				A30F299A242F1D4600B8CE31 /* WatchedFolderEditView.swift */,
 				A328E2502412916E00109432 /* WatchedFolderView.swift */,
 				A328E252241292D000109432 /* ContentView.swift */,
 			);
@@ -401,15 +449,17 @@
 		A3CA12D02411E82700FDD938 /* Sugar */ = {
 			isa = PBXGroup;
 			children = (
-				A3CA12D12411E83800FDD938 /* NSView but more like SwiftUI View.swift */,
+				A30F2987242F10BE00B8CE31 /* NSView but more like SwiftUI View */,
 				A328E25F24143A6C00109432 /* NSBox sugar.swift */,
 				A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */,
+				A3A7590F243A47F500E52B7B /* NSControl sugar.swift */,
 				A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */,
 				A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */,
 				A328E26124146BA100109432 /* NSPathControl sugar.swift */,
 				A328E2542412B53300109432 /* NSScrollView sugar.swift */,
 				A328E2562412B62600109432 /* NSStackView sugar.swift */,
 				A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */,
+				A3319DEB243A892800DCE6CC /* NSViewBuilder.swift */,
 			);
 			path = Sugar;
 			sourceTree = "<group>";
@@ -682,21 +732,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38C7BB0241E132900EC2F02 /* NSTextField Sugar.swift in Sources */,
+				A30F298D242F114600B8CE31 /* Spacer.swift in Sources */,
+				A30F298F242F117A00B8CE31 /* HasPopover.swift in Sources */,
+				A30F2995242F125F00B8CE31 /* ViewProtocol + HasPopover.swift in Sources */,
+				A30F2997242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift in Sources */,
 				A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */,
+				A3319DEC243A892800DCE6CC /* NSViewBuilder.swift in Sources */,
 				A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */,
 				A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */,
+				A30F298B242F10F400B8CE31 /* EasyView.swift in Sources */,
+				A3319E01243AC65000DCE6CC /* MeasurementPicker.swift in Sources */,
 				A328E2572412B62600109432 /* NSStackView sugar.swift in Sources */,
 				A328E253241292D000109432 /* ContentView.swift in Sources */,
 				A3CA12CF2411E77000FDD938 /* AllWatchedFoldersView.swift in Sources */,
+				A30F2999242F138600B8CE31 /* HasSheet.swift in Sources */,
 				A328E2512412916E00109432 /* WatchedFolderView.swift in Sources */,
+				A30F2989242F10CD00B8CE31 /* SugaryView.swift in Sources */,
 				A328E2552412B53300109432 /* NSScrollView sugar.swift in Sources */,
+				A3A75910243A47F500E52B7B /* NSControl sugar.swift in Sources */,
 				A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */,
 				A3CA12C42411E3F900FDD938 /* AppDelegate.swift in Sources */,
-				A3CA12D22411E83800FDD938 /* NSView but more like SwiftUI View.swift in Sources */,
+				A3CA12D22411E83800FDD938 /* View.swift in Sources */,
 				A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */,
+				A30F2991242F122200B8CE31 /* Rebuildable.swift in Sources */,
+				A3A7590E243A45FF00E52B7B /* SelectFileControl.swift in Sources */,
 				A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */,
 				A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */,
+				A30F2993242F123E00B8CE31 /* ViewProtocol.swift in Sources */,
 				A38C7BB2241E14B400EC2F02 /* NSFont sugar.swift in Sources */,
+				A30F299B242F1D4600B8CE31 /* WatchedFolderEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +878,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -871,6 +936,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -895,7 +961,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersSwiftUI";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -920,7 +985,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersSwiftUI;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -940,7 +1004,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersSwiftUI";
-				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor.app/Contents/MacOS/Janitor";
 			};
 			name = Debug;
@@ -961,7 +1024,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersSwiftUI;
-				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor.app/Contents/MacOS/Janitor";
 			};
 			name = Release;
@@ -981,7 +1043,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersSwiftUI";
-				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Janitor;
 			};
 			name = Debug;
@@ -1001,7 +1062,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersSwiftUI;
-				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Janitor;
 			};
 			name = Release;
@@ -1023,7 +1083,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.benleggiero.Janitor.Janitor-Finder-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1044,7 +1103,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.benleggiero.Janitor.Janitor-Finder-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1066,7 +1124,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersAppKit";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1088,7 +1145,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersAppKit;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1110,7 +1166,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.bh.Janitor--AppKit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersAppKit";
-				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor (AppKit).app/Contents/MacOS/Janitor (AppKit)";
 			};
 			name = Debug;
@@ -1133,7 +1188,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.bh.Janitor--AppKit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersAppKit;
-				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor (AppKit).app/Contents/MacOS/Janitor (AppKit)";
 			};
 			name = Release;

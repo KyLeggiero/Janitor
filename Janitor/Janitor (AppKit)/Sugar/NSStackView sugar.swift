@@ -38,7 +38,9 @@ public func VStack(_ views: [NSView]) -> NSStackView {
 
 
 @inline(__always)
-public func VStack<Echoed>(@NSViewBuilder _ builder: () -> Echoed) -> Echoed {
+public func VStack<Echoed>(@NSViewBuilder _ builder: () -> Echoed) -> Echoed
+    where Echoed: NSView
+{
     builder()
 }
 
@@ -51,14 +53,16 @@ public func VStack(alignment: HorizontalAlignment = .center, @NSViewBuilder _ bu
 }
 
 
-@inline(__always)
-public func HStack(_ views: [NSView]) -> NSStackView {
-    NSStackView(orientation: .horizontal, views: views)
-}
+//@inline(__always)
+//public func HStack(_ views: [NSView]) -> NSStackView {
+//    NSStackView(orientation: .horizontal, views: views)
+//}
 
 
 @inline(__always)
-public func HStack<Echoed>(@NSViewBuilder _ builder: () -> Echoed) -> Echoed {
+public func HStack<Echoed>(alignment _: VerticalAlignment = .center, @NSViewBuilder _ builder: () -> Echoed) -> Echoed
+    where Echoed: NSView
+{
     builder()
 }
 
@@ -68,20 +72,6 @@ public func HStack(alignment: VerticalAlignment = .center, @NSViewBuilder _ buil
     stack.alignment = alignment.layoutAttribute
     stack.setHuggingPriority(.required, for: .horizontal)
     return stack
-}
-
-
-
-@_functionBuilder
-public struct NSViewBuilder {
-    public static func buildBlock(_ content: NSView) -> NSView {
-        return content
-    }
-    
-    
-    public static func buildBlock(_ content: NSView...) -> [NSView] {
-        return content
-    }
 }
 
 

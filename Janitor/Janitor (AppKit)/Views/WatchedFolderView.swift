@@ -23,9 +23,12 @@ class WatchedFolderView: View {
     @ObservableMutableSafePointer
     var isPopoverShown = false
     
+    private let onEditPressed: OnEditPressed
     
-    init(trackedDirectory: TrackedDirectory) {
+    
+    init(trackedDirectory: TrackedDirectory, onEditPressed: @escaping OnEditPressed) {
         self.trackedDirectory = trackedDirectory
+        self.onEditPressed = onEditPressed
         super.init()
         self._isPopoverShown.addObserver { (_, _) in
             self.updateDisplay(ofPopoverWithId: "info")
@@ -43,14 +46,14 @@ class WatchedFolderView: View {
             VStack(alignment: .leading) {
                 HStack {
                     NSTextField(labelWithAttributedString: configurationDescription)
-                    NSButton(title: "􀁜", target: self, action: #selector(didPressInfoButton))
+                    Button("􀁜", action: didPressInfoButton)
                         .borderless()
                         .popover(withId: "info", parent: self, isPresented: _isPopoverShown, content: popoverContent)
                     
                     Spacer()
-                    NSButton(title: "􀈊", target: self, action: #selector(didPressEditButton))
+                    Button("􀈊", action: didPressEditButton)
                         .borderless()
-                    NSButton(title: "􀈑", target: self, action: #selector(didPressDeleteButton))
+                    Button("􀈑", action: didPressDeleteButton)
                         .borderless()
                 }
                 NSPathControl(trackedDirectory.url)
@@ -76,6 +79,10 @@ class WatchedFolderView: View {
             trackedDirectory.largestAllowedTotalSize.description
         }
     }
+    
+    
+    
+    typealias OnEditPressed = (ObservableSafeMutablePointer<TrackedDirectory>) -> Void
 }
 
 
@@ -89,7 +96,9 @@ private extension WatchedFolderView {
     
     @IBAction
     func didPressEditButton(sender _: NSButton) {
-        print("Edit")
+        onEditPressed(ObservableSafeMutablePointer(to: trackedDirectory) { _, new in
+            self.trackedDirectory = new
+        })
     }
     
     

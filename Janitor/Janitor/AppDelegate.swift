@@ -118,7 +118,10 @@ extension AppDelegate {
         window.titlebarAppearsTransparent = true
         
         #if PrefersAppKit
-        window.contentView = ContentView(trackedDirectories: UserPreferences.trackedDirectories)
+        let contentView = ContentView(trackedDirectories: UserPreferences.trackedDirectories,
+                                      onEdit: { UserPreferences.trackedDirectories = $0 })
+        
+        window.contentView = contentView
         #endif
     }
 }

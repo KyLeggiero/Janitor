@@ -9,6 +9,7 @@
 import Cocoa
 import JanitorKit
 import RectangleTools
+import SafePointer
 
 
 
@@ -22,9 +23,13 @@ public class AllWatchedFoldersView: View {
         didSet { rebuild() }
     }
     
+    @ObservableSafeMutablePointer
+    var currentlyEditedDirectory: TrackedDirectory?
     
-    init(trackedDirectories: [TrackedDirectory]) {
+    
+    init(trackedDirectories: [TrackedDirectory], editableDirectory: ObservableSafeMutablePointer<TrackedDirectory?>) {
         self.trackedDirectories = trackedDirectories
+        self._currentlyEditedDirectory = editableDirectory
         super.init()
     }
     
@@ -42,9 +47,26 @@ public class AllWatchedFoldersView: View {
         .verticallyScrollingContent(padding: NativeEdgeInsets(each: viewPadding))
         .background(.clear)
     }
+}
+
+private extension AllWatchedFoldersView {
+    var watchedFolderViews: [WatchedFolderView] {
+        trackedDirectories.map { WatchedFolderView(trackedDirectory: $0, onEditPressed: beginEditing) }
+    }
     
     
-    private var watchedFolderViews: [WatchedFolderView] {
-        trackedDirectories.map { WatchedFolderView(trackedDirectory: $0) }
+    func beginEditing(folder: ObservableSafeMutablePointer<TrackedDirectory>) {
+        var observerId = ObserverIdentifier()
+        observerId = self._currentlyEditedDirectory.addObserver { [weak self] (old, new) in
+            if let new = new {
+                folder.pointee = new
+            }
+            else {
+                self?._currentlyEditedDirectory.removeObserver(withId: observerId)
+                self?.currentlyEditedDirectory = nil
+            }
+        }
+        
+        self.currentlyEditedDirectory = folder.pointee
     }
 }

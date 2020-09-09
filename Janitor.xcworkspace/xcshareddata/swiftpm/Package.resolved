@@ -38,12 +38,21 @@
         }
       },
       {
+        "package": "FunctionTools",
+        "repositoryURL": "https://github.com/RougeWare/Swift-Function-Tools.git",
+        "state": {
+          "branch": "feature/MVP",
+          "revision": "7b8e87dcab69a999f81d598bcd9304ca49b21c68",
+          "version": null
+        }
+      },
+      {
         "package": "LazyContainers",
         "repositoryURL": "https://github.com/RougeWare/Swift-Lazy-Patterns.git",
         "state": {
-          "branch": null,
-          "revision": "df59ce2944def4b163f3d9b12c19c86b6f62e5e0",
-          "version": "3.0.2"
+          "branch": "feature/Dynamic-Member-Lookup",
+          "revision": "652ed89d090ad71f8671d961089f4232a1182633",
+          "version": null
         }
       },
       {
@@ -78,8 +87,8 @@
         "repositoryURL": "https://github.com/RougeWare/Swift-Safe-Pointer.git",
         "state": {
           "branch": null,
-          "revision": "af940049d4de7fc0c1cdf42bcbb7670f3cd838c6",
-          "version": "2.1.1"
+          "revision": "a71a39d19275d90e13f362c3d23163dc41318d85",
+          "version": "2.1.3"
         }
       },
       {
