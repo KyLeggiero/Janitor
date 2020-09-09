@@ -2,7 +2,7 @@
 //  WatchedFolderEditView.swift
 //  Janitor
 //
-//  Created by Ben Leggiero on 7/19/19.
+//  Created by Ben Leggiero on 2019-07-19.
 //  Copyright © 2019 Ben Leggiero. All rights reserved.
 //
 
