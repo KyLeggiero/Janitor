@@ -5,6 +5,6 @@
       location = "group:Janitor/Janitor.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JanitorKit/JanitorKit.xcodeproj">
+      location = "group:JanitorKit">
    </FileRef>
 </Workspace>

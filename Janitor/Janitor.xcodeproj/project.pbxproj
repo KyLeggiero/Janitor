@@ -3,612 +3,153 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A30F2989242F10CD00B8CE31 /* SugaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2988242F10CD00B8CE31 /* SugaryView.swift */; };
-		A30F298B242F10F400B8CE31 /* EasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F298A242F10F400B8CE31 /* EasyView.swift */; };
-		A30F298D242F114600B8CE31 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F298C242F114600B8CE31 /* Spacer.swift */; };
-		A30F298F242F117A00B8CE31 /* HasPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F298E242F117A00B8CE31 /* HasPopover.swift */; };
-		A30F2991242F122200B8CE31 /* Rebuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2990242F122200B8CE31 /* Rebuildable.swift */; };
-		A30F2993242F123E00B8CE31 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2992242F123E00B8CE31 /* ViewProtocol.swift */; };
-		A30F2995242F125F00B8CE31 /* ViewProtocol + HasPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2994242F125F00B8CE31 /* ViewProtocol + HasPopover.swift */; };
-		A30F2997242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2996242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift */; };
-		A30F2999242F138600B8CE31 /* HasSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F2998242F138600B8CE31 /* HasSheet.swift */; };
-		A30F299B242F1D4600B8CE31 /* WatchedFolderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F299A242F1D4600B8CE31 /* WatchedFolderEditView.swift */; };
-		A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A422E1047800DAC82D /* WatchedFolderView.swift */; };
-		A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A622E1052F00DAC82D /* PathControlView.swift */; };
-		A32740A922E1068700DAC82D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A822E1068700DAC82D /* Checkbox.swift */; };
-		A328E2512412916E00109432 /* WatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2502412916E00109432 /* WatchedFolderView.swift */; };
-		A328E253241292D000109432 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E252241292D000109432 /* ContentView.swift */; };
-		A328E2552412B53300109432 /* NSScrollView sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2542412B53300109432 /* NSScrollView sugar.swift */; };
-		A328E2572412B62600109432 /* NSStackView sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E2562412B62600109432 /* NSStackView sugar.swift */; };
-		A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */; };
-		A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E25F24143A6C00109432 /* NSBox sugar.swift */; };
-		A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328E26124146BA100109432 /* NSPathControl sugar.swift */; };
-		A3319DEC243A892800DCE6CC /* NSViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3319DEB243A892800DCE6CC /* NSViewBuilder.swift */; };
-		A3319E01243AC65000DCE6CC /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3319E00243AC65000DCE6CC /* MeasurementPicker.swift */; };
-		A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
-		A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
-		A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD122DFE5670097FFAD /* AppDelegate.swift */; };
-		A3709FD422DFE5670097FFAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD322DFE5670097FFAD /* ContentView.swift */; };
-		A3709FD622DFE5690097FFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3709FD522DFE5690097FFAD /* Assets.xcassets */; };
-		A3709FD922DFE5690097FFAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3709FD822DFE5690097FFAD /* Preview Assets.xcassets */; };
-		A3709FDC22DFE5690097FFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3709FDA22DFE5690097FFAD /* Main.storyboard */; };
-		A3709FE822DFE5690097FFAD /* JanitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FE722DFE5690097FFAD /* JanitorTests.swift */; };
-		A3709FF322DFE5690097FFAD /* JanitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FF222DFE5690097FFAD /* JanitorUITests.swift */; };
-		A370A00722DFE6800097FFAD /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370A00622DFE6800097FFAD /* FinderSync.swift */; };
-		A370A00C22DFE6800097FFAD /* Janitor Finder Extensions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A370A04F22DFE79F0097FFAD /* JanitorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; };
-		A370A05022DFE79F0097FFAD /* JanitorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E1E22EA4765002E7B49 /* OpenPanel.swift */; };
-		A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */; };
-		A38C7BB0241E132900EC2F02 /* NSTextField Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */; };
-		A38C7BB2241E14B400EC2F02 /* NSFont sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */; };
-		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
-		A3A7590E243A45FF00E52B7B /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A7590D243A45FF00E52B7B /* SelectFileControl.swift */; };
-		A3A75910243A47F500E52B7B /* NSControl sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A7590F243A47F500E52B7B /* NSControl sugar.swift */; };
-		A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBE178231CE60700966AF6 /* SwiftUI.framework */; };
-		A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */; };
-		A3CA12AA2411DF3500FDD938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CA12A92411DF3500FDD938 /* Assets.xcassets */; };
-		A3CA12AD2411DF3500FDD938 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3CA12AB2411DF3500FDD938 /* MainMenu.xib */; };
-		A3CA12B92411DF3600FDD938 /* Janitor__AppKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12B82411DF3600FDD938 /* Janitor__AppKit_Tests.swift */; };
-		A3CA12C32411DF8E00FDD938 /* Shared Startup Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C22411DF8E00FDD938 /* Shared Startup Stuff.swift */; };
-		A3CA12C42411E3F900FDD938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD122DFE5670097FFAD /* AppDelegate.swift */; };
-		A3CA12C92411E6C400FDD938 /* Image Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C72411E6BD00FDD938 /* Image Constants.swift */; };
-		A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C72411E6BD00FDD938 /* Image Constants.swift */; };
-		A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C82411E6BD00FDD938 /* Color Constants.swift */; };
-		A3CA12CC2411E6C800FDD938 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C82411E6BD00FDD938 /* Color Constants.swift */; };
-		A3CA12CF2411E77000FDD938 /* AllWatchedFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */; };
-		A3CA12D22411E83800FDD938 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12D12411E83800FDD938 /* View.swift */; };
-		A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */; };
-		A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */; };
+		A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB53926A3BD5800ABED25 /* SettingsView.swift */; };
+		A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */; };
+		A31EB54326A3C33600ABED25 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54226A3C33600ABED25 /* UserData.swift */; };
+		A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */; };
+		A31EB54B26A3C93600ABED25 /* JanitorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB54A26A3C93600ABED25 /* JanitorKit */; };
+		A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */; };
+		A3DA09E826A3BCED0014830B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA09E726A3BCED0014830B /* App.swift */; };
+		A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA09E926A3BCED0014830B /* ContentView.swift */; };
+		A3DA09EC26A3BCEE0014830B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EB26A3BCEE0014830B /* Assets.xcassets */; };
+		A3DA09EF26A3BCEE0014830B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A3709FE422DFE5690097FFAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A3709FC622DFE5660097FFAD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3709FCD22DFE5660097FFAD;
-			remoteInfo = Janitor;
-		};
-		A3709FEF22DFE5690097FFAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A3709FC622DFE5660097FFAD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3709FCD22DFE5660097FFAD;
-			remoteInfo = Janitor;
-		};
-		A370A00A22DFE6800097FFAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A3709FC622DFE5660097FFAD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A370A00322DFE6800097FFAD;
-			remoteInfo = "Janitor Finder Extensions";
-		};
-		A3CA12B52411DF3600FDD938 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A3709FC622DFE5660097FFAD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3CA12A42411DF3400FDD938;
-			remoteInfo = "Janitor (AppKit)";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A370A01022DFE6800097FFAD /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				A370A00C22DFE6800097FFAD /* Janitor Finder Extensions.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A370A05122DFE79F0097FFAD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A370A05022DFE79F0097FFAD /* JanitorKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		A30F2988242F10CD00B8CE31 /* SugaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugaryView.swift; sourceTree = "<group>"; };
-		A30F298A242F10F400B8CE31 /* EasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyView.swift; sourceTree = "<group>"; };
-		A30F298C242F114600B8CE31 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
-		A30F298E242F117A00B8CE31 /* HasPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasPopover.swift; sourceTree = "<group>"; };
-		A30F2990242F122200B8CE31 /* Rebuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rebuildable.swift; sourceTree = "<group>"; };
-		A30F2992242F123E00B8CE31 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
-		A30F2994242F125F00B8CE31 /* ViewProtocol + HasPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol + HasPopover.swift"; sourceTree = "<group>"; };
-		A30F2996242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol + Rebuildable.swift"; sourceTree = "<group>"; };
-		A30F2998242F138600B8CE31 /* HasSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSheet.swift; sourceTree = "<group>"; };
-		A30F299A242F1D4600B8CE31 /* WatchedFolderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderEditView.swift; sourceTree = "<group>"; };
-		A32740A422E1047800DAC82D /* WatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderView.swift; sourceTree = "<group>"; };
-		A32740A622E1052F00DAC82D /* PathControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathControlView.swift; sourceTree = "<group>"; };
-		A32740A822E1068700DAC82D /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
-		A328E2502412916E00109432 /* WatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderView.swift; sourceTree = "<group>"; };
-		A328E252241292D000109432 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A328E2542412B53300109432 /* NSScrollView sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScrollView sugar.swift"; sourceTree = "<group>"; };
-		A328E2562412B62600109432 /* NSStackView sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStackView sugar.swift"; sourceTree = "<group>"; };
-		A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint sugar.swift"; sourceTree = "<group>"; };
-		A328E25F24143A6C00109432 /* NSBox sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBox sugar.swift"; sourceTree = "<group>"; };
-		A328E26124146BA100109432 /* NSPathControl sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPathControl sugar.swift"; sourceTree = "<group>"; };
-		A3319DEB243A892800DCE6CC /* NSViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewBuilder.swift; sourceTree = "<group>"; };
-		A3319E00243AC65000DCE6CC /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
-		A34E61062411F920002C4B3B /* TODO returning anything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TODO returning anything.swift"; sourceTree = "<group>"; };
-		A3709FCE22DFE5670097FFAD /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3709FD122DFE5670097FFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3709FD322DFE5670097FFAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A3709FD522DFE5690097FFAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A3709FD822DFE5690097FFAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A3709FDB22DFE5690097FFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A3709FDD22DFE5690097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3709FDE22DFE5690097FFAD /* Janitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor.entitlements; sourceTree = "<group>"; };
-		A3709FE322DFE5690097FFAD /* JanitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JanitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3709FE722DFE5690097FFAD /* JanitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JanitorTests.swift; sourceTree = "<group>"; };
-		A3709FE922DFE5690097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3709FEE22DFE5690097FFAD /* JanitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JanitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3709FF222DFE5690097FFAD /* JanitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JanitorUITests.swift; sourceTree = "<group>"; };
-		A3709FF422DFE5690097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Janitor Finder Extensions.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A370A00622DFE6800097FFAD /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
-		A370A00822DFE6800097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A370A00922DFE6800097FFAD /* Janitor_Finder_Extensions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor_Finder_Extensions.entitlements; sourceTree = "<group>"; };
-		A370A04E22DFE79F0097FFAD /* JanitorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JanitorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3739E1E22EA4765002E7B49 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
-		A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
-		A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField Sugar.swift"; sourceTree = "<group>"; };
-		A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont sugar.swift"; sourceTree = "<group>"; };
-		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
-		A3A7590D243A45FF00E52B7B /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
-		A3A7590F243A47F500E52B7B /* NSControl sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSControl sugar.swift"; sourceTree = "<group>"; };
-		A3BBE178231CE60700966AF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton sugar.swift"; sourceTree = "<group>"; };
-		A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Janitor (AppKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3CA12A92411DF3500FDD938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A3CA12AC2411DF3500FDD938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A3CA12AE2411DF3500FDD938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3CA12AF2411DF3500FDD938 /* Janitor__AppKit_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor__AppKit_.entitlements; sourceTree = "<group>"; };
-		A3CA12B42411DF3600FDD938 /* Janitor (AppKit)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Janitor (AppKit)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3CA12B82411DF3600FDD938 /* Janitor__AppKit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Janitor__AppKit_Tests.swift; sourceTree = "<group>"; };
-		A3CA12BA2411DF3600FDD938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3CA12C22411DF8E00FDD938 /* Shared Startup Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Shared Startup Stuff.swift"; path = "Janitor/Shared Startup Stuff.swift"; sourceTree = SOURCE_ROOT; };
-		A3CA12C72411E6BD00FDD938 /* Image Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Constants.swift"; sourceTree = "<group>"; };
-		A3CA12C82411E6BD00FDD938 /* Color Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
-		A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersView.swift; sourceTree = "<group>"; };
-		A3CA12D12411E83800FDD938 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderEditView.swift; sourceTree = "<group>"; };
-		A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWatchedFoldersView.swift; sourceTree = "<group>"; };
+		A31EB53926A3BD5800ABED25 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
+		A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDirectoriesView.swift; sourceTree = "<group>"; };
+		A3DA09E426A3BCED0014830B /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DA09E726A3BCED0014830B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		A3DA09E926A3BCED0014830B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A3DA09EB26A3BCEE0014830B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A3DA09F026A3BCEE0014830B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DA09F126A3BCEE0014830B /* Janitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A3709FCB22DFE5660097FFAD /* Frameworks */ = {
+		A3DA09E126A3BCED0014830B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */,
-				A370A04F22DFE79F0097FFAD /* JanitorKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3709FE022DFE5690097FFAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3709FEB22DFE5690097FFAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A370A00122DFE6800097FFAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12A22411DF3400FDD938 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12B12411DF3600FDD938 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */,
+				A31EB54B26A3C93600ABED25 /* JanitorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A30F2987242F10BE00B8CE31 /* NSView but more like SwiftUI View */ = {
+		A31EB54126A3C32300ABED25 /* User Data */ = {
 			isa = PBXGroup;
 			children = (
-				A3CA12D12411E83800FDD938 /* View.swift */,
-				A30F2988242F10CD00B8CE31 /* SugaryView.swift */,
-				A30F298A242F10F400B8CE31 /* EasyView.swift */,
-				A30F298C242F114600B8CE31 /* Spacer.swift */,
-				A30F298E242F117A00B8CE31 /* HasPopover.swift */,
-				A30F2998242F138600B8CE31 /* HasSheet.swift */,
-				A30F2990242F122200B8CE31 /* Rebuildable.swift */,
-				A30F2992242F123E00B8CE31 /* ViewProtocol.swift */,
-				A30F2994242F125F00B8CE31 /* ViewProtocol + HasPopover.swift */,
-				A30F2996242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift */,
+				A31EB54226A3C33600ABED25 /* UserData.swift */,
+				A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */,
 			);
-			path = "NSView but more like SwiftUI View";
+			path = "User Data";
 			sourceTree = "<group>";
 		};
-		A32740A322E1045C00DAC82D /* Views */ = {
+		A31EB54926A3C93600ABED25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3739E1D22EA46EE002E7B49 /* AppKit Bridges */,
-				A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */,
-				A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */,
-				A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */,
-				A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */,
-				A32740A422E1047800DAC82D /* WatchedFolderView.swift */,
-				A3709FD322DFE5670097FFAD /* ContentView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		A328E266241472CB00109432 /* RectangleTools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RectangleTools;
-			sourceTree = "<group>";
-		};
-		A34E61042411F908002C4B3B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				A328E266241472CB00109432 /* RectangleTools */,
-				A34E61052411F910002C4B3B /* TODO */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		A34E61052411F910002C4B3B /* TODO */ = {
-			isa = PBXGroup;
-			children = (
-				A34E61062411F920002C4B3B /* TODO returning anything.swift */,
-			);
-			path = TODO;
-			sourceTree = "<group>";
-		};
-		A3709FC522DFE5660097FFAD = {
-			isa = PBXGroup;
-			children = (
-				A3CA12C52411E6AB00FDD938 /* Shared */,
-				A3709FD022DFE5670097FFAD /* Janitor */,
-				A3709FE622DFE5690097FFAD /* JanitorTests */,
-				A3709FF122DFE5690097FFAD /* JanitorUITests */,
-				A370A00522DFE6800097FFAD /* Janitor Finder Extensions */,
-				A3CA12A62411DF3400FDD938 /* Janitor (AppKit) */,
-				A3CA12B72411DF3600FDD938 /* Janitor (AppKit)Tests */,
-				A3709FCF22DFE5670097FFAD /* Products */,
-				A370A04D22DFE79F0097FFAD /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		A3709FCF22DFE5670097FFAD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A3709FCE22DFE5670097FFAD /* Janitor.app */,
-				A3709FE322DFE5690097FFAD /* JanitorTests.xctest */,
-				A3709FEE22DFE5690097FFAD /* JanitorUITests.xctest */,
-				A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */,
-				A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */,
-				A3CA12B42411DF3600FDD938 /* Janitor (AppKit)Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A3709FD022DFE5670097FFAD /* Janitor */ = {
-			isa = PBXGroup;
-			children = (
-				A32740A322E1045C00DAC82D /* Views */,
-				A3709FD122DFE5670097FFAD /* AppDelegate.swift */,
-				A3CA12C22411DF8E00FDD938 /* Shared Startup Stuff.swift */,
-				A3709FD522DFE5690097FFAD /* Assets.xcassets */,
-				A3709FDA22DFE5690097FFAD /* Main.storyboard */,
-				A3709FDD22DFE5690097FFAD /* Info.plist */,
-				A3709FDE22DFE5690097FFAD /* Janitor.entitlements */,
-				A3709FD722DFE5690097FFAD /* Preview Content */,
-			);
-			name = Janitor;
-			path = "../../../../../../../../System/Volumes/Data/Users/benleggiero/Google Drive/Libraries/Projects/From Me/Janitor/Janitor/Janitor";
-			sourceTree = "<group>";
-		};
-		A3709FD722DFE5690097FFAD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				A3709FD822DFE5690097FFAD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A3709FE622DFE5690097FFAD /* JanitorTests */ = {
-			isa = PBXGroup;
-			children = (
-				A3709FE722DFE5690097FFAD /* JanitorTests.swift */,
-				A3709FE922DFE5690097FFAD /* Info.plist */,
-			);
-			path = JanitorTests;
-			sourceTree = "<group>";
-		};
-		A3709FF122DFE5690097FFAD /* JanitorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A3709FF222DFE5690097FFAD /* JanitorUITests.swift */,
-				A3709FF422DFE5690097FFAD /* Info.plist */,
-			);
-			path = JanitorUITests;
-			sourceTree = "<group>";
-		};
-		A370A00522DFE6800097FFAD /* Janitor Finder Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				A370A00622DFE6800097FFAD /* FinderSync.swift */,
-				A370A00822DFE6800097FFAD /* Info.plist */,
-				A370A00922DFE6800097FFAD /* Janitor_Finder_Extensions.entitlements */,
-			);
-			path = "Janitor Finder Extensions";
-			sourceTree = "<group>";
-		};
-		A370A04D22DFE79F0097FFAD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3BBE178231CE60700966AF6 /* SwiftUI.framework */,
-				A370A04E22DFE79F0097FFAD /* JanitorKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A3739E1D22EA46EE002E7B49 /* AppKit Bridges */ = {
+		A31EB54E26A3CA8E00ABED25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A32740A822E1068700DAC82D /* Checkbox.swift */,
-				A3739E1E22EA4765002E7B49 /* OpenPanel.swift */,
-				A32740A622E1052F00DAC82D /* PathControlView.swift */,
-			);
-			path = "AppKit Bridges";
-			sourceTree = "<group>";
-		};
-		A3CA12A62411DF3400FDD938 /* Janitor (AppKit) */ = {
-			isa = PBXGroup;
-			children = (
-				A3CA12D02411E82700FDD938 /* Sugar */,
-				A3CA12CD2411E73F00FDD938 /* Views */,
-				A3CA12A92411DF3500FDD938 /* Assets.xcassets */,
-				A3CA12AB2411DF3500FDD938 /* MainMenu.xib */,
-				A3CA12AE2411DF3500FDD938 /* Info.plist */,
-				A3CA12AF2411DF3500FDD938 /* Janitor__AppKit_.entitlements */,
-			);
-			path = "Janitor (AppKit)";
-			sourceTree = "<group>";
-		};
-		A3CA12B72411DF3600FDD938 /* Janitor (AppKit)Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A3CA12B82411DF3600FDD938 /* Janitor__AppKit_Tests.swift */,
-				A3CA12BA2411DF3600FDD938 /* Info.plist */,
-			);
-			path = "Janitor (AppKit)Tests";
-			sourceTree = "<group>";
-		};
-		A3CA12C52411E6AB00FDD938 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				A34E61042411F908002C4B3B /* Extensions */,
-				A3CA12C62411E6B200FDD938 /* Constants */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		A3CA12C62411E6B200FDD938 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				A3CA12C72411E6BD00FDD938 /* Image Constants.swift */,
-				A3CA12C82411E6BD00FDD938 /* Color Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		A3CA12CD2411E73F00FDD938 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A3A7590D243A45FF00E52B7B /* SelectFileControl.swift */,
-				A3319E00243AC65000DCE6CC /* MeasurementPicker.swift */,
-				A3CA12CE2411E77000FDD938 /* AllWatchedFoldersView.swift */,
-				A30F299A242F1D4600B8CE31 /* WatchedFolderEditView.swift */,
-				A328E2502412916E00109432 /* WatchedFolderView.swift */,
-				A328E252241292D000109432 /* ContentView.swift */,
+				A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A3CA12D02411E82700FDD938 /* Sugar */ = {
+		A3DA09DB26A3BCED0014830B = {
 			isa = PBXGroup;
 			children = (
-				A30F2987242F10BE00B8CE31 /* NSView but more like SwiftUI View */,
-				A328E25F24143A6C00109432 /* NSBox sugar.swift */,
-				A3C0B3222419DA9E00559DC1 /* NSButton sugar.swift */,
-				A3A7590F243A47F500E52B7B /* NSControl sugar.swift */,
-				A38C7BB1241E14B400EC2F02 /* NSFont sugar.swift */,
-				A328E25B2412BC9D00109432 /* NSLayoutConstraint sugar.swift */,
-				A328E26124146BA100109432 /* NSPathControl sugar.swift */,
-				A328E2542412B53300109432 /* NSScrollView sugar.swift */,
-				A328E2562412B62600109432 /* NSStackView sugar.swift */,
-				A38C7BAF241E132900EC2F02 /* NSTextField Sugar.swift */,
-				A3319DEB243A892800DCE6CC /* NSViewBuilder.swift */,
+				A3DA09E626A3BCED0014830B /* Janitor */,
+				A3DA09E526A3BCED0014830B /* Products */,
+				A31EB54926A3C93600ABED25 /* Frameworks */,
 			);
-			path = Sugar;
+			sourceTree = "<group>";
+		};
+		A3DA09E526A3BCED0014830B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA09E426A3BCED0014830B /* Janitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3DA09E626A3BCED0014830B /* Janitor */ = {
+			isa = PBXGroup;
+			children = (
+				A31EB54E26A3CA8E00ABED25 /* Views */,
+				A31EB54126A3C32300ABED25 /* User Data */,
+				A3DA09E726A3BCED0014830B /* App.swift */,
+				A3DA09E926A3BCED0014830B /* ContentView.swift */,
+				A31EB53926A3BD5800ABED25 /* SettingsView.swift */,
+				A3DA09EB26A3BCEE0014830B /* Assets.xcassets */,
+				A3DA09F026A3BCEE0014830B /* Info.plist */,
+				A3DA09F126A3BCEE0014830B /* Janitor.entitlements */,
+				A3DA09ED26A3BCEE0014830B /* Preview Content */,
+			);
+			path = Janitor;
+			sourceTree = "<group>";
+		};
+		A3DA09ED26A3BCEE0014830B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A3709FCD22DFE5660097FFAD /* Janitor */ = {
+		A3DA09E326A3BCED0014830B /* Janitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3709FF722DFE5690097FFAD /* Build configuration list for PBXNativeTarget "Janitor" */;
+			buildConfigurationList = A3DA09F426A3BCEE0014830B /* Build configuration list for PBXNativeTarget "Janitor" */;
 			buildPhases = (
-				A3709FCA22DFE5660097FFAD /* Sources */,
-				A3709FCB22DFE5660097FFAD /* Frameworks */,
-				A3709FCC22DFE5660097FFAD /* Resources */,
-				A370A01022DFE6800097FFAD /* Embed App Extensions */,
-				A370A05122DFE79F0097FFAD /* Embed Frameworks */,
+				A3DA09E026A3BCED0014830B /* Sources */,
+				A3DA09E126A3BCED0014830B /* Frameworks */,
+				A3DA09E226A3BCED0014830B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A370A00B22DFE6800097FFAD /* PBXTargetDependency */,
 			);
 			name = Janitor;
+			packageProductDependencies = (
+				A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */,
+				A31EB54A26A3C93600ABED25 /* JanitorKit */,
+			);
 			productName = Janitor;
-			productReference = A3709FCE22DFE5670097FFAD /* Janitor.app */;
+			productReference = A3DA09E426A3BCED0014830B /* Janitor.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A3709FE222DFE5690097FFAD /* JanitorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3709FFA22DFE5690097FFAD /* Build configuration list for PBXNativeTarget "JanitorTests" */;
-			buildPhases = (
-				A3709FDF22DFE5690097FFAD /* Sources */,
-				A3709FE022DFE5690097FFAD /* Frameworks */,
-				A3709FE122DFE5690097FFAD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A3709FE522DFE5690097FFAD /* PBXTargetDependency */,
-			);
-			name = JanitorTests;
-			productName = JanitorTests;
-			productReference = A3709FE322DFE5690097FFAD /* JanitorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A3709FED22DFE5690097FFAD /* JanitorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3709FFD22DFE5690097FFAD /* Build configuration list for PBXNativeTarget "JanitorUITests" */;
-			buildPhases = (
-				A3709FEA22DFE5690097FFAD /* Sources */,
-				A3709FEB22DFE5690097FFAD /* Frameworks */,
-				A3709FEC22DFE5690097FFAD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A3709FF022DFE5690097FFAD /* PBXTargetDependency */,
-			);
-			name = JanitorUITests;
-			productName = JanitorUITests;
-			productReference = A3709FEE22DFE5690097FFAD /* JanitorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		A370A00322DFE6800097FFAD /* Janitor Finder Extensions */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A370A00D22DFE6800097FFAD /* Build configuration list for PBXNativeTarget "Janitor Finder Extensions" */;
-			buildPhases = (
-				A370A00022DFE6800097FFAD /* Sources */,
-				A370A00122DFE6800097FFAD /* Frameworks */,
-				A370A00222DFE6800097FFAD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Janitor Finder Extensions";
-			productName = "Janitor Finder Extensions";
-			productReference = A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		A3CA12A42411DF3400FDD938 /* Janitor (AppKit) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3CA12BB2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)" */;
-			buildPhases = (
-				A3CA12A12411DF3400FDD938 /* Sources */,
-				A3CA12A22411DF3400FDD938 /* Frameworks */,
-				A3CA12A32411DF3400FDD938 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Janitor (AppKit)";
-			productName = "Janitor (AppKit)";
-			productReference = A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */;
-			productType = "com.apple.product-type.application";
-		};
-		A3CA12B32411DF3600FDD938 /* Janitor (AppKit)Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3CA12BE2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)Tests" */;
-			buildPhases = (
-				A3CA12B02411DF3600FDD938 /* Sources */,
-				A3CA12B12411DF3600FDD938 /* Frameworks */,
-				A3CA12B22411DF3600FDD938 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A3CA12B62411DF3600FDD938 /* PBXTargetDependency */,
-			);
-			name = "Janitor (AppKit)Tests";
-			productName = "Janitor (AppKit)Tests";
-			productReference = A3CA12B42411DF3600FDD938 /* Janitor (AppKit)Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A3709FC622DFE5660097FFAD /* Project object */ = {
+		A3DA09DC26A3BCED0014830B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Ben Leggiero";
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					A3709FCD22DFE5660097FFAD = {
-						CreatedOnToolsVersion = 11.0;
-					};
-					A3709FE222DFE5690097FFAD = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = A3709FCD22DFE5660097FFAD;
-					};
-					A3709FED22DFE5690097FFAD = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = A3709FCD22DFE5660097FFAD;
-					};
-					A370A00322DFE6800097FFAD = {
-						CreatedOnToolsVersion = 11.0;
-					};
-					A3CA12A42411DF3400FDD938 = {
-						CreatedOnToolsVersion = 11.4;
-					};
-					A3CA12B32411DF3600FDD938 = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = A3CA12A42411DF3400FDD938;
+					A3DA09E326A3BCED0014830B = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = A3709FC922DFE5660097FFAD /* Build configuration list for PBXProject "Janitor" */;
+			buildConfigurationList = A3DA09DF26A3BCED0014830B /* Build configuration list for PBXProject "Janitor" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -616,208 +157,49 @@
 				en,
 				Base,
 			);
-			mainGroup = A3709FC522DFE5660097FFAD;
-			productRefGroup = A3709FCF22DFE5670097FFAD /* Products */;
+			mainGroup = A3DA09DB26A3BCED0014830B;
+			packageReferences = (
+				A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */,
+			);
+			productRefGroup = A3DA09E526A3BCED0014830B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A3709FCD22DFE5660097FFAD /* Janitor */,
-				A3709FE222DFE5690097FFAD /* JanitorTests */,
-				A3709FED22DFE5690097FFAD /* JanitorUITests */,
-				A370A00322DFE6800097FFAD /* Janitor Finder Extensions */,
-				A3CA12A42411DF3400FDD938 /* Janitor (AppKit) */,
-				A3CA12B32411DF3600FDD938 /* Janitor (AppKit)Tests */,
+				A3DA09E326A3BCED0014830B /* Janitor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A3709FCC22DFE5660097FFAD /* Resources */ = {
+		A3DA09E226A3BCED0014830B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3709FDC22DFE5690097FFAD /* Main.storyboard in Resources */,
-				A3709FD922DFE5690097FFAD /* Preview Assets.xcassets in Resources */,
-				A3709FD622DFE5690097FFAD /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3709FE122DFE5690097FFAD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3709FEC22DFE5690097FFAD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A370A00222DFE6800097FFAD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12A32411DF3400FDD938 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3CA12AA2411DF3500FDD938 /* Assets.xcassets in Resources */,
-				A3CA12AD2411DF3500FDD938 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12B22411DF3600FDD938 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A3DA09EF26A3BCEE0014830B /* Preview Assets.xcassets in Resources */,
+				A3DA09EC26A3BCEE0014830B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A3709FCA22DFE5660097FFAD /* Sources */ = {
+		A3DA09E026A3BCED0014830B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3CA12C92411E6C400FDD938 /* Image Constants.swift in Sources */,
-				A3CA12C32411DF8E00FDD938 /* Shared Startup Stuff.swift in Sources */,
-				A3709FD422DFE5670097FFAD /* ContentView.swift in Sources */,
-				A32740A922E1068700DAC82D /* Checkbox.swift in Sources */,
-				A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */,
-				A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */,
-				A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */,
-				A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */,
-				A3CA12CC2411E6C800FDD938 /* Color Constants.swift in Sources */,
-				A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */,
-				A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */,
-				A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */,
-				A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */,
-				A3709FD222DFE5670097FFAD /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3709FDF22DFE5690097FFAD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3709FE822DFE5690097FFAD /* JanitorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3709FEA22DFE5690097FFAD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3709FF322DFE5690097FFAD /* JanitorUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A370A00022DFE6800097FFAD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A370A00722DFE6800097FFAD /* FinderSync.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12A12411DF3400FDD938 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A38C7BB0241E132900EC2F02 /* NSTextField Sugar.swift in Sources */,
-				A30F298D242F114600B8CE31 /* Spacer.swift in Sources */,
-				A30F298F242F117A00B8CE31 /* HasPopover.swift in Sources */,
-				A30F2995242F125F00B8CE31 /* ViewProtocol + HasPopover.swift in Sources */,
-				A30F2997242F12BF00B8CE31 /* ViewProtocol + Rebuildable.swift in Sources */,
-				A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */,
-				A3319DEC243A892800DCE6CC /* NSViewBuilder.swift in Sources */,
-				A328E25C2412BC9D00109432 /* NSLayoutConstraint sugar.swift in Sources */,
-				A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */,
-				A30F298B242F10F400B8CE31 /* EasyView.swift in Sources */,
-				A3319E01243AC65000DCE6CC /* MeasurementPicker.swift in Sources */,
-				A328E2572412B62600109432 /* NSStackView sugar.swift in Sources */,
-				A328E253241292D000109432 /* ContentView.swift in Sources */,
-				A3CA12CF2411E77000FDD938 /* AllWatchedFoldersView.swift in Sources */,
-				A30F2999242F138600B8CE31 /* HasSheet.swift in Sources */,
-				A328E2512412916E00109432 /* WatchedFolderView.swift in Sources */,
-				A30F2989242F10CD00B8CE31 /* SugaryView.swift in Sources */,
-				A328E2552412B53300109432 /* NSScrollView sugar.swift in Sources */,
-				A3A75910243A47F500E52B7B /* NSControl sugar.swift in Sources */,
-				A328E26024143A6C00109432 /* NSBox sugar.swift in Sources */,
-				A3CA12C42411E3F900FDD938 /* AppDelegate.swift in Sources */,
-				A3CA12D22411E83800FDD938 /* View.swift in Sources */,
-				A328E26224146BA100109432 /* NSPathControl sugar.swift in Sources */,
-				A30F2991242F122200B8CE31 /* Rebuildable.swift in Sources */,
-				A3A7590E243A45FF00E52B7B /* SelectFileControl.swift in Sources */,
-				A3C0B3232419DA9E00559DC1 /* NSButton sugar.swift in Sources */,
-				A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */,
-				A30F2993242F123E00B8CE31 /* ViewProtocol.swift in Sources */,
-				A38C7BB2241E14B400EC2F02 /* NSFont sugar.swift in Sources */,
-				A30F299B242F1D4600B8CE31 /* WatchedFolderEditView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12B02411DF3600FDD938 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3CA12B92411DF3600FDD938 /* Janitor__AppKit_Tests.swift in Sources */,
+				A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */,
+				A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */,
+				A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */,
+				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
+				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
+				A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		A3709FE522DFE5690097FFAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A3709FCD22DFE5660097FFAD /* Janitor */;
-			targetProxy = A3709FE422DFE5690097FFAD /* PBXContainerItemProxy */;
-		};
-		A3709FF022DFE5690097FFAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A3709FCD22DFE5660097FFAD /* Janitor */;
-			targetProxy = A3709FEF22DFE5690097FFAD /* PBXContainerItemProxy */;
-		};
-		A370A00B22DFE6800097FFAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A370A00322DFE6800097FFAD /* Janitor Finder Extensions */;
-			targetProxy = A370A00A22DFE6800097FFAD /* PBXContainerItemProxy */;
-		};
-		A3CA12B62411DF3600FDD938 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A3CA12A42411DF3400FDD938 /* Janitor (AppKit) */;
-			targetProxy = A3CA12B52411DF3600FDD938 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A3709FDA22DFE5690097FFAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3709FDB22DFE5690097FFAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A3CA12AB2411DF3500FDD938 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3CA12AC2411DF3500FDD938 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		A3709FF522DFE5690097FFAD /* Debug */ = {
+		A3DA09F226A3BCEE0014830B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -843,6 +225,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -861,28 +244,23 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		A3709FF622DFE5690097FFAD /* Release */ = {
+		A3DA09F326A3BCEE0014830B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -908,6 +286,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -920,345 +299,112 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+			};
+			name = Release;
+		};
+		A3DA09F526A3BCEE0014830B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Janitor/Janitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Janitor/Preview Content\"";
+				DEVELOPMENT_TEAM = BPRYYPT488;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Janitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
-			name = Release;
+			name = Debug;
 		};
-		A3709FF822DFE5690097FFAD /* Debug */ = {
+		A3DA09F626A3BCEE0014830B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Janitor/Janitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_ASSET_PATHS = "Janitor/Preview\\ Content";
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				DEVELOPMENT_ASSET_PATHS = "\"Janitor/Preview Content\"";
+				DEVELOPMENT_TEAM = BPRYYPT488;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Janitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = "0.0.0-lambda.1";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersSwiftUI";
-			};
-			name = Debug;
-		};
-		A3709FF922DFE5690097FFAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Janitor/Janitor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_ASSET_PATHS = "Janitor/Preview\\ Content";
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Janitor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = "0.0.0-lambda.1";
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersSwiftUI;
-			};
-			name = Release;
-		};
-		A3709FFB22DFE5690097FFAD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JanitorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersSwiftUI";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor.app/Contents/MacOS/Janitor";
-			};
-			name = Debug;
-		};
-		A3709FFC22DFE5690097FFAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JanitorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersSwiftUI;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor.app/Contents/MacOS/Janitor";
-			};
-			name = Release;
-		};
-		A3709FFE22DFE5690097FFAD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JanitorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersSwiftUI";
-				TEST_TARGET_NAME = Janitor;
-			};
-			name = Debug;
-		};
-		A3709FFF22DFE5690097FFAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JanitorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.JanitorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersSwiftUI;
-				TEST_TARGET_NAME = Janitor;
-			};
-			name = Release;
-		};
-		A370A00E22DFE6800097FFAD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Janitor Finder Extensions/Janitor_Finder_Extensions.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Janitor Finder Extensions/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.benleggiero.Janitor.Janitor-Finder-Extensions";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A370A00F22DFE6800097FFAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Janitor Finder Extensions/Janitor_Finder_Extensions.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Janitor Finder Extensions/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.benleggiero.Janitor.Janitor-Finder-Extensions";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A3CA12BC2411DF3600FDD938 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Janitor (AppKit)/Janitor__AppKit_.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Janitor (AppKit)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = "0.0.0-lambda.2";
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersAppKit";
-			};
-			name = Debug;
-		};
-		A3CA12BD2411DF3600FDD938 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Janitor (AppKit)/Janitor__AppKit_.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Janitor (AppKit)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = "0.0.0-lambda.2";
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersAppKit;
-			};
-			name = Release;
-		};
-		A3CA12BF2411DF3600FDD938 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				INFOPLIST_FILE = "Janitor (AppKit)Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.bh.Janitor--AppKit-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersAppKit";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor (AppKit).app/Contents/MacOS/Janitor (AppKit)";
-			};
-			name = Debug;
-		};
-		A3CA12C02411DF3600FDD938 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				INFOPLIST_FILE = "Janitor (AppKit)Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.bh.Janitor--AppKit-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersAppKit;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor (AppKit).app/Contents/MacOS/Janitor (AppKit)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A3709FC922DFE5660097FFAD /* Build configuration list for PBXProject "Janitor" */ = {
+		A3DA09DF26A3BCED0014830B /* Build configuration list for PBXProject "Janitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A3709FF522DFE5690097FFAD /* Debug */,
-				A3709FF622DFE5690097FFAD /* Release */,
+				A3DA09F226A3BCEE0014830B /* Debug */,
+				A3DA09F326A3BCEE0014830B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3709FF722DFE5690097FFAD /* Build configuration list for PBXNativeTarget "Janitor" */ = {
+		A3DA09F426A3BCEE0014830B /* Build configuration list for PBXNativeTarget "Janitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A3709FF822DFE5690097FFAD /* Debug */,
-				A3709FF922DFE5690097FFAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3709FFA22DFE5690097FFAD /* Build configuration list for PBXNativeTarget "JanitorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3709FFB22DFE5690097FFAD /* Debug */,
-				A3709FFC22DFE5690097FFAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3709FFD22DFE5690097FFAD /* Build configuration list for PBXNativeTarget "JanitorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3709FFE22DFE5690097FFAD /* Debug */,
-				A3709FFF22DFE5690097FFAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A370A00D22DFE6800097FFAD /* Build configuration list for PBXNativeTarget "Janitor Finder Extensions" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A370A00E22DFE6800097FFAD /* Debug */,
-				A370A00F22DFE6800097FFAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3CA12BB2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3CA12BC2411DF3600FDD938 /* Debug */,
-				A3CA12BD2411DF3600FDD938 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3CA12BE2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3CA12BF2411DF3600FDD938 /* Debug */,
-				A3CA12C02411DF3600FDD938 /* Release */,
+				A3DA09F526A3BCEE0014830B /* Debug */,
+				A3DA09F626A3BCEE0014830B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ky1vstar/SwiftyUserDefaultsNamespaces.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */;
+			productName = SwiftyUserDefaultsNamespaces;
+		};
+		A31EB54A26A3C93600ABED25 /* JanitorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JanitorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = A3709FC622DFE5660097FFAD /* Project object */;
+	rootObject = A3DA09DC26A3BCED0014830B /* Project object */;
 }
