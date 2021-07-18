@@ -9,6 +9,8 @@
 import SwiftUI
 import AppKit
 
+import TODO
+
 
 
 struct OpenPanel: NSViewRepresentable {
@@ -25,7 +27,7 @@ struct OpenPanel: NSViewRepresentable {
     
     
     func makeNSView(context: NSViewRepresentableContext<OpenPanel>) -> NSViewType {
-        openPanel.delegate = openPanelDelegate
+        openPanel.delegate = TODO("")
         openPanel.didSelectFiles = didSelectFiles
         openPanel.didCancel = didCancel
         return openPanel.contentView!

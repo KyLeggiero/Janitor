@@ -3,32 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A422E1047800DAC82D /* WatchedFolderView.swift */; };
 		A32740A722E1052F00DAC82D /* PathControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A622E1052F00DAC82D /* PathControlView.swift */; };
-		A32740A922E1068700DAC82D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32740A822E1068700DAC82D /* Checkbox.swift */; };
-		A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
-		A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34E61062411F920002C4B3B /* TODO returning anything.swift */; };
+		A33D99492509D6A600F24F30 /* Janitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33D99482509D6A600F24F30 /* Janitor.swift */; };
+		A3623D7D258DF757007107B9 /* JanitorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3623D7C258DF757007107B9 /* JanitorKit */; };
 		A3709FD422DFE5670097FFAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FD322DFE5670097FFAD /* ContentView.swift */; };
 		A3709FD622DFE5690097FFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3709FD522DFE5690097FFAD /* Assets.xcassets */; };
 		A3709FD922DFE5690097FFAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3709FD822DFE5690097FFAD /* Preview Assets.xcassets */; };
-		A3709FDC22DFE5690097FFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3709FDA22DFE5690097FFAD /* Main.storyboard */; };
 		A3709FE822DFE5690097FFAD /* JanitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FE722DFE5690097FFAD /* JanitorTests.swift */; };
 		A3709FF322DFE5690097FFAD /* JanitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3709FF222DFE5690097FFAD /* JanitorUITests.swift */; };
 		A370A00722DFE6800097FFAD /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370A00622DFE6800097FFAD /* FinderSync.swift */; };
 		A370A00C22DFE6800097FFAD /* Janitor Finder Extensions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A370A04F22DFE79F0097FFAD /* JanitorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; };
-		A370A05022DFE79F0097FFAD /* JanitorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A370A04E22DFE79F0097FFAD /* JanitorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E1E22EA4765002E7B49 /* OpenPanel.swift */; };
 		A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */; };
 		A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */; };
 		A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBE178231CE60700966AF6 /* SwiftUI.framework */; };
 		A3CA12C92411E6C400FDD938 /* Image Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C72411E6BD00FDD938 /* Image Constants.swift */; };
-		A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C72411E6BD00FDD938 /* Image Constants.swift */; };
-		A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C82411E6BD00FDD938 /* Color Constants.swift */; };
 		A3CA12CC2411E6C800FDD938 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CA12C82411E6BD00FDD938 /* Color Constants.swift */; };
 		A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */; };
 		A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3784422E18BC100642A90 /* AllWatchedFoldersView.swift */; };
@@ -56,13 +50,6 @@
 			remoteGlobalIDString = A370A00322DFE6800097FFAD;
 			remoteInfo = "Janitor Finder Extensions";
 		};
-		A3CA12B52411DF3600FDD938 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A3709FC622DFE5660097FFAD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3CA12A42411DF3400FDD938;
-			remoteInfo = "Janitor (AppKit)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,7 +70,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A370A05022DFE79F0097FFAD /* JanitorKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,13 +79,11 @@
 /* Begin PBXFileReference section */
 		A32740A422E1047800DAC82D /* WatchedFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderView.swift; sourceTree = "<group>"; };
 		A32740A622E1052F00DAC82D /* PathControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathControlView.swift; sourceTree = "<group>"; };
-		A32740A822E1068700DAC82D /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
-		A34E61062411F920002C4B3B /* TODO returning anything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TODO returning anything.swift"; sourceTree = "<group>"; };
+		A33D99482509D6A600F24F30 /* Janitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Janitor.swift; path = Janitor/Janitor.swift; sourceTree = SOURCE_ROOT; };
 		A3709FCE22DFE5670097FFAD /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3709FD322DFE5670097FFAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A3709FD522DFE5690097FFAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3709FD822DFE5690097FFAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A3709FDB22DFE5690097FFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3709FDD22DFE5690097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3709FDE22DFE5690097FFAD /* Janitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor.entitlements; sourceTree = "<group>"; };
 		A3709FE322DFE5690097FFAD /* JanitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JanitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,13 +96,10 @@
 		A370A00622DFE6800097FFAD /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		A370A00822DFE6800097FFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A370A00922DFE6800097FFAD /* Janitor_Finder_Extensions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor_Finder_Extensions.entitlements; sourceTree = "<group>"; };
-		A370A04E22DFE79F0097FFAD /* JanitorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JanitorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3739E1E22EA4765002E7B49 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
 		A3739E2222EA5FAA002E7B49 /* SelectFileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFileControl.swift; sourceTree = "<group>"; };
 		A39E571922EAAB4600B416C4 /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 		A3BBE178231CE60700966AF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Janitor (AppKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3CA12B42411DF3600FDD938 /* Janitor (AppKit)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Janitor (AppKit)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CA12C72411E6BD00FDD938 /* Image Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Constants.swift"; sourceTree = "<group>"; };
 		A3CA12C82411E6BD00FDD938 /* Color Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
 		A3D4791722E1A0C700F83308 /* WatchedFolderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedFolderEditView.swift; sourceTree = "<group>"; };
@@ -131,7 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BBE179231CE60700966AF6 /* SwiftUI.framework in Frameworks */,
-				A370A04F22DFE79F0097FFAD /* JanitorKit.framework in Frameworks */,
+				A3623D7D258DF757007107B9 /* JanitorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,20 +137,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3CA12A22411DF3400FDD938 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12B12411DF3600FDD938 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -185,30 +152,6 @@
 				A3709FD322DFE5670097FFAD /* ContentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A328E266241472CB00109432 /* RectangleTools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RectangleTools;
-			sourceTree = "<group>";
-		};
-		A34E61042411F908002C4B3B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				A328E266241472CB00109432 /* RectangleTools */,
-				A34E61052411F910002C4B3B /* TODO */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		A34E61052411F910002C4B3B /* TODO */ = {
-			isa = PBXGroup;
-			children = (
-				A34E61062411F920002C4B3B /* TODO returning anything.swift */,
-			);
-			path = TODO;
 			sourceTree = "<group>";
 		};
 		A3709FC522DFE5660097FFAD = {
@@ -231,8 +174,6 @@
 				A3709FE322DFE5690097FFAD /* JanitorTests.xctest */,
 				A3709FEE22DFE5690097FFAD /* JanitorUITests.xctest */,
 				A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */,
-				A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */,
-				A3CA12B42411DF3600FDD938 /* Janitor (AppKit)Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,8 +183,8 @@
 			children = (
 				A32740A322E1045C00DAC82D /* Views */,
 				A3709FD522DFE5690097FFAD /* Assets.xcassets */,
-				A3709FDA22DFE5690097FFAD /* Main.storyboard */,
 				A3709FDD22DFE5690097FFAD /* Info.plist */,
+				A33D99482509D6A600F24F30 /* Janitor.swift */,
 				A3709FDE22DFE5690097FFAD /* Janitor.entitlements */,
 				A3709FD722DFE5690097FFAD /* Preview Content */,
 			);
@@ -291,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				A3BBE178231CE60700966AF6 /* SwiftUI.framework */,
-				A370A04E22DFE79F0097FFAD /* JanitorKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -299,7 +239,6 @@
 		A3739E1D22EA46EE002E7B49 /* AppKit Bridges */ = {
 			isa = PBXGroup;
 			children = (
-				A32740A822E1068700DAC82D /* Checkbox.swift */,
 				A3739E1E22EA4765002E7B49 /* OpenPanel.swift */,
 				A32740A622E1052F00DAC82D /* PathControlView.swift */,
 			);
@@ -309,7 +248,6 @@
 		A3CA12C52411E6AB00FDD938 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A34E61042411F908002C4B3B /* Extensions */,
 				A3CA12C62411E6B200FDD938 /* Constants */,
 			);
 			path = Shared;
@@ -343,6 +281,9 @@
 				A370A00B22DFE6800097FFAD /* PBXTargetDependency */,
 			);
 			name = Janitor;
+			packageProductDependencies = (
+				A3623D7C258DF757007107B9 /* JanitorKit */,
+			);
 			productName = Janitor;
 			productReference = A3709FCE22DFE5670097FFAD /* Janitor.app */;
 			productType = "com.apple.product-type.application";
@@ -400,41 +341,6 @@
 			productReference = A370A00422DFE6800097FFAD /* Janitor Finder Extensions.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		A3CA12A42411DF3400FDD938 /* Janitor (AppKit) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3CA12BB2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)" */;
-			buildPhases = (
-				A3CA12A12411DF3400FDD938 /* Sources */,
-				A3CA12A22411DF3400FDD938 /* Frameworks */,
-				A3CA12A32411DF3400FDD938 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Janitor (AppKit)";
-			productName = "Janitor (AppKit)";
-			productReference = A3CA12A52411DF3400FDD938 /* Janitor (AppKit).app */;
-			productType = "com.apple.product-type.application";
-		};
-		A3CA12B32411DF3600FDD938 /* Janitor (AppKit)Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3CA12BE2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)Tests" */;
-			buildPhases = (
-				A3CA12B02411DF3600FDD938 /* Sources */,
-				A3CA12B12411DF3600FDD938 /* Frameworks */,
-				A3CA12B22411DF3600FDD938 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A3CA12B62411DF3600FDD938 /* PBXTargetDependency */,
-			);
-			name = "Janitor (AppKit)Tests";
-			productName = "Janitor (AppKit)Tests";
-			productReference = A3CA12B42411DF3600FDD938 /* Janitor (AppKit)Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -442,7 +348,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Ben Leggiero";
 				TargetAttributes = {
 					A3709FCD22DFE5660097FFAD = {
@@ -459,13 +365,6 @@
 					A370A00322DFE6800097FFAD = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					A3CA12A42411DF3400FDD938 = {
-						CreatedOnToolsVersion = 11.4;
-					};
-					A3CA12B32411DF3600FDD938 = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = A3CA12A42411DF3400FDD938;
-					};
 				};
 			};
 			buildConfigurationList = A3709FC922DFE5660097FFAD /* Build configuration list for PBXProject "Janitor" */;
@@ -477,6 +376,9 @@
 				Base,
 			);
 			mainGroup = A3709FC522DFE5660097FFAD;
+			packageReferences = (
+				A3623D7B258DF757007107B9 /* XCRemoteSwiftPackageReference "JanitorKit" */,
+			);
 			productRefGroup = A3709FCF22DFE5670097FFAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -485,8 +387,6 @@
 				A3709FE222DFE5690097FFAD /* JanitorTests */,
 				A3709FED22DFE5690097FFAD /* JanitorUITests */,
 				A370A00322DFE6800097FFAD /* Janitor Finder Extensions */,
-				A3CA12A42411DF3400FDD938 /* Janitor (AppKit) */,
-				A3CA12B32411DF3600FDD938 /* Janitor (AppKit)Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -496,7 +396,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3709FDC22DFE5690097FFAD /* Main.storyboard in Resources */,
 				A3709FD922DFE5690097FFAD /* Preview Assets.xcassets in Resources */,
 				A3709FD622DFE5690097FFAD /* Assets.xcassets in Resources */,
 			);
@@ -523,20 +422,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3CA12A32411DF3400FDD938 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12B22411DF3600FDD938 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -546,12 +431,11 @@
 			files = (
 				A3CA12C92411E6C400FDD938 /* Image Constants.swift in Sources */,
 				A3709FD422DFE5670097FFAD /* ContentView.swift in Sources */,
-				A32740A922E1068700DAC82D /* Checkbox.swift in Sources */,
 				A3739E2322EA5FAA002E7B49 /* SelectFileControl.swift in Sources */,
 				A32740A522E1047800DAC82D /* WatchedFolderView.swift in Sources */,
-				A34E61072411F920002C4B3B /* TODO returning anything.swift in Sources */,
 				A39E571A22EAAB4600B416C4 /* MeasurementPicker.swift in Sources */,
 				A3CA12CC2411E6C800FDD938 /* Color Constants.swift in Sources */,
+				A33D99492509D6A600F24F30 /* Janitor.swift in Sources */,
 				A3D4791822E1A0C700F83308 /* WatchedFolderEditView.swift in Sources */,
 				A3F3784522E18BC100642A90 /* AllWatchedFoldersView.swift in Sources */,
 				A3739E1F22EA4765002E7B49 /* OpenPanel.swift in Sources */,
@@ -583,23 +467,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3CA12A12411DF3400FDD938 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A34E61082411F959002C4B3B /* TODO returning anything.swift in Sources */,
-				A3CA12CA2411E6C500FDD938 /* Image Constants.swift in Sources */,
-				A3CA12CB2411E6C700FDD938 /* Color Constants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3CA12B02411DF3600FDD938 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -618,23 +485,7 @@
 			target = A370A00322DFE6800097FFAD /* Janitor Finder Extensions */;
 			targetProxy = A370A00A22DFE6800097FFAD /* PBXContainerItemProxy */;
 		};
-		A3CA12B62411DF3600FDD938 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A3CA12A42411DF3400FDD938 /* Janitor (AppKit) */;
-			targetProxy = A3CA12B52411DF3600FDD938 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A3709FDA22DFE5690097FFAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3709FDB22DFE5690097FFAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A3709FF522DFE5690097FFAD /* Debug */ = {
@@ -663,6 +514,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -690,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -728,6 +580,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -749,7 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -766,6 +619,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Janitor/Janitor.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -790,6 +644,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Janitor/Janitor.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -890,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Janitor Finder Extensions/Janitor_Finder_Extensions.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 26V9MK8TGP;
@@ -910,6 +766,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Janitor Finder Extensions/Janitor_Finder_Extensions.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 26V9MK8TGP;
@@ -923,92 +780,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.benleggiero.Janitor.Janitor-Finder-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A3CA12BC2411DF3600FDD938 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Janitor (AppKit)/Janitor__AppKit_.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Janitor (AppKit)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = "0.0.0-lambda.2";
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersAppKit";
-			};
-			name = Debug;
-		};
-		A3CA12BD2411DF3600FDD938 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Janitor (AppKit)/Janitor__AppKit_.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Janitor (AppKit)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = "0.0.0-lambda.2";
-				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersAppKit;
-			};
-			name = Release;
-		};
-		A3CA12BF2411DF3600FDD938 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				INFOPLIST_FILE = "Janitor (AppKit)Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.bh.Janitor--AppKit-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PrefersAppKit";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor (AppKit).app/Contents/MacOS/Janitor (AppKit)";
-			};
-			name = Debug;
-		};
-		A3CA12C02411DF3600FDD938 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 26V9MK8TGP;
-				INFOPLIST_FILE = "Janitor (AppKit)Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.bh.Janitor--AppKit-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PrefersAppKit;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Janitor (AppKit).app/Contents/MacOS/Janitor (AppKit)";
 			};
 			name = Release;
 		};
@@ -1060,25 +831,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3CA12BB2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3CA12BC2411DF3600FDD938 /* Debug */,
-				A3CA12BD2411DF3600FDD938 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3CA12BE2411DF3600FDD938 /* Build configuration list for PBXNativeTarget "Janitor (AppKit)Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3CA12BF2411DF3600FDD938 /* Debug */,
-				A3CA12C02411DF3600FDD938 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3623D7B258DF757007107B9 /* XCRemoteSwiftPackageReference "JanitorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BenLeggiero/JanitorKit.git";
+			requirement = {
+				branch = "feature/MVP-Package";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3623D7C258DF757007107B9 /* JanitorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3623D7B258DF757007107B9 /* XCRemoteSwiftPackageReference "JanitorKit" */;
+			productName = JanitorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3709FC622DFE5660097FFAD /* Project object */;
 }
