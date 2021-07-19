@@ -13,6 +13,7 @@
 		A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */; };
 		A31EB54B26A3C93600ABED25 /* JanitorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB54A26A3C93600ABED25 /* JanitorKit */; };
 		A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */; };
+		A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */; };
 		A3DA09E826A3BCED0014830B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA09E726A3BCED0014830B /* App.swift */; };
 		A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA09E926A3BCED0014830B /* ContentView.swift */; };
 		A3DA09EC26A3BCEE0014830B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EB26A3BCEE0014830B /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
 		A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDirectoriesView.swift; sourceTree = "<group>"; };
+		A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDirectoryView.swift; sourceTree = "<group>"; };
 		A3DA09E426A3BCED0014830B /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA09E726A3BCED0014830B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		A3DA09E926A3BCED0014830B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */,
+				A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */,
 				A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */,
 				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
+				A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */,
 				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
 				A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */,
 			);
@@ -322,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Janitor/Preview Content\"";
-				DEVELOPMENT_TEAM = BPRYYPT488;
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Janitor/Info.plist;
@@ -345,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Janitor/Preview Content\"";
-				DEVELOPMENT_TEAM = BPRYYPT488;
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Janitor/Info.plist;
