@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+import CollectionTools
 import JanitorKit
 import SimpleLogging
 
@@ -41,7 +42,7 @@ struct TrackedDirectoriesView: View {
             Spacer(minLength: 0).fixedSize()
             
             HStack {
-                Button(action: selectNewDirectoryToTrack) {
+                Button(action: { isSelectingNewDirectoryToTrack = true }) {
 //                    HStack {
                         Image(systemName: "plus")
                         Text("Track another")
@@ -50,7 +51,6 @@ struct TrackedDirectoriesView: View {
                 .padding()
             }
             .controlSize(.large)
-//            .buttonStyle(DefaultButtonStyle())
         }
         .fileImporter(isPresented: $isSelectingNewDirectoryToTrack,
                       allowedContentTypes: [.directory]) { result in
@@ -66,6 +66,13 @@ struct TrackedDirectoriesView: View {
             case .failure(let error):
                 log(error: error)
                 assertionFailure()
+            }
+        }
+        .sheet(item: $nextTrackedDirectory) { nextTrackedDirectory in
+            TrackeedDirectoryConfigurationView(for: $nextTrackedDirectory) { new in
+                if let newTrackedDirextory = nextTrackedDirectory {
+                    trackedDirectories += newTrackedDirextory
+                }
             }
         }
     }
