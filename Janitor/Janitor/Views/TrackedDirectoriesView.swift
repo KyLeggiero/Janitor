@@ -19,12 +19,6 @@ struct TrackedDirectoriesView: View {
     private var trackedDirectories: [TrackedDirectory]
     
     @State
-    private var isSelectingNewDirectoryToTrack = false
-    
-    @State
-    private var nextTrackedDirectory: TrackedDirectory?
-    
-    @State
     private var isEditing = false
     
     @State
@@ -39,7 +33,7 @@ struct TrackedDirectoriesView: View {
     var body: some View {
         List {
             ForEach($trackedDirectories) { dir in
-                TrackedDirectoryView(dir)
+                TrackedDirectoryView(dir, onDeleteRequested: { trackedDirectories.remove(firstElementWithId: dir.id) })
             }
             .onDelete { self.trackedDirectories.remove(atOffsets: $0) }
         }
@@ -49,43 +43,8 @@ struct TrackedDirectoriesView: View {
         
         .toolbar(id: "TrackedDirectoriesView") {
             ToolbarItem(id: "Track a new directory", placement: .primaryAction, showsByDefault: true) {
-                Button(action: { isSelectingNewDirectoryToTrack = true }) {
-                    Image(systemName: "plus")
-                    Text("Track another")
-                }
-                .controlSize(.large)
+                TrackNewDirectoryButton(trackedDirectories: $trackedDirectories)
             }
-        }
-        
-        
-        .fileImporter(isPresented: $isSelectingNewDirectoryToTrack,
-                      allowedContentTypes: [.directory]) { result in
-            switch result {
-            case .success(let directoryUrl):
-                nextTrackedDirectory = .init(
-                    uuid: UUID(),
-                    isEnabled: true,
-                    url: directoryUrl,
-                    oldestAllowedAge: .init(value: 60, unit: .day),
-                    largestAllowedTotalSize: .init(value: 5, unit: .gibibyte))
-                
-            case .failure(let error):
-                log(error: error)
-                assertionFailure()
-            }
-        }
-        
-        
-        .sheet(item: $nextTrackedDirectory) { newTrackedDirectory in
-            TrackedDirectoryConfigurationView(
-                for: .init(
-                    get: { newTrackedDirectory },
-                    set: { self.trackedDirectories += $0 }
-                ),
-                onDone: {
-                    self.nextTrackedDirectory = nil
-                }
-            )
         }
     }
 }

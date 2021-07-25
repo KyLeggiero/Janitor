@@ -10,7 +10,7 @@ import SwiftUI
 import Introspection
 
 
-private let fancyPathSeparator = " ❯ "
+private let fancyPathSeparator = " ❯ "
 
 
 

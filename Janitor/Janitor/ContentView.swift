@@ -15,10 +15,24 @@ struct ContentView: View {
     @SwiftyUserDefault(keyPath: \.trackedDirectories)
     var trackedDirectories
     
+    
     var body: some View {
-        TrackedDirectoriesView(.init(
-                                get: { trackedDirectories ?? [] },
-                                set: { self.trackedDirectories = $0 }))
+        if trackedDirectories?.isEmpty ?? true {
+            VStack {
+                HStack {
+                    TrackNewDirectoryButton(trackedDirectories: .init(
+                        get: { trackedDirectories ?? [] },
+                        set: { self.trackedDirectories = $0 })
+                    )
+                }
+            }
+        }
+        else {
+            TrackedDirectoriesView(.init(
+                get: { trackedDirectories ?? [] },
+                set: { self.trackedDirectories = $0 })
+            )
+        }
     }
 }
 

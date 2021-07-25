@@ -10,6 +10,9 @@
 		A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */; };
 		A30BC4DA26AD1F700082D963 /* Introspection in Frameworks */ = {isa = PBXBuildFile; productRef = A30BC4D926AD1F700082D963 /* Introspection */; };
 		A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4DD26AD30240082D963 /* Color constants.swift */; };
+		A30BC4E026ADD8070082D963 /* TrackNewDirectoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4DF26ADD8070082D963 /* TrackNewDirectoryButton.swift */; };
+		A30BC4E226ADE6240082D963 /* EditTrackedDirectorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4E126ADE6240082D963 /* EditTrackedDirectorySheet.swift */; };
+		A30BC4E426ADF5900082D963 /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4E326ADF5900082D963 /* MeasurementView.swift */; };
 		A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB53926A3BD5800ABED25 /* SettingsView.swift */; };
 		A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */; };
 		A31EB54326A3C33600ABED25 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54226A3C33600ABED25 /* UserData.swift */; };
@@ -29,6 +32,9 @@
 /* Begin PBXFileReference section */
 		A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorativeUrlView.swift; sourceTree = "<group>"; };
 		A30BC4DD26AD30240082D963 /* Color constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color constants.swift"; sourceTree = "<group>"; };
+		A30BC4DF26ADD8070082D963 /* TrackNewDirectoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackNewDirectoryButton.swift; sourceTree = "<group>"; };
+		A30BC4E126ADE6240082D963 /* EditTrackedDirectorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackedDirectorySheet.swift; sourceTree = "<group>"; };
+		A30BC4E326ADF5900082D963 /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
 		A31EB53926A3BD5800ABED25 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
@@ -97,9 +103,12 @@
 			children = (
 				A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */,
 				A3DDC16426A9221F004A336F /* MeasurementPicker.swift */,
+				A30BC4E326ADF5900082D963 /* MeasurementView.swift */,
 				A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */,
 				A38FD78F26A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift */,
 				A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */,
+				A30BC4DF26ADD8070082D963 /* TrackNewDirectoryButton.swift */,
+				A30BC4E126ADE6240082D963 /* EditTrackedDirectorySheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,10 +239,13 @@
 				A3DDC16526A9221F004A336F /* MeasurementPicker.swift in Sources */,
 				A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */,
 				A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */,
+				A30BC4E226ADE6240082D963 /* EditTrackedDirectorySheet.swift in Sources */,
+				A30BC4E426ADF5900082D963 /* MeasurementView.swift in Sources */,
 				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
 				A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */,
 				A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */,
 				A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */,
+				A30BC4E026ADD8070082D963 /* TrackNewDirectoryButton.swift in Sources */,
 				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
 				A38FD79026A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift in Sources */,
 				A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */,

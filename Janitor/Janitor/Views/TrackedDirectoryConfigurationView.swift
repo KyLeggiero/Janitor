@@ -72,7 +72,7 @@ struct TrackedDirectoryConfigurationView: View {
                 
                 Spacer(minLength: 100)
                 
-                Toggle("Clean this directory", isOn: $workingTrackedDirectory.isEnabled)
+                Toggle("Automatically clean this directory", isOn: $workingTrackedDirectory.isEnabled)
                     .fixedSize()
                     .toggleStyle(SwitchToggleStyle(tint: .toggle))
                     .labelsHidden()
