@@ -22,7 +22,16 @@ struct TrackedDirectoryView: View {
     
     
     var body: some View {
-        Text("Tracking \(trackedDirectory.url)")
+        HStack {
+            DecorativeUrlView(trackedDirectory.url)
+            
+            Spacer()
+            
+            Toggle("Clean this directory", isOn: $trackedDirectory.isEnabled)
+                .toggleStyle(SwitchToggleStyle(tint: .toggle))
+                .labelsHidden()
+        }
+        .frame(minHeight: 32)
     }
 }
 

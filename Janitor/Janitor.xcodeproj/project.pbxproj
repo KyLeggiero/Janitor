@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */; };
 		A30BC4DA26AD1F700082D963 /* Introspection in Frameworks */ = {isa = PBXBuildFile; productRef = A30BC4D926AD1F700082D963 /* Introspection */; };
+		A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4DD26AD30240082D963 /* Color constants.swift */; };
 		A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB53926A3BD5800ABED25 /* SettingsView.swift */; };
 		A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */; };
 		A31EB54326A3C33600ABED25 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54226A3C33600ABED25 /* UserData.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorativeUrlView.swift; sourceTree = "<group>"; };
+		A30BC4DD26AD30240082D963 /* Color constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color constants.swift"; sourceTree = "<group>"; };
 		A31EB53926A3BD5800ABED25 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
@@ -58,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A30BC4DB26AD30100082D963 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A30BC4DC26AD30190082D963 /* SwiftUI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A30BC4DC26AD30190082D963 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				A30BC4DD26AD30240082D963 /* Color constants.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		A31EB54126A3C32300ABED25 /* User Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +124,7 @@
 		A3DA09E626A3BCED0014830B /* Janitor */ = {
 			isa = PBXGroup;
 			children = (
+				A30BC4DB26AD30100082D963 /* Extensions */,
 				A31EB54E26A3CA8E00ABED25 /* Views */,
 				A31EB54126A3C32300ABED25 /* User Data */,
 				A3DA09E726A3BCED0014830B /* App.swift */,
@@ -214,6 +233,7 @@
 				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
 				A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */,
 				A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */,
+				A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */,
 				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
 				A38FD79026A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift in Sources */,
 				A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */,
@@ -274,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -329,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

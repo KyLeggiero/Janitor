@@ -38,52 +38,13 @@ struct TrackedDirectoryConfigurationView: View {
     
     var body: some View {
         VStack {
-            VStack {
-                HStack(alignment: .top) {
-                    Button(action: { isSelectingNewDirectoryToTrack = true }) {
-                        DecorativeUrlView(workingTrackedDirectory.url)
-                            .fixedSize()
-                    }
-                    .buttonStyle(LinkButtonStyle())
-                    .padding(.bottom)
-                    
-                    Spacer(minLength: 100)
-                    
-                    Toggle("Enabled", isOn: $workingTrackedDirectory.isEnabled)
-                        .fixedSize()
-                        .toggleStyle(SwitchToggleStyle(tint: .green))
-                }
-                
-                Form {
-                    MeasurementPicker("Oldest Allowed Age",
-                                      selection: $workingTrackedDirectory.oldestAllowedAge,
-                                      valueRange: Age(value: 1, unit: .minute) ... Age(value: 50, unit: .year))
-                        .fixedSize()
-                    
-                    MeasurementPicker("Largest Total Size",
-                                      selection: $workingTrackedDirectory.largestAllowedTotalSize,
-                                      valueRange: DataSize(value: 56, unit: .kilobyte) ... DataSize(value: 1, unit: .exbibyte))
-                        .fixedSize()
-                }
-            }
-            .padding()
+            configurationArea
+                .padding()
             
             Divider()
             
-            HStack(alignment: .lastTextBaseline) {
-                Spacer()
-                
-                Button("Cancel", action: onDone)
-                    .keyboardShortcut(.cancelAction)
-                
-                Button("Start Tracking", action: {
-                    inoutTrackedDirectory = workingTrackedDirectory
-                    onDone()
-                })
-                    .keyboardShortcut(.defaultAction)
-                    .controlSize(.large)
-            }
-            .padding([.horizontal, .bottom])
+            dialogControlsArea
+                .padding([.horizontal, .bottom])
         }
         .fileImporter(isPresented: $isSelectingNewDirectoryToTrack,
                       allowedContentTypes: [.directory]) { result in
@@ -95,6 +56,58 @@ struct TrackedDirectoryConfigurationView: View {
                 log(error: error)
                 assertionFailure()
             }
+        }
+    }
+    
+    
+    var configurationArea: some View {
+        VStack {
+            HStack(alignment: .top) {
+                Button(action: { isSelectingNewDirectoryToTrack = true }) {
+                    DecorativeUrlView(workingTrackedDirectory.url)
+                        .fixedSize()
+                }
+                .buttonStyle(LinkButtonStyle())
+                .padding(.bottom)
+                
+                Spacer(minLength: 100)
+                
+                Toggle("Clean this directory", isOn: $workingTrackedDirectory.isEnabled)
+                    .fixedSize()
+                    .toggleStyle(SwitchToggleStyle(tint: .toggle))
+                    .labelsHidden()
+            }
+            
+            Form {
+                MeasurementPicker("Oldest Allowed Age",
+                                  selection: $workingTrackedDirectory.oldestAllowedAge,
+                                  valueRange: Age(value: 1, unit: .minute) ... Age(value: 50, unit: .year))
+                    .fixedSize()
+                
+                Spacer().fixedSize()
+                
+                MeasurementPicker("Largest Total Size",
+                                  selection: $workingTrackedDirectory.largestAllowedTotalSize,
+                                  valueRange: DataSize(value: 56, unit: .kilobyte) ... DataSize(value: 1, unit: .exbibyte))
+                    .fixedSize()
+            }
+        }
+    }
+    
+    
+    var dialogControlsArea: some View {
+        HStack(alignment: .lastTextBaseline) {
+            Spacer()
+            
+            Button("Cancel", action: onDone)
+                .keyboardShortcut(.cancelAction)
+            
+            Button("Start Tracking", action: {
+                inoutTrackedDirectory = workingTrackedDirectory
+                onDone()
+            })
+                .keyboardShortcut(.defaultAction)
+                .controlSize(.large)
         }
     }
 }

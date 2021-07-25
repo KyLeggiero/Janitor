@@ -16,18 +16,19 @@ import SimpleLogging
 struct TrackedDirectoriesView: View {
     
     @Binding
-    var trackedDirectories: [TrackedDirectory]
+    private var trackedDirectories: [TrackedDirectory]
     
     @State
     private var isSelectingNewDirectoryToTrack = false
     
     @State
-    private var nextTrackedDirectory: TrackedDirectory? = TrackedDirectory(
-        uuid: UUID(),
-        isEnabled: true,
-        url: URL(fileURLWithPath: "/Users/benleggiero/Downloads/"),
-        oldestAllowedAge: Age(value: 123, unit: .day),
-        largestAllowedTotalSize: DataSize(value: 456, unit: .mebibyte))
+    private var nextTrackedDirectory: TrackedDirectory?
+    
+    @State
+    private var isEditing = false
+    
+    @State
+    private var selectedDirectory: TrackedDirectory?
     
     
     init(_ trackedDirectories: Binding<[TrackedDirectory]>) {
@@ -36,27 +37,27 @@ struct TrackedDirectoriesView: View {
     
     
     var body: some View {
-        VStack(alignment: .leading) {
-            List($trackedDirectories) { dir in
+        List {
+            ForEach($trackedDirectories) { dir in
                 TrackedDirectoryView(dir)
             }
-            .listStyle(InsetListStyle())
-            
-            Divider()
-            
-            Spacer(minLength: 0).fixedSize()
-            
-            HStack {
-                Button(action: { isSelectingNewDirectoryToTrack = true }) {
-//                    HStack {
-                        Image(systemName: "plus")
-                        Text("Track another")
-//                    }
-                }
-                .padding()
-            }
-            .controlSize(.large)
+            .onDelete { self.trackedDirectories.remove(atOffsets: $0) }
         }
+        .listStyle(InsetListStyle())
+        .frame(minWidth: 400, idealWidth: 400, minHeight: 200, idealHeight: 300)
+        
+        
+        .toolbar(id: "TrackedDirectoriesView") {
+            ToolbarItem(id: "Track a new directory", placement: .primaryAction, showsByDefault: true) {
+                Button(action: { isSelectingNewDirectoryToTrack = true }) {
+                    Image(systemName: "plus")
+                    Text("Track another")
+                }
+                .controlSize(.large)
+            }
+        }
+        
+        
         .fileImporter(isPresented: $isSelectingNewDirectoryToTrack,
                       allowedContentTypes: [.directory]) { result in
             switch result {
@@ -73,21 +74,19 @@ struct TrackedDirectoriesView: View {
                 assertionFailure()
             }
         }
-        .sheet(item: $nextTrackedDirectory) { newTrackedDirectory in
-            TrackedDirectoryConfigurationView(for: .init(
-                get: { newTrackedDirectory },
-                set: { self.trackedDirectories += $0 } )) {
-                    self.nextTrackedDirectory = nil
-            }
-        }
-    }
-}
-
-
-
-private extension TrackedDirectoriesView {
-    func selectNewDirectoryToTrack() {
         
+        
+        .sheet(item: $nextTrackedDirectory) { newTrackedDirectory in
+            TrackedDirectoryConfigurationView(
+                for: .init(
+                    get: { newTrackedDirectory },
+                    set: { self.trackedDirectories += $0 }
+                ),
+                onDone: {
+                    self.nextTrackedDirectory = nil
+                }
+            )
+        }
     }
 }
 

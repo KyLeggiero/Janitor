@@ -33,7 +33,8 @@ struct MeasurementPicker<Unit: MeasurementUnit>: View {
                 TextField(title, value: $selection.value, format: FloatingPointFormatStyle())
                     .frame(minWidth: 100)
                     .fixedSize()
-            } else {
+            }
+            else {
                 TextField(title, text: .init(get: { selection.value.description },
                                              set: { newValue in Unit.Value(newValue).map { selection.value = $0 } }))
                     .frame(minWidth: 100)
