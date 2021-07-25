@@ -22,7 +22,12 @@ struct TrackedDirectoriesView: View {
     private var isSelectingNewDirectoryToTrack = false
     
     @State
-    private var nextTrackedDirectory: TrackedDirectory? = nil
+    private var nextTrackedDirectory: TrackedDirectory? = TrackedDirectory(
+        uuid: UUID(),
+        isEnabled: true,
+        url: URL(fileURLWithPath: "/Users/benleggiero/Downloads/"),
+        oldestAllowedAge: Age(value: 123, unit: .day),
+        largestAllowedTotalSize: DataSize(value: 456, unit: .mebibyte))
     
     
     init(_ trackedDirectories: Binding<[TrackedDirectory]>) {
@@ -68,11 +73,11 @@ struct TrackedDirectoriesView: View {
                 assertionFailure()
             }
         }
-        .sheet(item: $nextTrackedDirectory) { nextTrackedDirectory in
-            TrackeedDirectoryConfigurationView(for: $nextTrackedDirectory) { new in
-                if let newTrackedDirextory = nextTrackedDirectory {
-                    trackedDirectories += newTrackedDirextory
-                }
+        .sheet(item: $nextTrackedDirectory) { newTrackedDirectory in
+            TrackedDirectoryConfigurationView(for: .init(
+                get: { newTrackedDirectory },
+                set: { self.trackedDirectories += $0 } )) {
+                    self.nextTrackedDirectory = nil
             }
         }
     }

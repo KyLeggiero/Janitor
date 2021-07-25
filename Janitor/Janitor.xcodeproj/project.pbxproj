@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */; };
+		A30BC4DA26AD1F700082D963 /* Introspection in Frameworks */ = {isa = PBXBuildFile; productRef = A30BC4D926AD1F700082D963 /* Introspection */; };
 		A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB53926A3BD5800ABED25 /* SettingsView.swift */; };
 		A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */; };
 		A31EB54326A3C33600ABED25 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54226A3C33600ABED25 /* UserData.swift */; };
@@ -20,9 +22,11 @@
 		A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA09E926A3BCED0014830B /* ContentView.swift */; };
 		A3DA09EC26A3BCEE0014830B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EB26A3BCEE0014830B /* Assets.xcassets */; };
 		A3DA09EF26A3BCEE0014830B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */; };
+		A3DDC16526A9221F004A336F /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DDC16426A9221F004A336F /* MeasurementPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorativeUrlView.swift; sourceTree = "<group>"; };
 		A31EB53926A3BD5800ABED25 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 		A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3DA09F026A3BCEE0014830B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DA09F126A3BCEE0014830B /* Janitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor.entitlements; sourceTree = "<group>"; };
+		A3DDC16426A9221F004A336F /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 			files = (
 				A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */,
 				A38FD78E26A6371A00282E63 /* CollectionTools in Frameworks */,
+				A30BC4DA26AD1F700082D963 /* Introspection in Frameworks */,
 				A31EB54B26A3C93600ABED25 /* JanitorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,9 +77,11 @@
 		A31EB54E26A3CA8E00ABED25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */,
+				A3DDC16426A9221F004A336F /* MeasurementPicker.swift */,
 				A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */,
-				A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */,
 				A38FD78F26A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift */,
+				A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 				A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */,
 				A31EB54A26A3C93600ABED25 /* JanitorKit */,
 				A38FD78D26A6371A00282E63 /* CollectionTools */,
+				A30BC4D926AD1F700082D963 /* Introspection */,
 			);
 			productName = Janitor;
 			productReference = A3DA09E426A3BCED0014830B /* Janitor.app */;
@@ -159,7 +168,7 @@
 				};
 			};
 			buildConfigurationList = A3DA09DF26A3BCED0014830B /* Build configuration list for PBXProject "Janitor" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -170,6 +179,7 @@
 			packageReferences = (
 				A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */,
 				A38FD78C26A6371A00282E63 /* XCRemoteSwiftPackageReference "Swift-Collection-Tools" */,
+				A30BC4D826AD1F700082D963 /* XCRemoteSwiftPackageReference "Swift-Introspection" */,
 			);
 			productRefGroup = A3DA09E526A3BCED0014830B /* Products */;
 			projectDirPath = "";
@@ -198,10 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */,
+				A3DDC16526A9221F004A336F /* MeasurementPicker.swift in Sources */,
 				A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */,
 				A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */,
 				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
 				A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */,
+				A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */,
 				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
 				A38FD79026A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift in Sources */,
 				A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */,
@@ -345,6 +357,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SUPPRESS_WARNINGS = NO;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -368,6 +382,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SUPPRESS_WARNINGS = NO;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -396,6 +412,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A30BC4D826AD1F700082D963 /* XCRemoteSwiftPackageReference "Swift-Introspection" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RougeWare/Swift-Introspection/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ky1vstar/SwiftyUserDefaultsNamespaces.git";
@@ -415,6 +439,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A30BC4D926AD1F700082D963 /* Introspection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30BC4D826AD1F700082D963 /* XCRemoteSwiftPackageReference "Swift-Introspection" */;
+			productName = Introspection;
+		};
 		A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */;
