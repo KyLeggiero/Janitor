@@ -64,7 +64,7 @@ struct TrackedDirectoryConfigurationView: View {
         VStack {
             HStack(alignment: .top) {
                 Button(action: { isSelectingNewDirectoryToTrack = true }) {
-                    DecorativeUrlView(workingTrackedDirectory.url)
+                    DecorativePathView(workingTrackedDirectory.url)
                         .fixedSize()
                 }
                 .buttonStyle(LinkButtonStyle())
@@ -107,8 +107,8 @@ struct TrackedDirectoryConfigurationView: View {
                 onDone()
             })
                 .keyboardShortcut(.defaultAction)
-                .controlSize(.large)
         }
+        .controlSize(.large)
     }
 }
 

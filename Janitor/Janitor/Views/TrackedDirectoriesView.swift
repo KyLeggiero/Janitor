@@ -24,6 +24,9 @@ struct TrackedDirectoriesView: View {
     @State
     private var selectedDirectory: TrackedDirectory?
     
+    @State
+    private var _viewRefreshHack = ViewRefreshHack()
+    
     
     init(_ trackedDirectories: Binding<[TrackedDirectory]>) {
         self._trackedDirectories = trackedDirectories
@@ -31,21 +34,62 @@ struct TrackedDirectoriesView: View {
     
     
     var body: some View {
-        List {
-            ForEach($trackedDirectories) { dir in
-                TrackedDirectoryView(dir, onDeleteRequested: { trackedDirectories.remove(firstElementWithId: dir.id) })
+        Group {
+            if trackedDirectories.isEmpty {
+                VStack(spacing: 24) {
+
+                    Spacer()
+
+                    Text("Janitor tracks folders to make sure they don't get too bloated.")
+                        .font(.title)
+
+                    Text("Add a folder to begin:")
+                        .font(.title2)
+
+                    HStack {
+
+                        Spacer()
+
+                        TrackNewDirectoryButton(trackedDirectories: $trackedDirectories,
+                                                title: .trackADirectory,
+                                                onDone: { _viewRefreshHack.refresh() })
+                            .font(.title3.bold())
+
+                        Spacer()
+                    }
+
+                    Spacer()
+                }
+                .multilineTextAlignment(.center)
             }
-            .onDelete { self.trackedDirectories.remove(atOffsets: $0) }
+            
+            
+            else {
+                List {
+                    ForEach($trackedDirectories) { dir in
+                        TrackedDirectoryView(dir, onDeleteRequested: {
+                            trackedDirectories.remove(firstElementWithId: dir.id)
+                            _viewRefreshHack.refresh()
+                        }, _viewRefreshHack: $_viewRefreshHack)
+                    }
+                    .onDelete {
+                        self.trackedDirectories.remove(atOffsets: $0)
+                        _viewRefreshHack.refresh()
+                    }
+                    .animation(.easeInOut(duration: 0.2), value: trackedDirectories)
+                }
+                .listStyle(InsetListStyle())
+                
+                
+                .toolbar(id: "TrackedDirectoriesView") {
+                    ToolbarItem(id: "Track a new directory", placement: .primaryAction, showsByDefault: true) {
+                        TrackNewDirectoryButton(trackedDirectories: $trackedDirectories,
+                                                onDone: { _viewRefreshHack.refresh() })
+                    }
+                }
+            }
         }
-        .listStyle(InsetListStyle())
         .frame(minWidth: 400, idealWidth: 400, minHeight: 200, idealHeight: 300)
-        
-        
-        .toolbar(id: "TrackedDirectoriesView") {
-            ToolbarItem(id: "Track a new directory", placement: .primaryAction, showsByDefault: true) {
-                TrackNewDirectoryButton(trackedDirectories: $trackedDirectories)
-            }
-        }
     }
 }
 

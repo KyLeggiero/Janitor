@@ -13,5 +13,5 @@ import SwiftyUserDefaults
 
 
 extension DefaultsKeys {
-    var trackedDirectories: DefaultsKey<[TrackedDirectory]?> { .init("trackedDirectories") }
+    var trackedDirectories: DefaultsKey<[TrackedDirectory]> { .init("trackedDirectories", defaultValue: []) }
 }

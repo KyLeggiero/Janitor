@@ -8,10 +8,11 @@
 import SwiftUI
 
 import JanitorKit
+import RectangleTools
 
 
 
-private let hoverAnimation = Animation.spring()//.easeInOut(duration: 0.25)
+private let hoverAnimation = Animation.easeInOut(duration: 0.25)
 
 
 
@@ -28,10 +29,14 @@ struct TrackedDirectoryView: View {
     @State
     private var isHovering = false
     
+    @Binding
+    private var _viewRefreshHack: ViewRefreshHack
     
-    init(_ trackedDirectory: Binding<TrackedDirectory>, onDeleteRequested: @escaping BlindCallback) {
+    
+    init(_ trackedDirectory: Binding<TrackedDirectory>, onDeleteRequested: @escaping BlindCallback, _viewRefreshHack: Binding<ViewRefreshHack>) {
         self._trackedDirectory = trackedDirectory
         self.onDeleteRequested = onDeleteRequested
+        self.__viewRefreshHack = _viewRefreshHack
     }
     
     
@@ -40,13 +45,14 @@ struct TrackedDirectoryView: View {
             if isHovering {
                 Button(action: { isEditing = true }) {
                     Image(systemName: "slider.horizontal.3")
+                        .padding(EdgeInsets(eachVertical: 2, eachHorizontal: 4))
                 }
                 .buttonStyle(LinkButtonStyle())
                 .transition(.opacity)
+//                .border(Color.primary, width: 1)
             }
             
-            DecorativeUrlView(trackedDirectory.url)
-                .fixedSize()
+            DecorativePathView(trackedDirectory.url)
             
             MeasurementView(trackedDirectory.largestAllowedTotalSize)
                 .fixedSize()
@@ -64,7 +70,7 @@ struct TrackedDirectoryView: View {
         .animation(hoverAnimation, value: isHovering)
         .frame(minHeight: 32)
         
-        .editTrackedDirectory($trackedDirectory, isEditing: $isEditing)
+        .editTrackedDirectory($trackedDirectory, isEditing: $isEditing, _viewRefreshHack: $_viewRefreshHack)
         
         .contextMenu {
             Button("Delete", action: onDeleteRequested)
@@ -85,7 +91,8 @@ struct TrackedDirectoryView_Previews: PreviewProvider {
                 url: URL(fileURLWithPath: "/Path/To/File.txt"),
                 oldestAllowedAge: .init(value: 7, unit: .day),
                 largestAllowedTotalSize: .init(value: 2, unit: .gibibyte))),
-            onDeleteRequested: null
+            onDeleteRequested: null,
+            _viewRefreshHack: .constant(.init())
         )
     }
 }

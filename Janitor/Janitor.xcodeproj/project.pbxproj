@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */; };
+		A30BC4D726AC9E930082D963 /* DecorativePathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4D626AC9E930082D963 /* DecorativePathView.swift */; };
 		A30BC4DA26AD1F700082D963 /* Introspection in Frameworks */ = {isa = PBXBuildFile; productRef = A30BC4D926AD1F700082D963 /* Introspection */; };
 		A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4DD26AD30240082D963 /* Color constants.swift */; };
 		A30BC4E026ADD8070082D963 /* TrackNewDirectoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4DF26ADD8070082D963 /* TrackNewDirectoryButton.swift */; };
 		A30BC4E226ADE6240082D963 /* EditTrackedDirectorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4E126ADE6240082D963 /* EditTrackedDirectorySheet.swift */; };
 		A30BC4E426ADF5900082D963 /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4E326ADF5900082D963 /* MeasurementView.swift */; };
+		A30BC4E826AE0DF80082D963 /* RectangleTools in Frameworks */ = {isa = PBXBuildFile; productRef = A30BC4E726AE0DF80082D963 /* RectangleTools */; };
+		A30BC4EB26AE29930082D963 /* ViewRefreshHack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30BC4EA26AE29930082D963 /* ViewRefreshHack.swift */; };
 		A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB53926A3BD5800ABED25 /* SettingsView.swift */; };
 		A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */; };
 		A31EB54326A3C33600ABED25 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54226A3C33600ABED25 /* UserData.swift */; };
@@ -30,11 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorativeUrlView.swift; sourceTree = "<group>"; };
+		A30BC4D626AC9E930082D963 /* DecorativePathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorativePathView.swift; sourceTree = "<group>"; };
 		A30BC4DD26AD30240082D963 /* Color constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color constants.swift"; sourceTree = "<group>"; };
 		A30BC4DF26ADD8070082D963 /* TrackNewDirectoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackNewDirectoryButton.swift; sourceTree = "<group>"; };
 		A30BC4E126ADE6240082D963 /* EditTrackedDirectorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackedDirectorySheet.swift; sourceTree = "<group>"; };
 		A30BC4E326ADF5900082D963 /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
+		A30BC4E526AE0D300082D963 /* Swift-Rectangle-Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Swift-Rectangle-Tools"; path = "/Users/benleggiero/Library/Developer/Xcode/DerivedData/Janitor-etqushrgmqfpzebjhrfmpltqsvqy/SourcePackages/checkouts/Swift-Rectangle-Tools"; sourceTree = "<absolute>"; };
+		A30BC4EA26AE29930082D963 /* ViewRefreshHack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRefreshHack.swift; sourceTree = "<group>"; };
 		A31EB53926A3BD5800ABED25 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31EB53E26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces in Frameworks */,
+				A30BC4E826AE0DF80082D963 /* RectangleTools in Frameworks */,
 				A38FD78E26A6371A00282E63 /* CollectionTools in Frameworks */,
 				A30BC4DA26AD1F700082D963 /* Introspection in Frameworks */,
 				A31EB54B26A3C93600ABED25 /* JanitorKit in Frameworks */,
@@ -82,6 +87,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		A30BC4E926AE29250082D963 /* Hacks */ = {
+			isa = PBXGroup;
+			children = (
+				A30BC4EA26AE29930082D963 /* ViewRefreshHack.swift */,
+			);
+			path = Hacks;
+			sourceTree = "<group>";
+		};
 		A31EB54126A3C32300ABED25 /* User Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +107,7 @@
 		A31EB54926A3C93600ABED25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A30BC4E526AE0D300082D963 /* Swift-Rectangle-Tools */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,7 +115,7 @@
 		A31EB54E26A3CA8E00ABED25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A30BC4D626AC9E930082D963 /* DecorativeUrlView.swift */,
+				A30BC4D626AC9E930082D963 /* DecorativePathView.swift */,
 				A3DDC16426A9221F004A336F /* MeasurementPicker.swift */,
 				A30BC4E326ADF5900082D963 /* MeasurementView.swift */,
 				A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */,
@@ -133,6 +147,7 @@
 		A3DA09E626A3BCED0014830B /* Janitor */ = {
 			isa = PBXGroup;
 			children = (
+				A30BC4E926AE29250082D963 /* Hacks */,
 				A30BC4DB26AD30100082D963 /* Extensions */,
 				A31EB54E26A3CA8E00ABED25 /* Views */,
 				A31EB54126A3C32300ABED25 /* User Data */,
@@ -176,6 +191,7 @@
 				A31EB54A26A3C93600ABED25 /* JanitorKit */,
 				A38FD78D26A6371A00282E63 /* CollectionTools */,
 				A30BC4D926AD1F700082D963 /* Introspection */,
+				A30BC4E726AE0DF80082D963 /* RectangleTools */,
 			);
 			productName = Janitor;
 			productReference = A3DA09E426A3BCED0014830B /* Janitor.app */;
@@ -208,6 +224,7 @@
 				A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */,
 				A38FD78C26A6371A00282E63 /* XCRemoteSwiftPackageReference "Swift-Collection-Tools" */,
 				A30BC4D826AD1F700082D963 /* XCRemoteSwiftPackageReference "Swift-Introspection" */,
+				A30BC4E626AE0DF80082D963 /* XCRemoteSwiftPackageReference "Swift-Rectangle-Tools" */,
 			);
 			productRefGroup = A3DA09E526A3BCED0014830B /* Products */;
 			projectDirPath = "";
@@ -238,12 +255,13 @@
 				A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */,
 				A3DDC16526A9221F004A336F /* MeasurementPicker.swift in Sources */,
 				A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */,
+				A30BC4EB26AE29930082D963 /* ViewRefreshHack.swift in Sources */,
 				A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */,
 				A30BC4E226ADE6240082D963 /* EditTrackedDirectorySheet.swift in Sources */,
 				A30BC4E426ADF5900082D963 /* MeasurementView.swift in Sources */,
 				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
 				A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */,
-				A30BC4D726AC9E930082D963 /* DecorativeUrlView.swift in Sources */,
+				A30BC4D726AC9E930082D963 /* DecorativePathView.swift in Sources */,
 				A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */,
 				A30BC4E026ADD8070082D963 /* TrackNewDirectoryButton.swift in Sources */,
 				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
@@ -386,7 +404,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SUPPRESS_WARNINGS = NO;
@@ -411,7 +428,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.benleggiero.Janitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SUPPRESS_WARNINGS = NO;
@@ -452,6 +468,14 @@
 				minimumVersion = 1.0.1;
 			};
 		};
+		A30BC4E626AE0DF80082D963 /* XCRemoteSwiftPackageReference "Swift-Rectangle-Tools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RougeWare/Swift-Rectangle-Tools.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
 		A31EB53C26A3BFE000ABED25 /* XCRemoteSwiftPackageReference "SwiftyUserDefaultsNamespaces" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ky1vstar/SwiftyUserDefaultsNamespaces.git";
@@ -475,6 +499,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A30BC4D826AD1F700082D963 /* XCRemoteSwiftPackageReference "Swift-Introspection" */;
 			productName = Introspection;
+		};
+		A30BC4E726AE0DF80082D963 /* RectangleTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30BC4E626AE0DF80082D963 /* XCRemoteSwiftPackageReference "Swift-Rectangle-Tools" */;
+			productName = RectangleTools;
 		};
 		A31EB53D26A3BFE000ABED25 /* SwiftyUserDefaultsNamespaces */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,6 +1,6 @@
 //
-//  DecorativeUrlView.swift
-//  DecorativeUrlView
+//  DecorativePathView.swift
+//  Janitor
 //
 //  Created by Ben Leggiero on 2021-07-24.
 //
@@ -14,7 +14,7 @@ private let fancyPathSeparator = " ❯ "
 
 
 
-struct DecorativeUrlView: View {
+struct DecorativePathView: View {
     
     private let url: URL
     
@@ -25,13 +25,16 @@ struct DecorativeUrlView: View {
     
     
     var body: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 0) {
+        HStack(alignment: .lastTextBaseline, spacing: 0) {
             Text(
                 url.deletingLastPathComponent()
                     .replacingUserHome(with: "🏡")
                     .withFancyPathSeparators(keepTrailingSeparator: true, ifEmpty: .emojiRepresentingThisDevice + fancyPathSeparator)
             )
+                .truncationMode(.middle)
+                .lineLimit(1)
                 .foregroundColor(.secondary)
+                
             
             Text(url.lastPathComponent)
                 .font(.title.bold())
@@ -43,8 +46,8 @@ struct DecorativeUrlView: View {
 
 struct DecorativeUrlView_Previews: PreviewProvider {
     static var previews: some View {
-        DecorativeUrlView(URL(fileURLWithPath: "/Path/To/File.txt"))
-        DecorativeUrlView(URL(fileURLWithPath: "\(NSHomeDirectory())/Desktop"))
+        DecorativePathView(URL(fileURLWithPath: "/Path/To/File.txt"))
+        DecorativePathView(URL(fileURLWithPath: "\(NSHomeDirectory())/Desktop"))
     }
 }
 

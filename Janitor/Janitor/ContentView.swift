@@ -17,22 +17,10 @@ struct ContentView: View {
     
     
     var body: some View {
-        if trackedDirectories?.isEmpty ?? true {
-            VStack {
-                HStack {
-                    TrackNewDirectoryButton(trackedDirectories: .init(
-                        get: { trackedDirectories ?? [] },
-                        set: { self.trackedDirectories = $0 })
-                    )
-                }
-            }
-        }
-        else {
-            TrackedDirectoriesView(.init(
-                get: { trackedDirectories ?? [] },
-                set: { self.trackedDirectories = $0 })
-            )
-        }
+        TrackedDirectoriesView(.init(
+            get: { self.trackedDirectories },
+            set: { self.trackedDirectories = $0 })
+        )
     }
 }
 

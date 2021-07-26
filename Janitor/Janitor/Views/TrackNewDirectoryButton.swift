@@ -24,16 +24,25 @@ struct TrackNewDirectoryButton: View {
     @Binding
     private var trackedDirectories: [TrackedDirectory]
     
+    private let title: Title
     
-    public init(trackedDirectories: Binding<[TrackedDirectory]>) {
+    private let onDone: BlindCallback
+    
+    
+    public init(trackedDirectories: Binding<[TrackedDirectory]>,
+                title: Title = .trackAnother,
+                onDone: @escaping BlindCallback = null)
+    {
         self._trackedDirectories = trackedDirectories
+        self.title = title
+        self.onDone = onDone
     }
     
     
     var body: some View {
         Button(action: { isSelectingNewDirectoryToTrack = true }) {
             Image(systemName: "plus")
-            Text("Track another")
+            Text(title.rawValue)
         }
         .controlSize(.large)
         
@@ -58,17 +67,29 @@ struct TrackNewDirectoryButton: View {
         
         .sheet(item: $nextTrackedDirectory) { newTrackedDirectory in
             TrackedDirectoryConfigurationView(
-            for: .init(
-                get: { newTrackedDirectory },
-                set: { self.trackedDirectories += $0 }
-            ),
+                for: .init(
+                    get: { newTrackedDirectory },
+                    set: { self.trackedDirectories += $0 }
+                ),
                 onDone: {
                     self.nextTrackedDirectory = nil
+                    onDone()
                 }
             )
         }
     }
 }
+
+
+
+extension TrackNewDirectoryButton {
+    enum Title: LocalizedStringKey {
+        case trackADirectory = "Track a folder"
+        case trackAnother = "Track another"
+    }
+}
+
+
 
 struct TrackNewDirectoryButton_Previews: PreviewProvider {
     static var previews: some View {
