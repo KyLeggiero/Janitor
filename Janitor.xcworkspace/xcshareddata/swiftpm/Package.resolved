@@ -11,7 +11,7 @@
         }
       },
       {
-        "package": "Swift-Atomic",
+        "package": "Atomic",
         "repositoryURL": "https://github.com/RougeWare/Swift-Atomic.git",
         "state": {
           "branch": null,
@@ -20,7 +20,7 @@
         }
       },
       {
-        "package": "Swift-Collection-Tools",
+        "package": "CollectionTools",
         "repositoryURL": "https://github.com/RougeWare/Swift-Collection-Tools.git",
         "state": {
           "branch": null,
@@ -29,7 +29,7 @@
         }
       },
       {
-        "package": "Swift-Cross-Kit-Types",
+        "package": "CrossKitTypes",
         "repositoryURL": "https://github.com/RougeWare/Swift-Cross-Kit-Types.git",
         "state": {
           "branch": null,
@@ -38,7 +38,7 @@
         }
       },
       {
-        "package": "Swift-Drawing-Tools",
+        "package": "Swift Drawing Tools",
         "repositoryURL": "https://github.com/BenLeggiero/Swift-Drawing-Tools.git",
         "state": {
           "branch": null,
@@ -47,7 +47,7 @@
         }
       },
       {
-        "package": "Swift-Function-Tools",
+        "package": "FunctionTools",
         "repositoryURL": "https://github.com/RougeWare/Swift-Function-Tools",
         "state": {
           "branch": null,
@@ -56,7 +56,7 @@
         }
       },
       {
-        "package": "swift-image",
+        "package": "SwiftImage",
         "repositoryURL": "https://github.com/koher/swift-image.git",
         "state": {
           "branch": null,
@@ -65,16 +65,16 @@
         }
       },
       {
-        "package": "Swift-Introspection",
+        "package": "Introspection",
         "repositoryURL": "https://github.com/RougeWare/Swift-Introspection/",
         "state": {
           "branch": null,
-          "revision": "4c8cf79db8514559333e23a1382b908679500ae8",
-          "version": "1.0.1"
+          "revision": "f7f1a4e4762429d1480c1abcdb0798d08db2cd7a",
+          "version": "1.1.0"
         }
       },
       {
-        "package": "Swift-Lazy-Patterns",
+        "package": "LazyContainers",
         "repositoryURL": "https://github.com/RougeWare/Swift-Lazy-Patterns.git",
         "state": {
           "branch": null,
@@ -83,7 +83,7 @@
         }
       },
       {
-        "package": "Swift-MultiplicativeArithmetic",
+        "package": "MultiplicativeArithmetic",
         "repositoryURL": "https://github.com/RougeWare/Swift-MultiplicativeArithmetic.git",
         "state": {
           "branch": null,
@@ -92,7 +92,7 @@
         }
       },
       {
-        "package": "Swift-Optional-Tools",
+        "package": "OptionalTools",
         "repositoryURL": "https://github.com/RougeWare/Swift-Optional-Tools.git",
         "state": {
           "branch": null,
@@ -101,7 +101,7 @@
         }
       },
       {
-        "package": "Swift-PropertyWrapper-Protocol",
+        "package": "PropertyWrapperProtocol",
         "repositoryURL": "https://github.com/RougeWare/Swift-PropertyWrapper-Protocol.git",
         "state": {
           "branch": null,
@@ -110,7 +110,7 @@
         }
       },
       {
-        "package": "Swift-Range-Tools",
+        "package": "RangeTools",
         "repositoryURL": "https://github.com/RougeWare/Swift-Range-Tools.git",
         "state": {
           "branch": null,
@@ -119,7 +119,7 @@
         }
       },
       {
-        "package": "Swift-Rectangle-Tools",
+        "package": "RectangleTools",
         "repositoryURL": "https://github.com/RougeWare/Swift-Rectangle-Tools.git",
         "state": {
           "branch": null,
@@ -128,7 +128,7 @@
         }
       },
       {
-        "package": "Swift-Safe-Collection-Access",
+        "package": "SafeCollectionAccess",
         "repositoryURL": "https://github.com/RougeWare/Swift-Safe-Collection-Access.git",
         "state": {
           "branch": null,
@@ -137,7 +137,7 @@
         }
       },
       {
-        "package": "Swift-Safe-Pointer",
+        "package": "SafePointer",
         "repositoryURL": "https://github.com/RougeWare/Swift-Safe-Pointer.git",
         "state": {
           "branch": null,
@@ -146,7 +146,7 @@
         }
       },
       {
-        "package": "Swift-SemVer",
+        "package": "SemVer",
         "repositoryURL": "https://github.com/RougeWare/Swift-SemVer.git",
         "state": {
           "branch": null,
@@ -155,7 +155,7 @@
         }
       },
       {
-        "package": "Swift-Simple-Logging",
+        "package": "SimpleLogging",
         "repositoryURL": "https://github.com/RougeWare/Swift-Simple-Logging.git",
         "state": {
           "branch": null,
@@ -164,7 +164,7 @@
         }
       },
       {
-        "package": "Swift-Special-String",
+        "package": "SpecialString",
         "repositoryURL": "https://github.com/RougeWare/Swift-Special-String.git",
         "state": {
           "branch": null,
@@ -173,7 +173,7 @@
         }
       },
       {
-        "package": "Swift-String-Integer-Access",
+        "package": "StringIntegerAccess",
         "repositoryURL": "https://github.com/RougeWare/Swift-String-Integer-Access.git",
         "state": {
           "branch": null,
@@ -182,7 +182,7 @@
         }
       },
       {
-        "package": "Swift-TODO",
+        "package": "TODO",
         "repositoryURL": "https://github.com/RougeWare/Swift-TODO.git",
         "state": {
           "branch": null,

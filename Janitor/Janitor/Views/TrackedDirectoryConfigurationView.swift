@@ -46,6 +46,9 @@ struct TrackedDirectoryConfigurationView: View {
             dialogControlsArea
                 .padding([.horizontal, .bottom])
         }
+        
+        .frame(maxWidth: 640)
+        
         .fileImporter(isPresented: $isSelectingNewDirectoryToTrack,
                       allowedContentTypes: [.directory]) { result in
             switch result {
@@ -65,15 +68,13 @@ struct TrackedDirectoryConfigurationView: View {
             HStack(alignment: .top) {
                 Button(action: { isSelectingNewDirectoryToTrack = true }) {
                     DecorativePathView(workingTrackedDirectory.url)
-                        .fixedSize()
                 }
                 .buttonStyle(LinkButtonStyle())
                 .padding(.bottom)
                 
-                Spacer(minLength: 100)
+                Spacer(minLength: 24)
                 
                 Toggle("Automatically clean this directory", isOn: $workingTrackedDirectory.isEnabled)
-                    .fixedSize()
                     .toggleStyle(SwitchToggleStyle(tint: .toggle))
                     .labelsHidden()
             }

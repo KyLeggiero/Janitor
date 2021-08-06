@@ -21,6 +21,8 @@
 		A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */; };
 		A31EB54B26A3C93600ABED25 /* JanitorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A31EB54A26A3C93600ABED25 /* JanitorKit */; };
 		A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */; };
+		A32B508E26B769B500BE3DD8 /* TrackedDirectory + Example Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B508D26B769B500BE3DD8 /* TrackedDirectory + Example Data.swift */; };
+		A32B509026B769DF00BE3DD8 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B508F26B769DF00BE3DD8 /* ExampleData.swift */; };
 		A38FD78E26A6371A00282E63 /* CollectionTools in Frameworks */ = {isa = PBXBuildFile; productRef = A38FD78D26A6371A00282E63 /* CollectionTools */; };
 		A38FD79026A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38FD78F26A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift */; };
 		A3D2A88D26A4DF270020EF5B /* TrackedDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */; };
@@ -29,6 +31,8 @@
 		A3DA09EC26A3BCEE0014830B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EB26A3BCEE0014830B /* Assets.xcassets */; };
 		A3DA09EF26A3BCEE0014830B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */; };
 		A3DDC16526A9221F004A336F /* MeasurementPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DDC16426A9221F004A336F /* MeasurementPicker.swift */; };
+		A3DDD12726BCE666004281DD /* Binding + ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DDD12626BCE666004281DD /* Binding + ExampleData.swift */; };
+		A3DDD12C26BCE8E9004281DD /* Array + ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DDD12B26BCE8E9004281DD /* Array + ExampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,8 @@
 		A31EB54226A3C33600ABED25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A31EB54626A3C3B800ABED25 /* UserDefaults keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults keys.swift"; sourceTree = "<group>"; };
 		A31EB54F26A3CA9800ABED25 /* TrackedDirectoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDirectoriesView.swift; sourceTree = "<group>"; };
+		A32B508D26B769B500BE3DD8 /* TrackedDirectory + Example Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackedDirectory + Example Data.swift"; sourceTree = "<group>"; };
+		A32B508F26B769DF00BE3DD8 /* ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
 		A38FD78F26A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDirectoryConfigurationView.swift; sourceTree = "<group>"; };
 		A3D2A88C26A4DF270020EF5B /* TrackedDirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDirectoryView.swift; sourceTree = "<group>"; };
 		A3DA09E426A3BCED0014830B /* Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +59,8 @@
 		A3DA09F026A3BCEE0014830B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DA09F126A3BCEE0014830B /* Janitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Janitor.entitlements; sourceTree = "<group>"; };
 		A3DDC16426A9221F004A336F /* MeasurementPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPicker.swift; sourceTree = "<group>"; };
+		A3DDD12626BCE666004281DD /* Binding + ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding + ExampleData.swift"; sourceTree = "<group>"; };
+		A3DDD12B26BCE8E9004281DD /* Array + ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + ExampleData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		A30BC4DB26AD30100082D963 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A3DDD12A26BCE8D6004281DD /* Standard Library */,
 				A30BC4DC26AD30190082D963 /* SwiftUI */,
 			);
 			path = Extensions;
@@ -83,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				A30BC4DD26AD30240082D963 /* Color constants.swift */,
+				A3DDD12626BCE666004281DD /* Binding + ExampleData.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -127,6 +137,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A32B508C26B7698800BE3DD8 /* Example Data */ = {
+			isa = PBXGroup;
+			children = (
+				A32B508D26B769B500BE3DD8 /* TrackedDirectory + Example Data.swift */,
+				A32B508F26B769DF00BE3DD8 /* ExampleData.swift */,
+			);
+			path = "Example Data";
+			sourceTree = "<group>";
+		};
 		A3DA09DB26A3BCED0014830B = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +168,7 @@
 			children = (
 				A30BC4E926AE29250082D963 /* Hacks */,
 				A30BC4DB26AD30100082D963 /* Extensions */,
+				A32B508C26B7698800BE3DD8 /* Example Data */,
 				A31EB54E26A3CA8E00ABED25 /* Views */,
 				A31EB54126A3C32300ABED25 /* User Data */,
 				A3DA09E726A3BCED0014830B /* App.swift */,
@@ -168,6 +188,14 @@
 				A3DA09EE26A3BCEE0014830B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A3DDD12A26BCE8D6004281DD /* Standard Library */ = {
+			isa = PBXGroup;
+			children = (
+				A3DDD12B26BCE8E9004281DD /* Array + ExampleData.swift */,
+			);
+			path = "Standard Library";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +282,11 @@
 			files = (
 				A31EB53A26A3BD5800ABED25 /* SettingsView.swift in Sources */,
 				A3DDC16526A9221F004A336F /* MeasurementPicker.swift in Sources */,
+				A32B508E26B769B500BE3DD8 /* TrackedDirectory + Example Data.swift in Sources */,
 				A31EB54726A3C3B800ABED25 /* UserDefaults keys.swift in Sources */,
 				A30BC4EB26AE29930082D963 /* ViewRefreshHack.swift in Sources */,
 				A3DA09EA26A3BCED0014830B /* ContentView.swift in Sources */,
+				A32B509026B769DF00BE3DD8 /* ExampleData.swift in Sources */,
 				A30BC4E226ADE6240082D963 /* EditTrackedDirectorySheet.swift in Sources */,
 				A30BC4E426ADF5900082D963 /* MeasurementView.swift in Sources */,
 				A31EB54326A3C33600ABED25 /* UserData.swift in Sources */,
@@ -264,8 +294,10 @@
 				A30BC4D726AC9E930082D963 /* DecorativePathView.swift in Sources */,
 				A30BC4DE26AD30240082D963 /* Color constants.swift in Sources */,
 				A30BC4E026ADD8070082D963 /* TrackNewDirectoryButton.swift in Sources */,
+				A3DDD12C26BCE8E9004281DD /* Array + ExampleData.swift in Sources */,
 				A3DA09E826A3BCED0014830B /* App.swift in Sources */,
 				A38FD79026A64B4F00282E63 /* TrackedDirectoryConfigurationView.swift in Sources */,
+				A3DDD12726BCE666004281DD /* Binding + ExampleData.swift in Sources */,
 				A31EB55026A3CA9800ABED25 /* TrackedDirectoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -465,7 +497,7 @@
 			repositoryURL = "https://github.com/RougeWare/Swift-Introspection/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.1.0;
 			};
 		};
 		A30BC4E626AE0DF80082D963 /* XCRemoteSwiftPackageReference "Swift-Rectangle-Tools" */ = {

@@ -68,7 +68,7 @@ struct TrackedDirectoriesView: View {
                 List {
                     ForEach($trackedDirectories) { dir in
                         TrackedDirectoryView(dir, onDeleteRequested: {
-                            trackedDirectories.remove(firstElementWithId: dir.id)
+                            trackedDirectories.remove(firstElementWithId: dir.wrappedValue.id)
                             _viewRefreshHack.refresh()
                         }, _viewRefreshHack: $_viewRefreshHack)
                     }

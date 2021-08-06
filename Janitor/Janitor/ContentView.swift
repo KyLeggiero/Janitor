@@ -7,25 +7,28 @@
 
 import SwiftUI
 import SwiftyUserDefaults
+import JanitorKit
 
 
 
 struct ContentView: View {
     
-    @SwiftyUserDefault(keyPath: \.trackedDirectories)
-    var trackedDirectories
+    @Binding
+    private var trackedDirectories: [TrackedDirectory]
+    
+    
+    init(trackedDirectories: Binding<[TrackedDirectory]>) {
+        self._trackedDirectories = trackedDirectories
+    }
     
     
     var body: some View {
-        TrackedDirectoriesView(.init(
-            get: { self.trackedDirectories },
-            set: { self.trackedDirectories = $0 })
-        )
+        TrackedDirectoriesView($trackedDirectories)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(trackedDirectories: .example)
     }
 }

@@ -73,6 +73,7 @@ struct TrackedDirectoryView: View {
         .editTrackedDirectory($trackedDirectory, isEditing: $isEditing, _viewRefreshHack: $_viewRefreshHack)
         
         .contextMenu {
+            Button("Edit", action: { isEditing = true })
             Button("Delete", action: onDeleteRequested)
         }
         
