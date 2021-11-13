@@ -14,22 +14,49 @@ import JanitorKit
 
 struct SettingsView: View {
     
-    @EnvironmentObject
-    public var janitorialEngine: JanitorialEngine
+    @Environment(\.janitorialEngine)
+    private var janitorialEngine
+    
+    @Environment(\.janitorialEngineActivityFeed)
+    private var janitorialEngineActivityFeed
     
     
     @State
     private var enableToggleValue = false
     
+    @State
+    private var justUpdatingUi = false
+    
     
     var body: some View {
         Form {
-            Toggle("Enable \(Introspection.appName)", isOn: .init(
-                get: { janitorialEngine.dryRun },
-                set: { newValue in Task.detached {await janitorialEngine.setDryRun{newValue}} }))
+            Toggle("Enable \(Introspection.appName)", isOn: $enableToggleValue)
                 .toggleStyle(SwitchToggleStyle())
         }
         .padding()
         .frame(minWidth: 360, alignment: .topLeading)
+        .onChange(of: enableToggleValue) { newValue in
+            guard !justUpdatingUi else { return }
+            
+            Task {
+                await janitorialEngine?.setDryRun(!newValue)
+            }
+        }
+        .onReceive(janitorialEngineActivityFeed.onlyDryRunChanges) { dryRun in
+            justUpdatingUi = true
+            defer { justUpdatingUi = false }
+            
+            enableToggleValue = !dryRun
+        }
+    }
+}
+
+
+
+extension SettingsView {
+    struct Previews: PreviewProvider {
+        static var previews: some View {
+            SettingsView()
+        }
     }
 }

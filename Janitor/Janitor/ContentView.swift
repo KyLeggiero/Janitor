@@ -13,11 +13,16 @@ import JanitorKit
 
 struct ContentView: View {
     
+    private let isReady: Bool
+    
     @Binding
     private var trackedDirectories: [TrackedDirectory]
     
     
-    init(trackedDirectories: Binding<[TrackedDirectory]>) {
+    init(isReady: Bool,
+         trackedDirectories: Binding<[TrackedDirectory]>)
+    {
+        self.isReady = isReady
         self._trackedDirectories = trackedDirectories
     }
     
@@ -29,6 +34,6 @@ struct ContentView: View {
 
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(trackedDirectories: .example)
+        ContentView(isReady: true, trackedDirectories: .example)
     }
 }
